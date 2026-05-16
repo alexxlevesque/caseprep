@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import type { CaseCard } from '@/types/case'
 import ChecklistSection from './ChecklistSection'
 
@@ -25,6 +25,12 @@ export default function CardFlip({ card, onComplete }: Props) {
   const [checklist, setChecklist] = useState<boolean[]>(card.checklistItems.map(() => false))
   const [notes, setNotes] = useState('')
 
+  useEffect(() => {
+    setRevealed(false)
+    setChecklist(card.checklistItems.map(() => false))
+    setNotes('')
+  }, [card])
+
   function handleCheck(index: number, value: boolean) {
     setChecklist(prev => prev.map((v, i) => (i === index ? value : v)))
   }
@@ -39,6 +45,7 @@ export default function CardFlip({ card, onComplete }: Props) {
 
       {!revealed && (
         <textarea
+          aria-label="Notes"
           value={notes}
           onChange={e => setNotes(e.target.value)}
           placeholder="Jot your thinking here (optional)..."

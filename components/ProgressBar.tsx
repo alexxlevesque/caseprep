@@ -4,7 +4,7 @@ interface Props {
 }
 
 export default function ProgressBar({ current, total }: Props) {
-  const pct = Math.round((current / total) * 100)
+  const pct = total === 0 ? 0 : Math.round((current / total) * 100)
   return (
     <div className="mb-1">
       <div className="flex justify-between text-xs text-slate-500 mb-1">

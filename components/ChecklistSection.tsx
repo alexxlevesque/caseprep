@@ -10,7 +10,7 @@ export default function ChecklistSection({ items, checked, onChange }: Props) {
       <p className="text-xs font-semibold uppercase tracking-wide text-green-800 mb-2">Did you hit these?</p>
       <div className="space-y-2">
         {items.map((item, i) => (
-          <label key={i} className="flex items-start gap-2 cursor-pointer text-sm text-green-900">
+          <label key={item} className="flex items-start gap-2 cursor-pointer text-sm text-green-900">
             <input
               type="checkbox"
               checked={checked[i] ?? false}
