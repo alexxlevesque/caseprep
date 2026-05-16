@@ -1,0 +1,92 @@
+{
+  "id": "wharton-2017-01",
+  "title": "Improving Profitability",
+  "number": 1,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium",
+  "firm": "General profitability",
+  "type": "profitability",
+  "topics": ["profitability", "cost-reduction", "revenue-growth"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Your client is a clothing retailer that has recently expanded into the United States market. Despite strong brand recognition, they are currently unprofitable in the US, with revenues of $125M and costs of $138M — a $13M annual deficit. The CEO has asked your team to help them return to profitability.",
+      "question": "What clarifying questions would you ask before structuring your approach?",
+      "modelAnswer": "Key clarifying questions: (1) How long have they been operating in the US? (2) What are the main cost categories — manufacturing, shipping, labor, rent? (3) How does US performance compare to other markets? (4) What is the timeline for returning to profitability? (5) Are there any constraints on actions (e.g., can't close stores, can't raise prices)?",
+      "checklistItems": [
+        "Asked about timeline or urgency",
+        "Asked about cost structure breakdown",
+        "Asked about benchmarks vs other markets or competitors",
+        "Asked about constraints on possible actions"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "framework",
+      "interviewer": "Good questions. The client has been in the US for 2 years. The main cost categories are manufacturing, shipping (currently by air), labor, and rent (a flagship store plus mall stores). Their other markets are profitable. The CEO wants to be profitable within 12 months.",
+      "question": "How would you structure your approach to diagnosing and solving the profitability issue?",
+      "modelAnswer": "Profit = Revenue − Costs. I'd investigate both sides. On the revenue side: price × volume — are we priced correctly for the US market, and are we reaching enough customers? On the cost side: I'd break into COGS (manufacturing, shipping) and operating costs (labor, rent). Given that other markets are profitable, I'd focus first on what's different about the US — likely a mix of lower revenue (market fit, pricing) and higher costs (air shipping, US rent).",
+      "checklistItems": [
+        "Used profit = revenue − costs structure",
+        "Broke revenue into price and volume drivers",
+        "Broke costs into COGS and operating expenses",
+        "Noted that benchmarking against profitable markets is a useful lens",
+        "Prioritized where to look first"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "qualitative",
+      "interviewer": "Let's look at costs first. Manufacturing: we are already producing in the cheapest way possible. Labor: we have what we need and cannot reduce. That leaves shipping and rent. On shipping: we currently ship all inventory by air. On rent: we have a flagship store and several mall stores.",
+      "question": "Brainstorm cost reduction options for shipping and rent.",
+      "modelAnswer": "Shipping options: switch from air to boat (slower but cheaper — typically saves 5-10% of COGS). Rent options: (1) Move flagship location — rejected, needed for brand marketing. (2) Close mall stores — rejected, planning suburban expansion. (3) Share the flagship space with another business (e.g., a coffee shop) — this would split the rent burden. (4) Renegotiate lease terms.",
+      "checklistItems": [
+        "Identified sea/boat shipping as an alternative to air",
+        "Generated at least 2 rent reduction ideas",
+        "Discussed trade-offs (e.g., slower delivery with sea shipping)",
+        "Identified space-sharing / subletting as an option"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "math",
+      "interviewer": "Good. Here are the specifics: COGS from shipping is $90M annually. Switching from air to boat would save 5% of that. On rent: sharing the flagship with a coffee shop would cut 25% of the flagship rent burden. The flagship rent is $7M per year.",
+      "question": "Calculate the annual savings from each initiative.",
+      "modelAnswer": "Shipping savings: $90M × 5% = $4.5M per year.\nRent savings: $7M × 25% = $1.75M per year.\nTotal cost savings: $4.5M + $1.75M = $6.25M per year.",
+      "checklistItems": [
+        "Correctly computed shipping savings ($4.5M)",
+        "Correctly computed rent savings ($1.75M)",
+        "Correctly summed total savings ($6.25M)"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "Now let's look at the revenue side. American customers have been giving feedback that the styles are too conservative and the sizes run small for the US market. The team has analyzed that adjusting designs and sizes specifically for the American market would cost $12M annually in additional design and manufacturing costs, but would generate $23M in additional revenue.",
+      "question": "What is the net benefit of this revenue initiative? Does it make sense to pursue it?",
+      "modelAnswer": "Net incremental income = $23M revenue − $12M cost = $11M net per year. Yes, it makes sense — the net benefit is positive and substantial. Combined with cost savings: $6.25M (shipping + rent) + $11M (revenue initiative) = $17.25M total improvement. This exceeds the $13M deficit, returning the client to profitability with a $4.25M profit.",
+      "checklistItems": [
+        "Correctly computed net revenue initiative benefit ($11M)",
+        "Combined with cost savings to get total improvement ($17.25M)",
+        "Confirmed this exceeds the $13M deficit",
+        "Stated resulting profit ($4.25M)"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The CEO (she) is about to walk in.",
+      "question": "Give your recommendation.",
+      "modelAnswer": "We recommend three actions to return the US business to profitability: (1) Switch shipping from air to boat — $4.5M annual savings; (2) Partner with a coffee shop at the flagship to share rent — $1.75M savings; (3) Redesign inventory for the US market (sizes and styles) — $11M net annual benefit. Together these generate $17.25M in improvement, turning the $13M deficit into a $4.25M profit. Key risks: finding a reliable retail partner for the flagship space, product-market fit risk with the redesigned inventory, and potential shipping delays from sea freight. We recommend: vetting the coffee shop partner carefully, conducting US consumer research before full inventory redesign, and adjusting warehouse lead times to account for sea shipping.",
+      "checklistItems": [
+        "Led with a clear recommendation (all three actions)",
+        "Quantified total improvement ($17.25M)",
+        "Stated resulting profit ($4.25M)",
+        "Named at least 2 risks",
+        "Proposed concrete next steps",
+        "Did not refer to the CEO as 'he'"
+      ]
+    }
+  ]
+}

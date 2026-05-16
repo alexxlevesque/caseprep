@@ -1,0 +1,116 @@
+{
+  "id": "wharton-2017-02",
+  "title": "Brazilian Highway Concessions",
+  "number": 2,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium-hard",
+  "firm": "McKinsey final round",
+  "type": "market-entry",
+  "topics": ["international-expansion", "graphical-interpretation", "market-entry", "math"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "A leading Brazilian highway concessions company is looking to expand internationally. Economic growth in Brazil has stalled, and in order to continue to grow both top-line revenues and bottom-line profitability, the client wants to diversify its portfolio and decrease its exposure to the Brazilian economy. What factors should the client consider as it thinks through its international expansion options?",
+      "question": "What clarifying questions would you ask before structuring your approach?",
+      "modelAnswer": "Key clarifying questions: (1) Where else does the client currently operate? (Only Brazil; staff speaks primarily Portuguese.) (2) Does the client operate in industries besides road concessions? (No — exclusively road concessions.) (3) Who are the client's typical customers and how do they win business? (Municipal, state, or national governments through competitive RFPs.) (4) Does the company want to focus on a specific region? (Open to all geographies, bias toward South America.)",
+      "checklistItems": [
+        "Asked about current geographies of operation",
+        "Asked about adjacent industries or diversification",
+        "Asked about customer type and how they win business",
+        "Asked about preferred expansion region or constraints"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "framework",
+      "interviewer": "Good questions. The client operates only in Brazil, staff speaks primarily Portuguese, they focus exclusively on road concessions, and their customers are always governments through competitive RFPs. They are open to all geographies with a bias toward South America. How would you structure your evaluation of international expansion options?",
+      "question": "Walk me through your framework.",
+      "modelAnswer": "A strong framework covers four buckets: (1) Culture & management complexity — language barriers, cultural fit with current leadership, geographic distance to manage assets. (2) Pipeline & economic prospects — size of the 5-year infrastructure pipeline, likelihood of privatizations, country GDP growth. (3) Political environment — regulation around privatization, political stability, receptiveness to private sector participation. (4) Competitive environment — existing players, industry concentration, competitiveness of public bids.",
+      "checklistItems": [
+        "Identified culture and management complexity (incl. language)",
+        "Identified pipeline and economic prospects",
+        "Identified political environment and regulation",
+        "Identified competitive environment"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "exhibit",
+      "exhibitType": "chart",
+      "exhibitRef": "wharton-2017-02-chart-1.png",
+      "interviewer": "Our team gathered data comparing each South American country's 5-year infrastructure pipeline against its World Bank ease of doing business ranking. The x-axis is the World Bank ranking (inverted — higher values mean worse). The y-axis is the 5-year pipeline in $B. I'll give you the chart now.",
+      "question": "Based on this data, which markets should the client prioritize? Which should they eliminate?",
+      "modelAnswer": "Prioritize (upper-right quadrant — high pipeline, favorable business environment): Mexico, Colombia, Chile, Peru. Arguable: Argentina has a strong pipeline ($4.5B) but a difficult business environment (~rank 120) — could argue either way. Eliminate (low pipeline and/or poor business environment): Venezuela, Bolivia, Honduras. Lower-right with small pipeline (Costa Rica, Panama) are too small to be priorities.",
+      "checklistItems": [
+        "Correctly read the scatter plot axes (noted inverted x-axis)",
+        "Identified upper-right quadrant as the target zone",
+        "Named Mexico, Colombia, Chile, Peru as priorities",
+        "Correctly eliminated lower-left countries",
+        "Addressed Argentina as an edge case"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "qualitative",
+      "interviewer": "The team has determined that JV opportunities are not viable. The client must choose between two entry routes: primary investment (building new road concessions from scratch) or M&A (acquiring an existing player in one of the target markets).",
+      "question": "What inputs would you need to compare these two options side by side?",
+      "modelAnswer": "For primary investment: km of road × $/km toll rate × expected monthly traffic = annual revenue; subtract opex %; annual profit = revenue × (1 - opex); payback = investment / annual profit; value = annual profit / discount rate (perpetual concession); ROIC = value / investment - 1. For M&A: acquisition price, target annual revenue, opex %, synergies as % of revenue → annual profit = revenue × (1 - opex) + revenue × synergies; same DCF and ROIC logic.",
+      "checklistItems": [
+        "Identified km × $/km × traffic as primary revenue driver",
+        "Mentioned opex as the key cost driver",
+        "Mentioned payback period or DCF valuation",
+        "Identified synergies as M&A-specific input",
+        "Mentioned discount rate"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "math",
+      "interviewer": "Here is the data for each option.",
+      "question": "Calculate the ROIC for primary investment and M&A. Which should the client pursue?",
+      "data": {
+        "primary": {
+          "km": 300,
+          "dollarsPerKm": 5,
+          "trafficPerMonth": 20000,
+          "opex": 0.30,
+          "investment": 150000000,
+          "discountRate": 0.10,
+          "contractTerm": "perpetual"
+        },
+        "ma": {
+          "annualRevenue": 120000000,
+          "opex": 0.40,
+          "synergies": 0.15,
+          "investment": 750000000,
+          "discountRate": 0.10
+        }
+      },
+      "modelAnswer": "Primary investment: Annual revenue = 300 × $5 × 20,000 = $30M. Annual opex = $30M × 30% = $9M. Annual profit = $21M. Value = $21M / 10% = $210M. ROIC = $210M / $150M - 1 = 40%.\n\nM&A: Annual revenue = $120M. Annual profit = $120M × (1 - 40%) + $120M × 15% = $72M + $18M = $90M. Value = $90M / 10% = $900M. ROIC = $900M / $750M - 1 = 20%.\n\nConclusion: Primary investment is superior — 40% ROIC vs 20% for M&A.",
+      "checklistItems": [
+        "Correctly computed primary annual revenue ($30M)",
+        "Correctly computed primary annual profit ($21M)",
+        "Correctly computed primary value ($210M)",
+        "Correctly computed primary ROIC (40%)",
+        "Correctly computed M&A annual profit ($90M including synergies)",
+        "Correctly computed M&A ROIC (20%)",
+        "Concluded that primary investment is superior"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The CEO is about to walk in.",
+      "question": "Give your recommendation.",
+      "modelAnswer": "We recommend pursuing primary investment over M&A to expand internationally, prioritizing Mexico and Colombia based on their strong infrastructure pipeline and favorable business environments. The primary investment approach delivers a 40% ROIC versus 20% for M&A. Key risks: (1) political environment in target markets could shift; (2) the Portuguese-speaking team will need local Spanish-language support; (3) government RFP bidding is competitive. Next steps: commission market studies in Mexico and Colombia, engage local advisors for RFP navigation, and assess Spanish-language hiring needs.",
+      "checklistItems": [
+        "Led with a clear recommendation (primary investment)",
+        "Specified priority markets (Mexico and/or Colombia)",
+        "Quantified the ROIC advantage (40% vs 20%)",
+        "Named at least 2 risks",
+        "Proposed concrete next steps"
+      ]
+    }
+  ]
+}
