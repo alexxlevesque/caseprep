@@ -1,0 +1,98 @@
+[
+  {
+    "id": "roic-basic",
+    "topic": "roic",
+    "title": "Calculate ROIC",
+    "template": "A company invested ${{investment}}M. The investment generates ${{annualProfit}}M in annual profit. The discount rate is {{discountRatePct}}%. What is the ROIC?",
+    "variables": {
+      "investment": { "min": 100, "max": 800, "step": 50 },
+      "annualProfit": { "min": 10, "max": 120, "step": 5 },
+      "discountRatePct": { "min": 8, "max": 15, "step": 1 }
+    },
+    "computeFnKey": "roic-basic",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Value = Annual Profit / Discount Rate = ${{annualProfit}}M / {{discountRatePct}}% = ${{value}}M",
+      "ROIC = Value / Investment - 1 = ${{value}}M / ${{investment}}M - 1 = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "payback-basic",
+    "topic": "payback",
+    "title": "Calculate Payback Period",
+    "template": "A company invests ${{investment}}M in a project generating ${{annualProfit}}M in annual profit. How many years until payback?",
+    "variables": {
+      "investment": { "min": 50, "max": 500, "step": 25 },
+      "annualProfit": { "min": 10, "max": 100, "step": 5 }
+    },
+    "computeFnKey": "payback-basic",
+    "answerFormat": "years",
+    "workingStepsTemplate": [
+      "Payback = Investment / Annual Profit = ${{investment}}M / ${{annualProfit}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "pct-change",
+    "topic": "percentages",
+    "title": "Percentage Change",
+    "template": "A metric changed from ${{oldValue}}M to ${{newValue}}M. What is the percentage change?",
+    "variables": {
+      "oldValue": { "min": 50, "max": 500, "step": 10 },
+      "newValue": { "min": 30, "max": 600, "step": 10 }
+    },
+    "computeFnKey": "pct-change",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "% Change = (New - Old) / Old = (${{newValue}}M - ${{oldValue}}M) / ${{oldValue}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "market-sizing",
+    "topic": "market-sizing",
+    "title": "Market Size Estimation",
+    "template": "A market has {{population}}M potential customers. {{penetrationPct}}% are expected to adopt the product. The average annual spend is ${{price}}. What is the total market size?",
+    "variables": {
+      "population": { "min": 10, "max": 300, "step": 10 },
+      "penetrationPct": { "min": 5, "max": 40, "step": 5 },
+      "price": { "min": 50, "max": 2000, "step": 50 }
+    },
+    "computeFnKey": "market-sizing",
+    "answerFormat": "currency",
+    "workingStepsTemplate": [
+      "Customers = Population × Penetration = {{population}}M × {{penetrationPct}}% = {{customers}}M",
+      "Market Size = Customers × Price = {{customers}}M × ${{price}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "margin-calc",
+    "topic": "margins",
+    "title": "Profit Margin",
+    "template": "A company has ${{revenue}}M in revenue and ${{costs}}M in total costs. What is the profit margin?",
+    "variables": {
+      "revenue": { "min": 100, "max": 2000, "step": 50 },
+      "costs": { "min": 50, "max": 1800, "step": 50 }
+    },
+    "computeFnKey": "margin-calc",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Profit = Revenue - Costs = ${{revenue}}M - ${{costs}}M = ${{profit}}M",
+      "Margin = Profit / Revenue = ${{profit}}M / ${{revenue}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "cagr-basic",
+    "topic": "cagr",
+    "title": "Calculate CAGR",
+    "template": "A market grew from ${{startValue}}B to ${{endValue}}B over {{years}} years. What was the CAGR?",
+    "variables": {
+      "startValue": { "min": 1, "max": 50, "step": 1 },
+      "endValue": { "min": 2, "max": 100, "step": 2 },
+      "years": { "min": 3, "max": 10, "step": 1 }
+    },
+    "computeFnKey": "cagr-basic",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "CAGR = (End / Start)^(1/Years) - 1 = (${{endValue}}B / ${{startValue}}B)^(1/{{years}}) - 1 = {{answerFormatted}}"
+    ]
+  }
+]
