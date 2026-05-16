@@ -42,3 +42,11 @@ next-env.d.ts
 
 # sqlite database
 caseinterviewer.db
+caseinterviewer.db-shm
+caseinterviewer.db-wal
+
+# superpowers brainstorm artifacts
+.superpowers/
+
+# uploaded reference PDFs
+*.pdf
