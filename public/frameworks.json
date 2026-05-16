@@ -1,0 +1,38 @@
+[
+  {
+    "id": "profitability-tree",
+    "name": "Profitability Tree",
+    "trigger": "Use when: client has declining profits, margin compression, or cost issues.",
+    "structure": "Profit = Revenue − Costs\n\nRevenue\n  └── Price × Volume\n        └── Volume = # customers × purchase frequency × avg order size\n\nCosts\n  ├── Fixed costs (rent, salaries, depreciation)\n  └── Variable costs (COGS, shipping, commissions)\n\nAlways clarify: is this a revenue problem, a cost problem, or both? Benchmark against competitors and prior periods."
+  },
+  {
+    "id": "market-entry",
+    "name": "Market Entry Framework",
+    "trigger": "Use when: client is considering entering a new market, geography, or segment.",
+    "structure": "1. Market Attractiveness\n   · Size and growth rate\n   · Profitability of incumbents\n   · Customer needs (unmet?)\n\n2. Competitive Landscape\n   · Who are the players? Concentrated or fragmented?\n   · Barriers to entry (capital, regulation, brand, network effects)\n   · How will incumbents respond?\n\n3. Client Capabilities\n   · Does the client have relevant capabilities?\n   · What would need to be built or acquired?\n\n4. Entry Mode\n   · Greenfield (build), Acquisition (M&A), Joint Venture\n   · Timeline and investment required\n\n5. Financial Attractiveness\n   · Expected ROI / ROIC\n   · Payback period"
+  },
+  {
+    "id": "ma-framework",
+    "name": "M&A / Acquisition Framework",
+    "trigger": "Use when: client is considering acquiring a company or being acquired.",
+    "structure": "1. Strategic Rationale\n   · Why this target? Market share, capabilities, technology, geography?\n   · Alternatives (build vs buy vs partner)?\n\n2. Target Assessment\n   · Financial health (revenue, margins, growth, cash flow)\n   · Competitive position\n   · Key risks (customer concentration, key-person dependency, IP)\n\n3. Synergies\n   · Revenue synergies (cross-sell, new markets)\n   · Cost synergies (shared ops, procurement, headcount)\n   · Be specific and quantify\n\n4. Valuation\n   · DCF, EBITDA multiples, precedent transactions\n   · Is the price fair given synergies?\n\n5. Integration\n   · Culture fit\n   · Day-1 plan, 100-day plan\n   · Key retention risks"
+  },
+  {
+    "id": "porters-five-forces",
+    "name": "Porter's Five Forces",
+    "trigger": "Use when: assessing industry attractiveness or competitive dynamics.",
+    "structure": "1. Threat of New Entrants\n   · Capital requirements, economies of scale, brand loyalty, regulation\n\n2. Bargaining Power of Suppliers\n   · Concentration of suppliers, switching costs, uniqueness of inputs\n\n3. Bargaining Power of Buyers\n   · Buyer concentration, price sensitivity, switching costs\n\n4. Threat of Substitutes\n   · Availability of alternative products, customer propensity to switch\n\n5. Competitive Rivalry\n   · Number and size of competitors, industry growth rate, exit barriers\n\nHigh forces = less attractive industry for incumbents."
+  },
+  {
+    "id": "3cs",
+    "name": "3Cs Framework",
+    "trigger": "Use when: need a quick market overview — company, customers, competitors.",
+    "structure": "Company\n  · Strengths, capabilities, products, financials\n  · What can we do better than anyone else?\n\nCustomers\n  · Who are they? Segment by behavior, need, or value\n  · What do they value? What are their pain points?\n  · How are their needs changing?\n\nCompetitors\n  · Who are the main rivals?\n  · How do we compare on price, quality, service, distribution?\n  · What are their strategic moves?"
+  },
+  {
+    "id": "4ps",
+    "name": "4Ps Marketing Framework",
+    "trigger": "Use when: client has a marketing, pricing, or go-to-market question.",
+    "structure": "Product\n  · What is the product/service? Features, quality, differentiation\n  · Product lifecycle stage?\n\nPrice\n  · Pricing strategy (cost-plus, value-based, competitive)\n  · Price elasticity, discounting, bundling\n\nPlace (Distribution)\n  · Channels: direct, retail, online, wholesale\n  · Geographic coverage\n\nPromotion\n  · Advertising, PR, digital, digital, sales force\n  · Budget allocation, target audience"
+  }
+]
