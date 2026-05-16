@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import type { CaseCard } from '@/types/case'
 import ChecklistSection from './ChecklistSection'
 
-interface CompletePayload {
+export interface CompletePayload {
   selfRating: number
   checklist: boolean[]
   notes: string

@@ -3,14 +3,8 @@
 import { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
 import type { Case } from '@/types/case'
-import CardFlip from '@/components/CardFlip'
+import CardFlip, { type CompletePayload } from '@/components/CardFlip'
 import ProgressBar from '@/components/ProgressBar'
-
-interface CompletePayload {
-  selfRating: number
-  checklist: boolean[]
-  notes: string
-}
 
 export default function PracticePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
@@ -23,29 +17,40 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
   const [cardResults, setCardResults] = useState<CompletePayload[]>([])
 
   useEffect(() => {
-    fetch(`/api/cases/${id}`).then(r => r.json()).then(setCaseData)
-    fetch('/api/sessions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ caseId: id }),
-    }).then(r => r.json()).then(d => setSessionId(d.id))
+    let cancelled = false
+    async function init() {
+      const caseRes = await fetch(`/api/cases/${id}`)
+      const caseJson = await caseRes.json() as Case
+      if (cancelled) return
+      setCaseData(caseJson)
+
+      const sessRes = await fetch('/api/sessions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ caseId: id }),
+      })
+      const sessJson = await sessRes.json() as { id: number }
+      if (cancelled) return
+      setSessionId(sessJson.id)
+    }
+    init()
+    return () => { cancelled = true }
   }, [id])
 
   async function handleCardComplete(payload: CompletePayload) {
-    if (!sessionId || !caseData) return
-    await fetch(`/api/sessions/${sessionId}/cards`, {
+    await fetch(`/api/sessions/${sessionId!}/cards`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         cardIndex,
-        cardType: caseData.cards[cardIndex].type,
+        cardType: caseData!.cards[cardIndex].type,
         selfRating: payload.selfRating,
         checklist: payload.checklist,
         notes: payload.notes,
       }),
     })
     setCardResults(prev => [...prev, payload])
-    if (cardIndex + 1 >= caseData.cards.length) {
+    if (cardIndex + 1 >= caseData!.cards.length) {
       setDone(true)
     } else {
       setCardIndex(i => i + 1)
@@ -62,7 +67,7 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
     })
   }
 
-  if (!caseData) return <div className="text-slate-400 text-sm">Loading...</div>
+  if (!caseData || !sessionId) return <div className="text-slate-400 text-sm">Loading...</div>
 
   if (done) {
     const avg = cardResults.length
