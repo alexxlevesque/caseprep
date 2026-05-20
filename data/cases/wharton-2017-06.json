@@ -1,0 +1,128 @@
+{
+  "id": "wharton-2017-06",
+  "title": "SLS Oil & Gas Engineer Attrition",
+  "number": 6,
+  "casebook": "Wharton 2017",
+  "difficulty": "hard",
+  "firm": "Bain and BCG final round",
+  "type": "operations",
+  "topics": ["operations", "hr-talent", "attrition", "math", "exhibit-analysis"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Our client SLS is one of the world's largest oil and gas services providers, operating in 85 countries and employing about 100,000 people from over 140 countries. They help find, scope, and drill oil and gas for clients ranging from major international oil companies to petrostates such as Saudi Arabia and Russia. Of late, they are seeing a very high attrition rate among their Field Engineer (FE) population across several offices globally. The Mumbai office is one of the most affected. The CEO is concerned and has asked you for advice specifically for the Mumbai office — if the problem can be fixed in Mumbai, a similar fix can be implemented everywhere else. It is a matter of grave urgency for SLS.",
+      "question": "What clarifying questions would you ask before structuring your analysis?",
+      "modelAnswer": "Key clarifying questions:\n\n1. **What do Field Engineers do?** FEs work with specialized oilfield equipment lowered into wells to identify oil and gas deposits. They spend significant time on offshore oil rigs at sea — all Mumbai rigs are offshore. (Most rigs have poor food, internet, and accommodation.)\n\n2. **How is attrition rate defined?** (Number of FEs quitting in a year / Average number of FEs in that year) × 100.\n\n3. **How high is the attrition rate?** 28% in Mumbai in 2016 — similarly high in several other offices globally.\n\n4. **Where are FEs going?** Mostly going to pursue Masters degrees or moving to completely different industries.\n\n5. **What has the CEO requested?** Identify the cause(s) of high attrition and make recommendations on fixing it.\n\n6. **Has this always been the case, or is this a recent trend?** (This sets up the exhibit analysis — attrition has been rising sharply since 2014.)",
+      "checklistItems": [
+        "Asked what Field Engineers do (nature of their work / offshore context)",
+        "Asked how attrition rate is defined",
+        "Confirmed the attrition rate (28% in 2016)",
+        "Asked where departing FEs are going",
+        "Asked whether this is a recent or long-standing trend",
+        "Asked what the CEO has specifically requested"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "framework",
+      "interviewer": "Good questions. Field Engineers work with specialized drilling equipment on offshore oil rigs in Mumbai — all of which are at sea. They spend considerable time offshore; the rigs are often not comfortable. Attrition is 28% in 2016, up sharply from prior years. FEs are mostly going to pursue graduate degrees or leaving the industry entirely. The CEO wants us to identify the root cause and make actionable recommendations for Mumbai. How would you structure your approach?",
+      "question": "Walk me through your framework for diagnosing and solving the attrition problem.",
+      "modelAnswer": "I'd organize this around three work streams:\n\n**1. Understand the business and the life of a Field Engineer in Mumbai**\n- What exactly does SLS do in Mumbai? (Scope, drill, and extract oil and gas from offshore fields.)\n- What is a typical FE's work schedule, rotation cycle, and career path?\n- What compensation and benefits do FEs receive? What makes the role attractive vs. unattractive?\n\n**2. Identify the root causes of high attrition**\n- What information do we need, and how do we collect it? (Face-to-face FE interviews first, then managers and HR; anonymous surveys for sensitive topics)\n- Categorize potential causes:\n  - **Internal (SLS-related)**: Changes in management, offshore rotation length, vacation frequency, promotion/transfer opportunities\n  - **External (non-SLS-related)**: Competing job offers, India startup culture, perceived value of graduate degrees, compensation gap with other sectors\n\n**3. Develop specific, actionable recommendations for Mumbai**\n- Short-term (quick wins that don't require structural change)\n- Long-term (systemic fixes to the staffing model, compensation, and culture)",
+      "checklistItems": [
+        "Organized framework into 3+ distinct buckets",
+        "Included understanding the FE role as the first step",
+        "Distinguished internal vs. external causes of attrition",
+        "Mentioned data collection approach (interviews + surveys)",
+        "Separated short-term from long-term recommendations",
+        "Framework is actionable and specific to the Mumbai context"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "exhibit",
+      "exhibitType": "table",
+      "interviewer": "Good structure. Here is data from the Mumbai office from 2012 to 2016.",
+      "question": "What observations do you draw from this data, and what hypotheses do they generate?",
+      "data": {
+        "exhibit": "Exhibit 2 — Mumbai FE Headcount and Attrition (2012–2016)",
+        "table": {
+          "columns": ["Metric", "2012", "2013", "2014", "2015", "2016"],
+          "rows": [
+            ["# Engineers (start)", "50", "52", "55", "51", "50"],
+            ["# Engineers (end)", "52", "55", "51", "50", "50"],
+            ["# Hired", "6", "6", "5", "2", "6"],
+            ["# Fired", "1", "2", "1", "0", "0"],
+            ["# Quit", "2", "3", "7", "10", "14"],
+            ["# Transferred Out", "4", "3", "1", "0", "0"],
+            ["# Transferred In", "3", "5", "0", "7", "8"],
+            ["Attrition %", "3.9", "5.6", "13.2", "19.8", "28.0"]
+          ]
+        }
+      },
+      "modelAnswer": "**Key observations:**\n\n1. **# Quit is rising sharply**: From 2 in 2012 to 14 in 2016. This is the primary driver of rising attrition and is exactly what the case is about.\n\n2. **# Engineers has been roughly constant (~50)**: Activity hasn't changed (still 25 rigs). The problem isn't a business downturn — it's a people problem.\n\n3. **Transfers Out went to zero**: In 2012–2013, FEs regularly transferred to other offices (4–3/year). This stopped entirely in 2014–2016. This could be demotivating — FEs are stuck in Mumbai with no mobility path.\n\n4. **Transfers In increased significantly**: Mumbai has been importing FEs (7 in 2015, 8 in 2016) to replace those quitting. This creates cohesion issues — new engineers arriving may disrupt team dynamics.\n\n5. **The inflection point is 2014**: Attrition doubled from 5.6% (2013) to 13.2% (2014). Something changed in 2014 — likely a management change.\n\n**Hypotheses:**\n- A 2014 management change made the job less attractive (fewer vacations, less rotation flexibility)\n- No transfer-out options = trapped engineers → poor morale\n- Rapid influx of new transfers-in = weakened team cohesion",
+      "checklistItems": [
+        "Identified that # Quit is the key driver of rising attrition",
+        "Noted that total engineer count is stable (not a business slowdown)",
+        "Identified that transfers out went to zero starting 2014",
+        "Identified the 2014 inflection point as significant",
+        "Generated at least 2 hypotheses about root cause",
+        "Did not confuse attrition rate with headcount level"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "math",
+      "interviewer": "Good observations. Now let's look at how FEs are actually deployed. There are 50 FEs in the Mumbai office. Current utilization is 80% (FEs not on vacation) and effective utilization is 60% (FEs offshore on a rig). Based on these numbers: (a) How many FEs are in the office vs. on a rig vs. on vacation on any given day? (b) Now, given that only 2 FEs are needed in the office, there are 25 rigs each requiring 1 standby FE, and 36% of rigs have operations ongoing requiring an additional FE, what is the maximum effective utilization achievable and how many FEs can be sent on vacation?",
+      "question": "Work through the FE staffing math.",
+      "data": {
+        "totalFEs": 50,
+        "utilization": 0.80,
+        "effectiveUtilization": 0.60,
+        "rigs": 25,
+        "FEsNeededInOffice": 2,
+        "operationsRate": 0.36
+      },
+      "modelAnswer": "**Part (a) — Current situation:**\n- Utilization = 80% → 50 × 80% = 40 FEs at work (not on vacation)\n- Effective utilization = 60% → 50 × 60% = 30 FEs offshore\n- FEs in office: 40 − 30 = **10 in office**\n- FEs on vacation: 50 − 40 = **10 on vacation**\n\n*Problem: 10 FEs in the office when only 2 are needed — managers are keeping too many in reserve.*\n\n**Part (b) — Optimized staffing:**\n- Standby FEs needed: 25 rigs × 1 = **25 FEs offshore (standby)**\n- Operational FEs needed: 25 × 36% = 9 → **9 FEs offshore (operations)**\n- Total offshore required: 25 + 9 = **34 FEs**\n- FEs needed in office: **2**\n- FEs that can be on vacation: 50 − 34 − 2 = **14 FEs**\n- New effective utilization: 34/50 = **68%**\n\n*With proper rotation, 14 FEs can be on vacation vs. only 10 currently — more rest = lower burnout = lower attrition.*",
+      "checklistItems": [
+        "Correctly computed 40 at work and 30 offshore in Part (a)",
+        "Correctly identified 10 in office and 10 on vacation",
+        "Correctly computed 25 standby FEs in Part (b)",
+        "Correctly computed 9 operational FEs (25 × 36%)",
+        "Correctly arrived at 34 FEs offshore and 14 on vacation",
+        "Drew the insight: more vacation capacity = less burnout = lower attrition"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "You've shown that the current staffing model is keeping too many FEs in the office and giving too few vacation days. What other factors — internal and external — are likely driving the 28% attrition rate?",
+      "question": "What are the root causes of high FE attrition in Mumbai?",
+      "modelAnswer": "**Internal (SLS-related) causes:**\n\n1. **2014 management change to risk-averse leadership**: The new management keeps more FEs on reserve rather than rotating them to vacation. This reduces bonus eligibility (FEs only earn offshore bonus when on a rig) and creates frustration.\n\n2. **Senior FEs bearing disproportionate offshore burden**: Exhibit 5 shows Sr. FEs are spending 3–4+ weeks offshore much more than Jr. FEs. This is because the new risk-averse management doesn't trust Jr. FEs' competency, so Sr. FEs do longer stretches. Both are unhappy — Sr. FEs are burnt out, Jr. FEs aren't getting the experience or bonus.\n\n3. **No transfer-out opportunities**: Previously, FEs could transfer to other global offices. Since 2014 that's been zero — FEs feel trapped. Career mobility was a key attraction of SLS.\n\n4. **Influx of new recruits disrupts team cohesion**: As more FEs quit, SLS imports transfers-in. New arrivals don't integrate well with the existing team, further weakening morale.\n\n**External (non-SLS-related) causes:**\n\n1. **India's booming startup culture**: Plenty of exit opportunities for talented engineers — tech startups, consulting, and other industries actively recruit from engineering talent pools.\n\n2. **Compensation gap narrowing**: SLS historically offered strong compensation and global travel as differentiators. As other sectors' comp has risen, the SLS premium has shrunk.\n\n3. **Graduate school pull**: FEs (hired from top engineering schools) are reconsidering grad school after 1–2 years in the field.",
+      "checklistItems": [
+        "Identified 2014 management change as a root cause",
+        "Identified vacation/bonus reduction as a mechanism of dissatisfaction",
+        "Identified senior FE overwork (Exhibit 5 insight) as a cause",
+        "Identified loss of transfer opportunities as a demotivating factor",
+        "Identified at least 2 external causes (startup culture, compensation gap, grad school)",
+        "Organized response into internal vs. external categories"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The CEO is about to join the call. What are your recommendations?",
+      "question": "Give your recommendations for reducing FE attrition in Mumbai.",
+      "modelAnswer": "**Recommendation: A two-phase intervention targeting the staffing model and culture.**\n\n**Short-term actions (within 3–6 months):**\n1. **Train management** to shift the offshore staffing system from people-driven (manager discretion) to process-driven: swap FEs predictably after their optimal 3-week offshore stint, regardless of manager preference.\n2. **Restore vacation rotation**: Our staffing analysis shows 14 FEs can be on vacation at any time (vs. 10 today). Immediately implement this — more vacation → more bonus eligibility → better morale.\n3. **Improve offshore quality of life**: Send food, games, and entertainment supplies from town to the rigs. Low-cost, high-impact morale booster.\n4. **Team-building activities** in Mumbai to rebuild cohesion between old and new FEs.\n\n**Long-term actions (6–18 months):**\n1. **Restore the transfer-out program**: Allowing FEs to rotate to other global offices was a major differentiator. Its removal is demotivating. Resume this immediately.\n2. **Revamp Jr. FE competency development**: The risk-averse management doesn't trust Jr. FEs — invest in training and certification so management becomes comfortable sending them offshore, relieving Sr. FE burnout.\n3. **Revisit compensation**: Benchmark SLS Mumbai FE pay against market alternatives — startup offers, consulting, competing oil services firms. Close any gap.\n4. **Improve recruiting alignment**: Ensure new hires understand the offshore lifestyle before joining — set realistic expectations at campus recruiting to reduce early attrition.",
+      "checklistItems": [
+        "Led with a clear recommendation (two-phase approach or similar structure)",
+        "Recommended making the rotation system process-driven (not people-driven)",
+        "Recommended restoring the vacation rotation based on the staffing math",
+        "Recommended restoring the transfer-out program",
+        "Addressed Jr. FE competency development to relieve Sr. FE burden",
+        "Included a compensation benchmarking recommendation",
+        "Separated short-term from long-term actions"
+      ]
+    }
+  ]
+}

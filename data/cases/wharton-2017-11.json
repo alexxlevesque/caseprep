@@ -1,0 +1,177 @@
+{
+  "id": "wharton-2017-11",
+  "title": "Phighting Phillies",
+  "number": 11,
+  "casebook": "Wharton 2017",
+  "difficulty": "hard",
+  "firm": "Bain",
+  "type": "acquisition",
+  "topics": ["acquisition", "private-equity", "valuation", "math", "synergies", "exhibit-analysis"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Our client, Alpha Capital, is a private equity firm considering buying the Philadelphia Phillies. The current team owners approached Alpha about purchasing the team for $1.1 billion. Alpha engaged our firm in the due diligence process and wants us to help them understand: A. What is the team worth? B. Should they make this investment?",
+      "question": "What clarifying questions would you ask before structuring your analysis?",
+      "modelAnswer": "Key clarifying questions and answers:\n\n1. **Fund structure and previous investments?** This asset will go into a new fund without hold period constraints or previous investments.\n\n2. **Hurdle rates, hold periods, other constraints?** Assume these are not major issues.\n\n3. **What is the motivation for the deal?** Alpha wants to maximize its investment — and assume fund leadership are avid Phillies fans who also want the team to succeed.\n\n4. **How does the team make money?** (Brainstorm first, then confirm.) Major revenue streams: ticket sales, concessions, merchandise, media rights, and advertising/sponsorships.\n\n5. **What are the major cost drivers?** (Brainstorm first, then confirm.) Major costs: player salaries, front office costs, sales & advertising, and stadium/facility costs.\n\n6. **Does the team own or lease its stadium?** The city of Philadelphia owns the stadium — the team pays annual leasing costs.\n\n7. **Are there other potential bidders?** Assume no other bidders — Alpha has first shot at buying the team.",
+      "checklistItems": [
+        "Asked about fund structure and constraints",
+        "Brainstormed revenue streams before being told (ticket sales, concessions, merch, media, sponsorships)",
+        "Brainstormed cost drivers before being told (player salaries, front office, S&A, stadium)",
+        "Asked about stadium ownership",
+        "Asked whether other bidders exist"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "framework",
+      "interviewer": "Good questions. No fund constraints. Motivation is maximizing investment while hoping the team succeeds. Revenue comes from tickets, concessions, merchandise, media rights, and sponsorships. Costs include player salaries, front office, sales & advertising, and stadium/facility. The city owns the stadium. No other bidders. How would you structure this analysis?",
+      "question": "Walk me through your framework for answering: What is the team worth, and should Alpha buy it?",
+      "modelAnswer": "I'd structure this around two core questions:\n\n**Part 1: What is the team worth?**\n- *Revenues*: Ticket sales (# seats × fill rate × price by category), concessions (fans/game × spend/fan × games), merchandise (items sold × price × royalty), media rights (local + national), sponsorships/advertising\n- *Costs*: Player salaries, front office costs, sales & advertising, stadium/facility leasing\n- *EBIT*: Revenue − Costs\n- *Valuation*: EBIT / Discount Rate (assuming no taxes and perpetuity cash flows)\n- *Compare to asking price*: Is the base valuation above or below $1.1B?\n- *Synergies*: Identify cost and revenue synergies that could increase the valuation above the asking price\n\n**Part 2: Should Alpha make the investment?**\n- *Management team considerations*: Quality of existing team management; would Alpha need to replace leadership?\n- *Ability to execute*: Does Alpha have capital and expertise to run a sports enterprise? Can it achieve the synergies identified?\n- *Other factors*: Fan-base reaction to PE ownership; MLB/league approval; tension between profit maximization and winning; regulatory/legal risks; are there better investment alternatives for this capital?",
+      "checklistItems": [
+        "Structured analysis into two clear parts: valuation + investment decision",
+        "Identified all major revenue streams (ticket, concessions, merch, media, sponsorships)",
+        "Identified all major cost drivers (player salaries, front office, S&A, stadium)",
+        "Mentioned synergies as a path to bridging valuation gap",
+        "Addressed qualitative investment considerations (management, execution, fan reaction, league approval)"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "math",
+      "interviewer": "Let's build the valuation. Here is the revenue and cost data for the Phillies.",
+      "question": "Calculate the team's base valuation (before synergies) and compare it to the $1.1B asking price.",
+      "data": {
+        "revenues": {
+          "ticketSales": {
+            "stadiumSeats": 50000,
+            "standardSeatShare": 0.90,
+            "standardFillRate": 0.5556,
+            "standardSeatPrice": 25,
+            "premiumSeatShare": 0.10,
+            "premiumFillRate": 0.75,
+            "premiumSeatPrice": 100,
+            "homeGames": 80,
+            "totalTicketRevenue": 80000000
+          },
+          "concessions": {
+            "fansPerGame": 20000,
+            "spendPerFan": 25,
+            "homeGames": 80,
+            "totalConcessions": 40000000
+          },
+          "merchandise": 10000000,
+          "mediaRights": 120000000,
+          "sponsorshipsAds": 50000000,
+          "totalRevenue": 300000000
+        },
+        "costs": {
+          "playerSalaries": 110000000,
+          "frontOfficeCosts": 20000000,
+          "salesAdvertising": 50000000,
+          "stadiumFacility": 20000000,
+          "totalCosts": 200000000
+        },
+        "valuation": {
+          "annualEBIT": 100000000,
+          "taxes": 0,
+          "discountRate": 0.10,
+          "baseValuation": 1000000000
+        }
+      },
+      "modelAnswer": "**Revenue breakdown:**\n- Ticket Sales: $80M\n- Concessions: $40M\n- Merchandise: $10M\n- Media Rights (local $40M + national $80M): $120M\n- Sponsorships/Ads: $50M\n- **Total Revenue = $300M**\n\n**Cost breakdown:**\n- Player Salaries: $110M\n- Front Office: $20M\n- Sales & Advertising: $50M\n- Stadium/Facility: $20M\n- **Total Costs = $200M**\n\n**Valuation:**\n- Annual EBIT = $300M − $200M = **$100M**\n- Taxes = $0 (as instructed)\n- Discount Rate = 10%\n- Valuation = EBIT / Discount Rate = $100M / 10% = **$1.0 billion**\n\n**Conclusion**: The base valuation of $1.0B is **below** the asking price of $1.1B. At current operations, Alpha would be overpaying by $100M. The deal only makes sense if synergies bring the total value above $1.1B.",
+      "checklistItems": [
+        "Correctly computed total revenue of $300M",
+        "Correctly computed total costs of $200M",
+        "Correctly computed EBIT of $100M",
+        "Correctly applied valuation formula: EBIT / discount rate = $100M / 10% = $1.0B",
+        "Identified that $1.0B < $1.1B asking price → synergies needed",
+        "Did not confuse revenue with valuation"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "exhibit",
+      "exhibitType": "charts",
+      "interviewer": "The valuation at $1.0B is below the $1.1B asking price. Let me share two exhibits: a bar chart showing potential revenue boosts as % of total revenue, and a cost comparison chart between the Phillies and league benchmarks. What synergies do you see, and how do they change the valuation?",
+      "question": "Analyze the synergy exhibits and calculate the new total valuation.",
+      "data": {
+        "costSynergies": {
+          "exhibit": "Team Cost Comparison vs. League Benchmark ($MM)",
+          "philliesCosts": {
+            "playerSalaries": 110,
+            "frontOfficeCosts": 20,
+            "salesAdvertising": 50,
+            "stadiumFacility": 20
+          },
+          "leagueBenchmark": {
+            "playerSalaries": 110,
+            "frontOfficeCosts": 20,
+            "salesAdvertising": 40,
+            "stadiumFacility": 20
+          },
+          "savingsPotential": {
+            "salesAdvertising": 10000000,
+            "totalCostSynergies": 10000000
+          }
+        },
+        "revenueSynergies": {
+          "exhibit": "Potential Boost to Total Revenues",
+          "toplineRevenue": 300000000,
+          "initiatives": [
+            { "name": "Dynamic Ticket Pricing", "boostPct": 0.04, "incrementalRevenue": 12000000 },
+            { "name": "Renegotiated Local Media Deal", "boostPct": 0.03, "incrementalRevenue": 9000000 },
+            { "name": "Attract Higher Value Sponsors", "boostPct": 0.02, "incrementalRevenue": 6000000 },
+            { "name": "Revamped Concessions Offerings", "boostPct": 0.01, "incrementalRevenue": 3000000 }
+          ],
+          "totalRevenueSynergies": 30000000
+        },
+        "valuationImpact": {
+          "totalSynergies": 40000000,
+          "discountRate": 0.10,
+          "valuationImpact": 400000000,
+          "newTotalValuation": 1400000000
+        }
+      },
+      "modelAnswer": "**Cost synergies:**\n- The cost comparison chart shows the Phillies spend $50M on Sales & Advertising vs. the league benchmark of $40M.\n- Cost savings potential: **$10M per year**\n- Other cost lines (player salaries, front office, stadium) are in line with benchmark — no savings opportunity there.\n\n**Revenue synergies:**\n- Dynamic ticket pricing: +4% × $300M = **$12M/yr**\n- Renegotiated local media deal: +3% × $300M = **$9M/yr**\n- Attract higher-value sponsors: +2% × $300M = **$6M/yr**\n- Revamped concessions: +1% × $300M = **$3M/yr**\n- Total revenue synergies: **$30M/yr**\n\n**Total synergies**: $10M (cost) + $30M (revenue) = **$40M per year**\n\n**Valuation impact**: $40M / 10% = **$400M**\n\n**New total valuation**: $1,000M + $400M = **$1.4 billion**\n\nWith synergies, the team is worth $1.4B — well above the $1.1B asking price. The deal becomes attractive.",
+      "checklistItems": [
+        "Spotted the S&A overspend as the only cost synergy ($10M)",
+        "Connected the revenue % boosts to actual dollar amounts using topline revenue",
+        "Correctly calculated total revenue synergies: $30M/yr",
+        "Correctly calculated total synergies: $40M/yr",
+        "Correctly calculated valuation uplift: $40M / 10% = $400M",
+        "Correctly calculated new total valuation: $1.4B > $1.1B asking price"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "The math looks compelling. But what other factors should Alpha consider before making this investment decision?",
+      "question": "What qualitative considerations should inform Alpha's investment decision beyond the valuation?",
+      "modelAnswer": "Even though the synergy-adjusted valuation ($1.4B) exceeds the asking price ($1.1B), Alpha needs to evaluate whether it can actually capture those synergies — and whether there are risks that could erode the investment.\n\n**Management team considerations:**\n- What is the quality of the existing Phillies management team? Would Alpha need to replace leadership?\n- Does Alpha have the operational expertise to run a professional sports franchise?\n\n**Ability to execute synergies:**\n- Dynamic pricing requires technology and fan acceptance — if the Phillies fan base is price-sensitive, pushing prices higher could reduce attendance\n- Renegotiating media deals is complex and may require favorable market timing\n- The $30M revenue synergy estimate assumes Alpha's strategic moves succeed — execution risk is real\n\n**Other factors:**\n- **Fan-base reaction to PE ownership**: Fans often distrust financial buyers; there could be a PR backlash that hurts brand value and attendance\n- **MLB league approval**: The league must approve the sale; if they view Alpha unfavorably, the deal may not close\n- **Tension between ROI and winning**: A PE firm maximizing profits may cut player salary spending, which could hurt team performance — and fan engagement\n- **Macro risk**: Baseball's popularity is under pressure from changing entertainment preferences; long-term demand for the sport is uncertain\n- **Opportunity cost**: Are there better investment opportunities for Alpha's capital with similar returns at lower execution risk?",
+      "checklistItems": [
+        "Addressed management quality and Alpha's ability to run a sports enterprise",
+        "Noted execution risk for the synergies (especially revenue synergies)",
+        "Raised fan-base reaction to PE ownership as a brand risk",
+        "Raised MLB league approval as a deal risk",
+        "Noted the tension between PE profit maximization and winning",
+        "Mentioned macro risk (baseball's declining popularity) as a downside scenario"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The MD at Alpha Capital is walking down the hallway and wants to know your initial findings and recommendation. What do you tell her?",
+      "question": "Give your recommendation to the MD at Alpha Capital.",
+      "modelAnswer": "**Recommendation: Alpha Capital should proceed with acquiring the Phillies — at $1.1B, the deal offers compelling value, but only if Alpha can execute the identified synergies.**\n\n**Bottom line on valuation**: The team's base value at current operations is approximately $1.0B — slightly below the $1.1B asking price. However, with synergies of $40M per year ($10M in S&A cost savings + $30M in revenue initiatives including dynamic pricing, renegotiated media deals, and premium sponsorships), the adjusted valuation reaches $1.4B — a $300M margin above the asking price.\n\n**Why the deal makes sense:**\n- The price is reasonable relative to our synergy-adjusted value\n- Alpha has first-mover advantage with no competing bidders\n- Revenue synergies are tied to operational initiatives within Alpha's control (pricing, media, sponsorships)\n\n**Key risks to manage:**\n1. **League approval**: MLB must approve the sale — Alpha should begin informal outreach immediately\n2. **Fan perception**: A PE buyer may face public skepticism; a public commitment to the team's success (including player investment) would help\n3. **Synergy execution**: The $30M revenue synergy estimate must be pressure-tested — I recommend a deeper feasibility study on the media renegotiation specifically\n\n**Recommended next steps**: Complete legal and financial due diligence; engage MLB on the approval process; develop a 100-day integration plan to begin capturing cost synergies immediately.",
+      "checklistItems": [
+        "Led with a clear recommendation (yes, buy the Phillies)",
+        "Referenced the $1.4B adjusted valuation vs. $1.1B asking price",
+        "Named the synergies correctly ($10M cost + $30M revenue = $40M/yr → $400M uplift)",
+        "Named at least 2 key risks (league approval, fan perception, synergy execution)",
+        "Proposed concrete next steps",
+        "Structured answer: recommendation → rationale → risks → next steps"
+      ]
+    }
+  ]
+}

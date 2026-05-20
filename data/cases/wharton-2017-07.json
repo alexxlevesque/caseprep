@@ -1,0 +1,69 @@
+{
+  "id": "wharton-2017-07",
+  "title": "Salt Lake City Airport",
+  "number": 7,
+  "casebook": "Wharton 2017",
+  "difficulty": "easy",
+  "firm": "Parthenon-EY",
+  "type": "market-sizing",
+  "topics": ["brainstorming", "market-sizing", "math", "stakeholder-analysis"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Our company is pitching to the President of the Salt Lake City International Airport next week, hoping to earn a big consulting contract. We know that SLC Airport is the only commercial airport for more than 2.5 million people in the greater Salt Lake City area. It is the 21st busiest airport in the nation with 650 flights per day, and is owned entirely by the City of Salt Lake. The Airport President is a mayor-appointed individual who oversees all aspects of the airport's operation. Note: this case is structured differently from a typical consulting case — it does not call for a traditional framework. You should still be structured, get the math right, and come up with a clear final recommendation.",
+      "question": "Off the top of your head, what are the most important things that the Airport President must think about?",
+      "modelAnswer": "The Airport President is accountable to multiple stakeholders, and a good answer covers all three of the most important ones:\n\n**1. Passengers** — If passengers have a bad experience (long waits, poor facilities, high fares), they will choose alternatives: drive to a different airport, take the train, or simply not travel. Visitors might choose to ski in Colorado instead of Utah. A poor passenger experience directly undermines the airport's revenue and the city's tourism economy.\n\n**2. Airlines** — Airlines are the supply side of the airport's business. If airlines are unhappy with fees, facilities, or passenger volumes, they will reduce flights to SLC. Fewer flights means higher fares (due to less competition), fewer passengers, and a weaker local economy overall.\n\n**3. Airport Vendors** — Vendors (restaurants, retail, ground transport) affect the passenger experience and represent local jobs and lease revenue. The Airport President acts like a shopping mall manager — responsible for ensuring there is the right mix and number of vendors, and for mediating between them.\n\n*Other valid stakeholders: Security/TSA, City Tourism Board, City Chamber of Commerce.*",
+      "checklistItems": [
+        "Identified passengers as a key stakeholder with clear downstream impact",
+        "Identified airlines as a key stakeholder and explained the dependency",
+        "Identified airport vendors as a third stakeholder",
+        "Structured the answer (not just a list — explained why each stakeholder matters)",
+        "Used airport-specific terminology (passengers, not customers; terminal, not store)"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "math",
+      "interviewer": "Good. Now let's do some sizing. How many passengers does the SLC Airport handle annually? For this question: a passenger is someone who passes through the airport to board or deplane an aircraft. Layover passengers count as one. Taxi drivers and people picking up friends are not passengers. Pilots and TSA workers are not passengers. A family of four flying roundtrip counts as 8 passenger visits (4 departures + 4 arrivals).",
+      "question": "Estimate the number of annual passengers at SLC Airport.",
+      "modelAnswer": "**Approach 1 — Flights-based (simpler):**\n\nWe know there are 650 flights per day. Assume:\n- Average plane: 30 rows × 6 seats = 180 seats\n- Average load factor: ~75% full\n\n365 days × 650 flights × 180 seats × 75% = **~32–34 million passengers per year**\n\n---\n\n**Approach 2 — Population-based (shows more structure):**\n\nStart with 2.5M people in the SLC area. Segment by travel frequency:\n1. **Frequent business travelers (10%)**: 40 years of workers age 25–65 × 25K people/year × 45 roundtrips/year × 2 = ~9M\n2. **Occasional work travelers (10%)**: 40 × 25K × 12 roundtrips × 2 = ~2.4M\n3. **Families and vacation travelers (80% of workers)**: 40 × 25K × 8 people × 1 trip × 2 = ~1.6M + kids 20 × 25K × 8 × 1 × 2 = ~1M\n4. **Senior travelers (65+)**: 35 × 25K × 1 trip × 2 = ~1.75M\n\nResident total: ~15.75M → double for visitors (planes are ~half local, half visitors) = **~31.5M passengers per year**\n\n**Sanity check**: Both approaches converge on ~32–34M passengers per year. ✓",
+      "checklistItems": [
+        "Chose a structured approach (flights-based or population-based, not guessing)",
+        "Correctly applied a load factor (~75–80%) to seat capacity",
+        "Arrived at a reasonable answer in the 25–40M range",
+        "Remembered to count both departures AND arrivals (roundtrips = ×2)",
+        "Stated assumptions explicitly"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "qualitative",
+      "interviewer": "Good. Now, the Airport President is thinking about which of two projects to undertake. Construction costs have been funded by municipal bonds, so you can ignore them. Option A: open a sit-down restaurant in the terminal. Option B: open a lounge in the terminal. The airport currently has neither. The restaurant would charge $15 per visitor and cost $6 per visitor to operate. The lounge would charge $30 per visitor and cost $12 per visitor to operate.",
+      "question": "Which project should the Airport President pursue — the restaurant or the lounge?",
+      "modelAnswer": "**Financial analysis:**\n- **Restaurant**: $15 revenue − $6 cost = **$9 profit per visitor**\n- **Lounge**: $30 revenue − $12 cost = **$18 profit per visitor**\n\nThe lounge is twice as profitable per visitor. The restaurant would only be more profitable overall if it attracted more than twice as many visitors as the lounge — unlikely given the airport's passenger profile.\n\n**Stakeholder analysis:**\n\n- **Passengers**: SLC serves primarily business travelers (21st busiest US airport serving a major corporate hub). Business travelers strongly prefer a premium lounge with reliable Wi-Fi, quiet seating, and drinks over a sit-down restaurant with longer service times.\n\n- **Existing vendors**: The airport likely already has quick-service and fast-casual food vendors. A sit-down restaurant competes directly with these vendors and would create conflict. A lounge does not — it serves a different use case (premium rest and productivity, not a meal).\n\n**Recommendation: Build the lounge.**\n- $18 profit/visitor vs. $9 for restaurant\n- Better aligned with the business traveler majority\n- Doesn't cannibalize existing food vendors\n- Enhances the premium perception of SLC Airport, which helps attract and retain airlines",
+      "checklistItems": [
+        "Computed profit per visitor for both options ($9 restaurant, $18 lounge)",
+        "Identified that the lounge is twice as profitable per user",
+        "Referenced the business traveler passenger profile of SLC",
+        "Noted that the restaurant could cannibalize existing quick-service vendors",
+        "Made a clear recommendation (lounge) with reasoning from both financials and stakeholders"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "recommendation",
+      "interviewer": "The Airport President has just arrived. Sum up your pitch: why should SLC Airport hire your firm, and what's your top recommendation for the airport?",
+      "question": "Give your closing pitch and final recommendation to the Airport President.",
+      "modelAnswer": "**Opening:**\nSLC Airport serves 2.5 million residents as their sole commercial airport and handles approximately 32–34 million passenger visits per year. Managing this requires balancing the needs of three critical stakeholders: passengers, airlines, and vendors.\n\n**Top recommendation:**\nBuild a premium lounge in the terminal — not a sit-down restaurant. A lounge generates $18 profit per visitor versus $9 for a restaurant, aligns with your business traveler majority, and doesn't cannibalize your existing food vendors. It also improves the overall passenger experience, which helps attract airlines and boosts the city's tourism reputation.\n\n**Why hire us:**\nWe bring experience with airports and public-sector clients, understand the unique stakeholder dynamics of publicly owned transportation infrastructure, and can help the Airport President balance the competing interests of passengers, airlines, and vendors to maximize both revenue and service quality.\n\n**Proposed next steps:**\n1. Conduct a passenger survey to confirm business vs. leisure traveler split\n2. Model lounge revenue at several price points and capacity assumptions\n3. Engage existing vendors to identify areas of tension and opportunity\n4. Develop a long-term concessions strategy tied to passenger growth projections",
+      "checklistItems": [
+        "Led with a clear top recommendation (lounge, not restaurant)",
+        "Referenced the $18 vs. $9 profit-per-visitor data point",
+        "Used airport-specific language throughout (passengers, terminal, concessions)",
+        "Made a case for why the consulting firm should be hired",
+        "Proposed at least 2 concrete next steps",
+        "Tied recommendation back to the Airport President's key stakeholders"
+      ]
+    }
+  ]
+}

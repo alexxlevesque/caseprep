@@ -1,0 +1,130 @@
+{
+  "id": "wharton-2017-05",
+  "title": "Chicago Parking Meters",
+  "number": 5,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium",
+  "firm": "Not specified",
+  "type": "market-sizing",
+  "topics": ["market-sizing", "valuation", "math", "brainstorming"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "The city of Chicago is planning to sell the rights to all of its parking meters for 20 years to a private company. In exchange for a lump sum, the city would turn over the operation and revenue stream of its approximately 40,000 parking spaces to a private operator. The deal brings in cash for a cash-strapped city and relieves it of the responsibility of maintaining meters. The city will use a competitive bidding process with the highest bidder winning. Bidders will set their own parking prices and bear the risk of consumer demand. The contract also requires a high-tech upgrade replacing old coin-based meters with new machines that accept cash, credit, and debit cards. Your consulting firm has been hired by the company Parking GenNext to give a reasonable price for the rights to collect all money from Chicago's meters over a 20-year timeframe to win the competitive bid. Note: money collected on parking tickets goes to the city, not the company.",
+      "question": "How would you approach estimating a reasonable bid price?",
+      "modelAnswer": "This is a valuation problem. To determine a bid price, I'd estimate the present value of 20-year free cash flows:\n\n**Revenue side:** Estimate total annual revenue from the meters. I'll need assumptions on: (1) the number and pricing of meters by zone, (2) daily usage hours per meter, and (3) annual days of operation.\n\n**Cost side:** Two components:\n- **One-time investment**: upgrading 40,000 spaces to new multi-space card-accepting machines\n- **Recurring operating costs**: labor to monitor/enforce the system + ongoing maintenance\n\n**Bid price = 20-yr Revenue − 20-yr Costs** (ignoring time value of money for simplicity, unless asked to apply a discount rate)\n\nKey clarifying questions:\n1. Is there a pricing structure for the meters already, or do we set prices? (We set prices.)\n2. Do parking ticket revenues come to us? (No — those go to the city.)\n3. Are we expected to apply a discount rate? (Ignore for base case; growth rate = 0.)",
+      "checklistItems": [
+        "Framed this as a revenue minus cost problem",
+        "Identified need to estimate annual revenues by zone/ring",
+        "Identified both one-time capex and recurring opex as cost components",
+        "Asked at least one clarifying question (pricing control, ticket revenue, discount rate)",
+        "Proposed bid price = NPV of 20-yr free cash flows"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "math",
+      "interviewer": "Good structure. Here's the pricing information. Chicago has a three-ring meter structure. Ring I (Downtown Loop) has 3% of meters at $3/hour. Ring II (Central Business District) has 16% of meters at $2/hour. Ring III (Suburbs and Other) has 81% of meters at $1/hour. Total meters: 40,000. For usage, assume Ring I runs 12 hours per day, Ring II runs 8 hours per day, and Ring III runs 4 hours per day. Assume 30 days per month and 12 months per year. What is the total annual revenue from the meters?",
+      "question": "Calculate the total annual parking meter revenue.",
+      "data": {
+        "totalMeters": 40000,
+        "rings": [
+          { "name": "Ring I — Downtown Loop", "sharePct": 3, "meters": 1200, "pricePerHour": 3, "hoursPerDay": 12 },
+          { "name": "Ring II — Central Business District", "sharePct": 16, "meters": 6400, "pricePerHour": 2, "hoursPerDay": 8 },
+          { "name": "Ring III — Suburbs + Others", "sharePct": 81, "meters": 32400, "pricePerHour": 1, "hoursPerDay": 4 }
+        ],
+        "daysPerMonth": 30,
+        "monthsPerYear": 12,
+        "formula": "Annual Revenue = meters × price/hr × hrs/day × 30 days × 12 months"
+      },
+      "modelAnswer": "**Annual revenue by ring (meters × $/hr × hrs/day × 360 days):**\n\n- **Ring I**: 1,200 × $3 × 12 × 360 = **$15,552,000**\n- **Ring II**: 6,400 × $2 × 8 × 360 = **$36,864,000**\n- **Ring III**: 32,400 × $1 × 4 × 360 = **$46,656,000**\n\n**Total annual revenue: ~$99M → round to $100M/year**\n\n**20-year revenue (0% growth): $99M × 20 = ~$2 billion**",
+      "checklistItems": [
+        "Correctly computed Ring I meters (1,200 = 3% × 40,000)",
+        "Correctly computed Ring II meters (6,400 = 16% × 40,000)",
+        "Correctly computed Ring III meters (32,400 = 81% × 40,000)",
+        "Correctly computed annual revenue for each ring",
+        "Arrived at ~$99M total annual revenue",
+        "Correctly computed 20-year revenue (~$2B at 0% growth)"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "math",
+      "interviewer": "Good. Now estimate the costs. There are two categories: a one-time capital investment to upgrade the meters, and recurring annual operating expenses. For the upgrade: the 40,000 old single-space coin meters will be replaced by new multi-space machines, each capable of handling 8 spaces, at $20,000 per machine including installation. For recurring costs: assume one worker is needed per 10 new machines, paid $10/hour for 8 hours/day, 300 days/year. Assume ongoing maintenance of $200 per machine per month.",
+      "question": "Calculate the total 20-year cost (one-time capex + recurring opex).",
+      "data": {
+        "oneTime": {
+          "oldSpaces": 40000,
+          "spacesPerNewMachine": 8,
+          "newMachines": 5000,
+          "costPerMachine": 20000
+        },
+        "recurring": {
+          "spacesPerWorker": 80,
+          "numberOfWorkers": 500,
+          "hourlyWage": 10,
+          "hoursPerDay": 8,
+          "daysPerYear": 300,
+          "maintenanceCostPerMachinePerMonth": 200,
+          "months": 12
+        }
+      },
+      "modelAnswer": "**One-time capital investment:**\n- New machines needed: 40,000 spaces ÷ 8 = 5,000 machines\n- Cost: 5,000 × $20,000 = **$100,000,000**\n\n**Recurring annual costs:**\n- Maintenance: 5,000 machines × $200/month × 12 = **$12,000,000/yr**\n- Labor: 5,000 ÷ 10 = 500 workers × $10/hr × 8 hrs × 300 days = **$12,000,000/yr**\n- Total annual operating cost: **$24,000,000/yr**\n\n**20-year recurring cost: $24M × 20 = $480,000,000**\n\n**Total 20-year cost: $100M + $480M = $580M → round to ~$600M**",
+      "checklistItems": [
+        "Correctly computed 5,000 new machines (40,000 ÷ 8)",
+        "Correctly computed one-time capex ($100M)",
+        "Correctly computed annual maintenance ($12M)",
+        "Correctly computed annual labor ($12M)",
+        "Correctly computed 20-year recurring costs ($480M)",
+        "Arrived at ~$580M total 20-year costs"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "math",
+      "interviewer": "Good work. Now put it together.",
+      "question": "What is the maximum bid price Parking GenNext should submit?",
+      "data": {
+        "twentyYrRevenue": 1981440000,
+        "twentyYrCosts": 580010200,
+        "pvFreecashFlows": 1401429800
+      },
+      "modelAnswer": "**20-year Revenue: ~$2.0B**\n**20-year Costs: ~$0.6B**\n**Net PV of Free Cash Flows: ~$1.4B**\n\nParking GenNext's maximum rational bid is approximately **$1.4 billion** — anything above this destroys value over the contract period.\n\n*Context check*: In 2008, Chicago actually sold its parking meter rights for 75 years (not 20) to a private company for $1.15 billion. That deal was widely criticized as undervalued. Our estimate for a 20-year deal is $1.4B, which is consistent with the city having been substantially underpaid in the real transaction.",
+      "checklistItems": [
+        "Correctly arrived at ~$1.4B maximum bid price",
+        "Stated that this is the NPV of 20-year free cash flows",
+        "Noted that any bid above $1.4B destroys value",
+        "Did not confuse revenue with bid price"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "Now let's think more creatively. Beyond the base case, how might Parking GenNext maximize revenue or manage risk over the 20-year period?",
+      "question": "Brainstorm creative ways to increase revenue or reduce risk from the parking meter contract.",
+      "modelAnswer": "**Revenue enhancement ideas:**\n\n1. **Surge/dynamic pricing**: Charge higher rates during peak hours (lunch, evening) and lower rates at off-peak times. This is already done in some cities and maximizes revenue from high-demand periods.\n\n2. **Subscription or permit leasing**: Sell monthly or annual parking passes to commuters or nearby businesses, providing predictable recurring revenue independent of daily usage variability.\n\n3. **Data monetization**: The new smart meters collect rich data on parking availability and usage patterns. This data could be sold to retailers, real estate developers, or city planners.\n\n4. **Mobile app and technology services**: A parking availability app (notifying drivers of open spots and alerting when time is expiring) could be offered as a premium service and improve utilization.\n\n**Risk mitigation ideas:**\n\n1. **Demand risk hedging**: Population growth, preferences (biking, transit), or autonomous vehicles could reduce parking demand. Negotiate a floor on ticket volumes with the city or build in contract renegotiation triggers.\n\n2. **Reputation management**: As a privatized city service, public perception matters. Invest in service quality (fast meter maintenance, easy payment UX) to avoid political backlash that could threaten the contract.",
+      "checklistItems": [
+        "Proposed at least one dynamic/surge pricing idea",
+        "Proposed at least one alternative revenue stream (subscriptions, data, apps)",
+        "Addressed demand risk or long-term trend risk (autonomy, transit shifts)",
+        "Mentioned reputation/public image as a risk factor for a privatized city service",
+        "Structured brainstorm into at least two categories (revenue vs. risk)"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The client needs a final recommendation before submitting the bid tomorrow.",
+      "question": "What is your recommendation to Parking GenNext on the bid?",
+      "modelAnswer": "**Recommendation: Bid approximately $1.2–1.3 billion.**\n\nOur analysis shows the 20-year NPV of free cash flows is approximately $1.4 billion. I recommend bidding slightly below the maximum ($1.2–1.3B) to retain a margin of safety against:\n1. Demand-side risk (autonomous vehicles, shifting commuter preferences, economic downturns)\n2. Cost overruns in the meter upgrade program\n3. Regulatory risk (city may force price caps or renegotiate if public backlash occurs)\n\n**Revenue upside opportunities** — surge pricing, subscription passes, and technology services — could lift actual NPV above $1.4B, providing additional cushion if we win at $1.2–1.3B.\n\n**Next steps:**\n1. Validate meter pricing assumptions with current Chicago parking data\n2. Get firm quotes from meter manufacturers on the $20K/unit assumption\n3. Build a sensitivity model showing NPV under low/mid/high demand scenarios\n4. Assess political risk: speak to Chicago stakeholders on contract stability",
+      "checklistItems": [
+        "Led with a specific bid recommendation (~$1.2–1.4B range)",
+        "Cited the $1.4B NPV as the ceiling and recommended bidding below it",
+        "Named at least 2 specific risks justifying the margin of safety",
+        "Identified revenue upside that could justify the bid",
+        "Proposed concrete next steps before finalizing the bid"
+      ]
+    }
+  ]
+}

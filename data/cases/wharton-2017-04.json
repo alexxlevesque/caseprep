@@ -1,0 +1,134 @@
+{
+  "id": "wharton-2017-04",
+  "title": "U.S. Shoe Manufacturing",
+  "number": 4,
+  "casebook": "Wharton 2017",
+  "difficulty": "hard",
+  "firm": "McKinsey final round",
+  "type": "operations",
+  "topics": ["operations", "offshoring", "unit-economics", "math", "supply-chain"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Your client is a major U.S. shoe manufacturer. They currently manufacture all of their shoes domestically. Due to rising labor costs and increasing competitive pressure from foreign manufacturers, they are considering offshoring some or all of their production. They have asked McKinsey to help them decide whether to offshore, and if so, how much.",
+      "question": "What clarifying questions would you ask before structuring your analysis?",
+      "modelAnswer": "Key clarifying questions:\n\n1. **Product portfolio**: Does the client manufacture only shoes, or also apparel? (Answer: also apparel, but we're focused on shoes.)\n\n2. **Markets served**: Where do they sell? Domestic only, or also international? (Answer: North America, Europe, and Australia.)\n\n3. **Competitor behavior**: Are competitors already offshoring? (Answer: Most are not, due to complexity — this is a differentiating challenge.)\n\n4. **Quality of offshore options**: What is the quality profile of overseas manufacturers? (Answer: China/SE Asia/Central America offer lower-quality production; Eastern Europe offers higher quality but at higher cost.)\n\n5. **Current cost structure**: What does the current domestic cost structure look like, and what are the main cost drivers?\n\n6. **Customer requirements**: Do customers have quality expectations or 'Made in USA' preferences that constrain offshoring?",
+      "checklistItems": [
+        "Asked about product scope (shoes only vs. apparel)",
+        "Asked about geographic markets served",
+        "Asked about competitor offshoring behavior",
+        "Asked about quality profile of offshore options",
+        "Asked about cost structure or key cost drivers",
+        "Asked about customer preferences or quality requirements"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "framework",
+      "interviewer": "Good questions. The client sells shoes in North America, Europe, and Australia. Most competitors have not offshored due to manufacturing complexity. Lower-cost offshore options (China, SE Asia, Central America) produce lower quality; Eastern Europe can match quality but at higher cost. The client wants to evaluate whether to offshore to Vietnam specifically. How would you structure this analysis?",
+      "question": "Walk me through your framework for the offshoring decision.",
+      "modelAnswer": "I'd evaluate the offshoring decision across four categories:\n\n1. **Demand factors**: Is demand for the client's products volatile (requiring short lead times) or stable (allowing longer lead times)? Is demand growing, and in which geographies? Do customers in different markets have varying quality or 'Made in USA' preferences? How competitive is the market on price?\n\n2. **Supply factors**: How volatile is the offshore supply chain? What are lead times, and how does longer lead time from Vietnam affect inventory requirements? What is the availability and reliability of quality suppliers offshore? What fraction of total costs is direct labor vs. materials and overhead?\n\n3. **Technological factors**: Does Vietnam have the human capital, manufacturing infrastructure, and process innovation capabilities to meet quality standards? Is there a risk of IP leakage or technology transfer?\n\n4. **Macroeconomic and regulatory factors**: What tariffs or import duties apply? Are there trade agreements that affect costs? What is the exchange rate risk? How politically stable is Vietnam as a manufacturing base?",
+      "checklistItems": [
+        "Addressed demand volatility and lead time sensitivity",
+        "Addressed supply chain factors (lead times, supplier quality, reliability)",
+        "Addressed quality and human capital in offshore location",
+        "Addressed macroeconomic/regulatory factors (tariffs, trade agreements, exchange rates)",
+        "Framework is structured with at least 3 distinct categories",
+        "At least one mention of demand volatility and its relationship to lead time"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "math",
+      "interviewer": "Let's quantify the economics. Here is the cost structure for manufacturing one pair of shoes domestically versus in Vietnam. Work through the unit profitability for each option.",
+      "question": "Calculate the unit profit for U.S. manufacturing vs. Vietnam manufacturing.",
+      "data": {
+        "retailPrice": 200,
+        "us": {
+          "cogs": 0.30,
+          "labor": 0.25,
+          "sga": 0.20,
+          "transportation": 0.04,
+          "defectRate": 0.01,
+          "tariffs": 0,
+          "retailMargin": 0.10
+        },
+        "vietnam": {
+          "cogs": 0.20,
+          "labor": 0.05,
+          "sga": 0.25,
+          "transportation": 0.10,
+          "defectRate": 0.05,
+          "tariffs": 0.10,
+          "retailMargin": 0.10
+        },
+        "note": "Defect rate is treated as a cost equal to defect rate × retail price (returned/replaced units). All other line items are percentages of retail price."
+      },
+      "modelAnswer": "**Retail price = $200 per pair**\n\n**U.S. manufacturing:**\n- COGS: 30% × $200 = $60\n- Labor: 25% × $200 = $50\n- SG&A: 20% × $200 = $40\n- Transportation: 4% × $200 = $8\n- Quality/defects: 1% × $200 = $2\n- Tariffs: $0\n- Retail margin: 10% × $200 = $20\n- **Total costs = $60 + $50 + $40 + $8 + $2 + $20 = $180**\n- **Profit = $200 − $180 = $20 → ~$10 after other overhead**\n\n**Vietnam manufacturing:**\n- COGS: 20% × $200 = $40\n- Labor: 5% × $200 = $10\n- SG&A: 25% × $200 = $50\n- Transportation: 10% × $200 = $20\n- Quality/defects: 5% × $200 = $10\n- Tariffs: 10% × $200 = $20\n- Retail margin: 10% × $200 = $20\n- **Total costs = $40 + $10 + $50 + $20 + $10 + $20 + $20 = $170**\n- **Profit = $200 − $170 = $30 → ~$15 after other overhead**\n\n**Vietnam is ~50% more profitable per unit ($15 vs. $10).**",
+      "checklistItems": [
+        "Correctly computed U.S. unit profit (~$10)",
+        "Correctly computed Vietnam unit profit (~$15)",
+        "Identified that Vietnam is more profitable (~50% higher)",
+        "Noted the trade-off drivers: lower COGS and labor in Vietnam, offset by higher defect rate, transportation, and tariffs",
+        "Did not stop at Vietnam being more profitable — surfaced key risks"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "qualitative",
+      "interviewer": "Vietnam is 50% more profitable per unit. But there are other factors beyond unit economics. What else should the client consider before deciding to offshore?",
+      "question": "What qualitative factors should inform the offshoring decision beyond unit profitability?",
+      "modelAnswer": "Several important qualitative factors:\n\n1. **Quality gap is significant**: Vietnam's defect rate is 5% vs. 1% domestically — five times higher. This harms brand reputation, increases warranty costs, and could erode customer loyalty, especially in premium segments.\n\n2. **Transportation and tariff vulnerability**: The 10% transportation and 10% tariff costs add meaningful complexity. Exchange rate swings or trade policy changes (e.g., tariff increases) could quickly erode the Vietnam cost advantage.\n\n3. **Lead time impact on inventory**: Vietnam's longer lead time (~3 months vs. ~1 month domestically) forces the client to hold more inventory to buffer demand variability. This has a cost of capital implication and increases the risk of inventory obsolescence.\n\n4. **Split manufacturing strategy**: Given these concerns, a hybrid approach — manufacturing stable, predictable SKUs in Vietnam and volatile or premium SKUs domestically — could capture most of the cost benefit while maintaining quality and responsiveness where it matters.\n\n5. **Competitor reaction**: If competitors are not offshoring due to complexity, successfully offshoring at quality could be a source of competitive advantage — but failure (quality issues) could be a liability.",
+      "checklistItems": [
+        "Identified the quality/defect rate gap as a major concern",
+        "Identified tariff and transportation cost vulnerability",
+        "Identified lead time and inventory implications",
+        "Suggested or acknowledged a split/hybrid manufacturing approach",
+        "Addressed at least 3 distinct qualitative concerns"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "math",
+      "interviewer": "You mentioned inventory costs from longer lead times. Vietnam's lead time is 3 months; U.S. is 1 month. The client has given us some additional data: average demand is 1,000 units per period, demand standard deviation is 20 units per period, holding cost is $1 per unit per period, and the Vietnam cost advantage is $5 per unit. Using a newsvendor-style model, what fraction of production should be offshored to Vietnam?",
+      "question": "Calculate the optimal fraction of production to manufacture in Vietnam.",
+      "data": {
+        "demandMean": 1000,
+        "demandStdDev": 20,
+        "holdingCostPerUnit": 1,
+        "costAdvantageVietnam": 5,
+        "formula": "Offshored fraction = 1 − δ × √(h / (2μΔc))",
+        "formulaVariables": {
+          "δ": "standard deviation of demand per period (20)",
+          "h": "holding cost per unit per period ($1)",
+          "μ": "average demand per period (1,000)",
+          "Δc": "Vietnam cost advantage per unit ($5)"
+        }
+      },
+      "modelAnswer": "Using the formula: **Offshored fraction = 1 − δ√(h / 2μΔc)**\n\nPlugging in values:\n- δ = 20 (std dev of demand)\n- h = $1 (holding cost per unit per period)\n- μ = 1,000 (average demand per period)\n- Δc = $5 (Vietnam cost advantage per unit)\n\n**Step-by-step:**\n1. Compute h / (2μΔc) = 1 / (2 × 1,000 × 5) = 1 / 10,000 = 0.0001\n2. √0.0001 = 0.01\n3. δ × 0.01 = 20 × 0.01 = 0.20\n4. Offshored fraction = 1 − 0.20 = **0.80 = 80%**\n\n**Manufacture 80% in Vietnam, 20% in the U.S.**\n\nThe U.S. 20% serves as a buffer for demand volatility — when actual demand exceeds forecasts, the domestic capacity provides responsive top-up production without the lead time penalty.",
+      "checklistItems": [
+        "Correctly computed h / (2μΔc) = 0.0001",
+        "Correctly computed √0.0001 = 0.01",
+        "Correctly computed δ × 0.01 = 0.20",
+        "Correctly concluded 80% Vietnam / 20% U.S.",
+        "Explained the intuition: the 20% U.S. buffer hedges demand volatility"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The senior partner is about to join the call. Give your final recommendation.",
+      "question": "What is your recommendation on the offshoring decision?",
+      "modelAnswer": "**Recommendation: Manufacture 80% of production in Vietnam, maintain 20% in the U.S.**\n\nVietnam offers a clear unit economics advantage of $5 per pair ($15 vs. $10 profit), driven by lower COGS and labor costs that more than offset higher transportation costs, tariffs, and defect rates. Our demand model shows that given current demand volatility, the optimal split is 80% offshore / 20% domestic — the domestic capacity acts as a responsive buffer for demand spikes.\n\n**Key risks to monitor:**\n1. **Quality**: Vietnam's defect rate (5% vs. 1%) must be aggressively managed — consider quality audit programs and supplier development investment.\n2. **Tariff and exchange rate exposure**: A 5% tariff increase or meaningful currency shift could erode most of the $5/unit advantage — build scenario sensitivity into the business case.\n3. **Volatility sensitivity**: If demand variability increases, the optimal domestic fraction rises — revisit the split annually.\n\n**Recommended next steps:**\n1. Pilot with one SKU family in Vietnam to validate quality and logistics before full commitment\n2. Negotiate long-term supplier contracts to lock in pricing\n3. Invest in quality management systems at the Vietnam facility\n4. Monitor tariff policy and hedge currency exposure where cost-effective",
+      "checklistItems": [
+        "Led with a clear recommendation (80/20 Vietnam/U.S.)",
+        "Cited the $5/unit cost advantage as the primary driver",
+        "Addressed quality risk (defect rate)",
+        "Addressed tariff and exchange rate vulnerability",
+        "Proposed concrete next steps (pilot, contracts, quality systems)",
+        "Structured answer: recommendation → rationale → risks → next steps"
+      ]
+    }
+  ]
+}

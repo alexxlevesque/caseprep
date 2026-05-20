@@ -1,0 +1,87 @@
+{
+  "id": "wharton-2017-15",
+  "title": "Wellington Equestrian Festival",
+  "number": 15,
+  "casebook": "Wharton 2017",
+  "difficulty": "hard",
+  "firm": "Bain and BCG",
+  "type": "market-sizing",
+  "topics": ["market-sizing", "math", "brainstorming", "sports-entertainment", "economic-impact"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Your client is Mark Bellissimo, CEO of Wellington Equestrian Partners (WEP). Mark, a Harvard MBA with no background in the equestrian industry aside from watching his daughters ride at competitions, created WEP in 2006 with the mission of transforming Wellington, FL from a town with a large horse show to a community with a vibrant equestrian industry. As of now, Mark has succeeded in creating an incredible competition circuit in FL (called the Winter Equestrian Festival) and is seeking an investment from a reputable investment firm. In order to do so, he needs to: 1. assess the total economic impact the festival has on the community each year, and 2. brainstorm ways to expand his business that the investor might be excited about. You have been asked to assist Mark with this analysis and with crafting a 60-second pitch, that includes expansion plans, for the outside investor.\n\n(For context, top riders and trainers from around the world come to Wellington, FL for 12 weeks every winter to compete against elite competition and avoid the cold weather. You can think of this like you would any other sporting league/venue with on and off seasons.)",
+      "question": "How would you structure the economic impact analysis? What factors would you include?",
+      "modelAnswer": "I would structure the economic impact analysis into two main buckets:\n\n**Revenue from the competition itself:**\n- **Stabling and care fees**: Horses need boarding for the full season — key question is how many horses, at what cost per month?\n- **Entry fees**: Competitors enter multiple classes per week — how many entries per horse per week, at what entry fee?\n- **Veterinary fees**: On-site vets serve each horse — how many vets per horse, at what cost?\n- **Equipment and misc. fees**: Exhibitors purchase and rent equipment for the season\n- **Training fees**: Each exhibitor pays a trainer for the season\n- **Spectator tickets**: Spectators pay admission — how many per event?\n\n**Revenue from the surrounding community (indirect economic impact):**\n- **Hotel and lodging**: Out-of-town riders and spectators fill local hotels for weeks at a time\n- **Restaurants and retail**: Visitors spend on food and shopping throughout the season\n\n*Key analytical insight*: Think of WEF like any other local, seasonal sporting event — the same drivers that generate economic impact for the Super Bowl or Masters apply here: direct event spend + hospitality/tourism spend.",
+      "checklistItems": [
+        "Identified competition revenue (entry fees, stabling, vet, equipment, training) as the first bucket",
+        "Identified indirect/community revenue (hotels, restaurants, retail) as the second bucket",
+        "Asked for or brainstormed quantity and pricing data for each category",
+        "Made the analogy to other seasonal sporting events (Masters, Super Bowl, etc.)",
+        "Organized answer into at least 2 categories before diving into numbers"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "math",
+      "interviewer": "Good structure. Let me give you the data to calculate the economic impact. The festival runs 12 weeks (3 months). There are 3,000 horses competing each week, and 15,000 exhibitors across the season. Here is the breakdown by category — ask me for any figures you don't have.",
+      "question": "Calculate the total annual economic impact of the Winter Equestrian Festival.",
+      "data": {
+        "festivalWeeks": 12,
+        "festivalMonths": 3,
+        "horsesPerWeek": 3000,
+        "totalExhibitors": 15000,
+        "categories": [
+          { "name": "Stabling and care fees", "quantity": "3,000 horses", "price": "$3,000/horse/month", "months": 3, "total": 27000000 },
+          { "name": "Entry fees", "quantity": "5 entries/horse/week × 3,000 horses × 12 weeks", "price": "$75/entry", "total": 13500000 },
+          { "name": "Veterinary fees", "quantity": "1 vet per horse × 3,000 horses", "price": "$2,000/horse/3 months", "total": 6000000 },
+          { "name": "Misc. equipment fees", "quantity": "15,000 exhibitors", "price": "$1,000/exhibitor/3 months", "total": 15000000 },
+          { "name": "Training fees", "quantity": "1 trainer per exhibitor × 15,000 exhibitors", "price": "$1,000/exhibitor/3 months", "total": 15000000 },
+          { "name": "Spectators", "quantity": "200,000 people", "price": "$15/ticket", "total": 3000000 },
+          { "name": "Hotel bookings", "quantity": "120,000 nights", "price": "~$150/night", "total": 18000000 },
+          { "name": "Restaurants and shopping", "quantity": "15,000 people", "price": "$1,000/person/3 months", "total": 15000000 }
+        ],
+        "totalEconomicImpact": 112500000
+      },
+      "modelAnswer": "**Competition revenue:**\n- Stabling and care: 3,000 horses × $3,000/month × 3 months = **$27,000,000**\n- Entry fees: 5 entries/horse/week × 3,000 horses × 12 weeks × $75 = **$13,500,000**\n- Veterinary fees: 3,000 horses × $2,000/horse/3 months = **$6,000,000**\n- Equipment fees: 15,000 exhibitors × $1,000/3 months = **$15,000,000**\n- Training fees: 15,000 exhibitors × $1,000/3 months = **$15,000,000**\n\n**Community/indirect revenue:**\n- Spectators: 200,000 people × $15 = **$3,000,000**\n- Hotel bookings: 120,000 nights × $150/night = **$18,000,000**\n- Restaurants and shopping: 15,000 people × $1,000 = **$15,000,000**\n\n**Total annual economic impact: $112,500,000**\n\n*Note*: Candidates should brainstorm which categories to include first, then request the quantities and prices. A well-thought-out answer in the ballpark of $112.5M that includes many of these categories is sufficient — the unique equestrian categories to notice are stabling/care fees and veterinary fees (a normal sporting event wouldn't have these).",
+      "checklistItems": [
+        "Correctly computed stabling: 3,000 × $3,000 × 3 months = $27M",
+        "Correctly computed entry fees: 5 × 3,000 × 12 × $75 = $13.5M",
+        "Correctly computed vet fees: 3,000 × $2,000 = $6M",
+        "Correctly computed equipment and training fees: 15,000 × $1,000 each = $15M each",
+        "Included spectators, hotel, and restaurant/retail as community revenue",
+        "Arrived at a total in the ballpark of $112.5M"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "qualitative",
+      "interviewer": "Great — so the Winter Equestrian Festival generates roughly $112.5 million in annual economic impact. Now Mark needs expansion ideas to pitch to investors. What are the ways WEP could grow its business?",
+      "question": "Brainstorm internal and external strategies for WEP to expand its business offerings.",
+      "modelAnswer": "I'd organize expansion plans into **internal** (things WEP controls directly) and **external** (things that require partners or new markets):\n\n**Internal strategies:**\n1. **Extend the festival beyond 12 weeks** — more weeks = more revenue\n   - *Risk*: loss of prestige if the event becomes too common; elite riders may not commit to a longer season\n2. **Offer multiple festivals throughout the year** — leverage the venue and infrastructure during off-season\n   - *Risk*: competitive landscape at different times of year; demand may be limited\n3. **Repurpose the venue for other events during off-season** — concerts, sports, corporate events\n   - *Risk*: expensive and potentially damaging to property; brand dilution\n4. **Increase number of exhibitors** — make venue as competition-friendly as possible through enhanced quality (horse-friendly conditions, more ring capacity)\n   - *Risk*: expensive to build out; may require raising entry fees\n5. **Increase spectator attendance** — make sport more accessible (food, carnivals for kids, instructional pamphlets, better parking, advertising)\n   - *Risk*: uncertain whether non-equestrian audiences will come\n6. **Acquire more property in surrounding neighborhoods** — expand the venue footprint\n   - *Risk*: acquisitions may not lead to proportional profit\n\n**External strategies:**\n1. **Partner with local hotels and tourism board** — attract more out-of-towners, ensure accommodation supply meets demand\n   - *Risk*: increased traffic may not translate to increased festival revenue directly\n2. **Attract media coverage** — get on NBC Sports or other networks to grow the sport's audience\n   - *Risk*: if viewership is low, media investment does not pay off; irreparable reputational damage if poorly produced\n3. **Increase sponsorships** — target brands that serve equestrian demographics (Rolex, Fidelity Investments, luxury goods)\n   - *Risk*: sport may appear too elite for mass-market sponsors\n4. **Partner with schools and riding academies** — grow the total sport participation to expand the future market\n   - *Risk*: pipeline takes many years; junior riders won't compete at WEF level for a long time\n5. **Expand to new locations** — replicate the WEF model in other equestrian markets (Europe, Middle East)\n   - *Risk*: expensive; unfamiliar competitive landscapes\n\n*Note*: All of these are ideas Mark Bellissimo has actually implemented in real life.",
+      "checklistItems": [
+        "Organized brainstorm into internal vs. external (or short-term vs. long-term)",
+        "Named at least 3 internal strategies (extend weeks, repurpose venue, increase exhibitors/spectators, acquire property)",
+        "Named at least 3 external strategies (hotel partnerships, media, sponsorships, school partnerships, new locations)",
+        "Included a risk for each strategy",
+        "Mentioned a method for evaluating which initiatives to prioritize",
+        "Drew the analogy to other local seasonal sporting events"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "recommendation",
+      "interviewer": "The investor is ready to hear the pitch. Give your 60-second pitch to the outside investor on behalf of Mark Bellissimo and WEP.",
+      "question": "Give the 60-second investor pitch covering economic impact, expansion plans, risks, and next steps.",
+      "modelAnswer": "**Pitch:**\n\nThe Winter Equestrian Festival that WEP hosts every year contributes over **$112.5 million annually** to the local economy through current revenue streams — including stabling fees, entry and training fees, hotel bookings, and retail. This makes WEF the largest and longest-running horse show in the United States.\n\nWEP is well-positioned to grow this impact significantly. Near-term opportunities include **offering multiple festivals throughout the year**, **partnering with the local community to increase spectator attendance**, and **attracting premium sponsors** in luxury and financial services who target high-net-worth equestrian demographics. Longer-term, WEP could **expand to new locations**, replicating the Wellington model in other equestrian markets globally.\n\nThese initiatives will expand WEP's market share within the equestrian industry and increase the festival's revenue across all streams. **Risks** include the potential that expansion plans do not convert into revenue at expected rates, and uncertainty about how competitors respond — however, WEP's dominant market position as the definitive U.S. equestrian destination provides a strong defensive moat.\n\n**Next steps** would be to assess market share potential in other locations and survey current competitors on their willingness to participate in multiple festivals per year.\n\nOverall, WEP is ready to secure this investment.",
+      "checklistItems": [
+        "Led with the $112.5M economic impact figure",
+        "Named at least 2 specific expansion initiatives (multiple festivals, spectator growth, sponsorships, new locations)",
+        "Acknowledged the risks of expansion (cost, competitive response, demand uncertainty)",
+        "Proposed concrete next steps",
+        "Pitch was structured: impact → growth → risks → next steps → close"
+      ]
+    }
+  ]
+}

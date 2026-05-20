@@ -1,0 +1,161 @@
+{
+  "id": "wharton-2017-10",
+  "title": "Competitive Strategy in Mining (Commodities)",
+  "number": 10,
+  "casebook": "Wharton 2017",
+  "difficulty": "hard",
+  "firm": "BCG and Bain final round",
+  "type": "competitive-strategy",
+  "topics": ["competitive-strategy", "commodities", "exhibit-analysis", "math", "game-theory", "supply-demand"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Our client is an Australian mining company whose main product is Iron Ore, which it sells exclusively to China. This company is the largest producer by volume in this market with 230 million tons sold each year. It is also the lowest-cost producer at $27 per ton of production costs. We estimate total Chinese demand for Iron Ore today to be around 980 million tons per year. Our client has won a concession to mine a new site adjacent to its biggest mine, and increases production to 360 million tons per year (an additional 130 million tons per year). Is this worth doing?",
+      "question": "What clarifying questions would you ask before structuring your analysis?",
+      "modelAnswer": "Key clarifying questions and answers:\n\n1. **What constitutes success? Are there criteria to approve projects?** The board typically approves projects with a payback period of less than 5 years. No discounting needed for the math.\n\n2. **How is the market expected to grow?** Assume the market remains flat at 980 million tons per year for the foreseeable future.\n\n3. **How much upfront investment is required?** $3 billion upfront.\n\n4. **What is the cost of production at the new site?** Assume the same as existing production: $27 per ton (no cost synergies, no cost disadvantage).\n\n5. **How does the competitive landscape look?** Ask to see the exhibit — Exhibit A of China's cash cost curve for iron ore.\n\n6. **Should we consider international expansion or new minerals?** For the purposes of this case, limit analysis to iron ore and China.\n\n**Framework**: This is a profit tree / payback analysis. Revenue will be affected by both volume (up) and price (likely down — adding supply to a commodity market pushes price down). Costs will go up in total (more volume) but stay flat per unit. I also need to consider competitive reaction — competitors will be hurt by the price drop and may respond.",
+      "checklistItems": [
+        "Asked about the payback threshold (5 years, no discounting)",
+        "Asked how the market is expected to grow (flat at 980 Mty)",
+        "Asked about the upfront investment ($3B)",
+        "Asked about cost structure of new production ($27/ton, same as existing)",
+        "Asked to see the competitive landscape exhibit",
+        "Identified that revenue will be impacted by both volume and price"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "exhibit",
+      "exhibitType": "chart",
+      "interviewer": "Good framework. Here is Exhibit A — China's Cash Cost Curve for Iron Ore. The x-axis shows cumulative supply in million tons per year (MTY), and the y-axis shows cash cost in USD per ton. Our client (Company A) is the leftmost bar (0–230 MTY, cost ~$27/ton). Competitor B is the next bar (230–420 MTY, cost ~$30/ton). The curve continues up to ~$80/ton at 1,100 MTY. Current Chinese demand is 980 MTY. What do you observe, and what does this tell you about the impact of the expansion?",
+      "question": "Analyze the cash cost curve. What is the current equilibrium iron ore price, and how will it change if our client expands to 360 million tons?",
+      "data": {
+        "exhibit": "Exhibit A — China's Iron Ore Supply CFR Cash Cost Curve (2015)",
+        "xAxis": "Cumulative Supply MTY (as delivered)",
+        "yAxis": "US$ / ton",
+        "keyPoints": [
+          { "x": "0–230", "label": "Company A (our client)", "cost": 27 },
+          { "x": "230–420", "label": "Competitor B", "cost": 30 },
+          { "x": "980", "label": "Current demand line", "priceAtDemand": 60 },
+          { "x": "850", "label": "New demand line after +130 MTY from A", "priceAtDemand": 50 }
+        ]
+      },
+      "modelAnswer": "**Current situation (before expansion):**\n\nIn a commodity market, price is set by the market and converges to the lowest level at which total demand can be satisfied. From the curve, everyone with costs below $60/ton can profitably serve the market, and supply meets demand exactly at x = 980 MTY. So the **current equilibrium price is $60/ton**.\n\nClient A currently sells 230 MTY at ($60 − $27) = $33/ton margin.\n\n**After expansion (+ 130 MTY from A):**\n\nAdding 130 MTY from A pushes the supply curve to the right. The highest-cost producers (those near x = 980) are pushed out of the market. The new equilibrium demand of 980 MTY is now met at a supply curve position of x = 980 − 130 = 850, which corresponds to approximately **$50/ton** from the chart.\n\n**Key insight**: Adding volume is a double-edged sword. A sells more tons (360 vs. 230), but at a lower price ($50 vs. $60). Whether this is profitable depends on the math.",
+      "checklistItems": [
+        "Correctly identified the commodity market mechanism (price = cost at demand level)",
+        "Correctly read the current equilibrium price as $60/ton at x=980",
+        "Correctly identified that adding 130 MTY shifts the effective demand curve left to x=850",
+        "Correctly read the new equilibrium price as approximately $50/ton",
+        "Articulated the double-edged sword: more volume but lower price"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "math",
+      "interviewer": "Good analysis. Now calculate the payback period. Does this project meet the board's criteria?",
+      "question": "Calculate the annual profit before and after expansion, the incremental profit, and the payback period for the $3B investment.",
+      "data": {
+        "currentVolume": 230,
+        "newVolume": 360,
+        "costPerTon": 27,
+        "currentPrice": 60,
+        "newPrice": 50,
+        "investment": 3000,
+        "paybackThreshold": 5
+      },
+      "modelAnswer": "**Old annual profit (before expansion):**\n- Volume: 230 MTY\n- Price: $60/ton\n- Cost: $27/ton\n- Profit = 230 × ($60 − $27) = 230 × $33 = **$7,590 million/year**\n\n**New annual profit (after expansion):**\n- Volume: 360 MTY\n- Price: $50/ton (new equilibrium)\n- Cost: $27/ton\n- Profit = 360 × ($50 − $27) = 360 × $23 = **$8,280 million/year**\n\n**Incremental annual profit:**\n- Delta = $8,280M − $7,590M = **$690 million/year**\n\n**Payback period:**\n- Investment: $3,000M\n- Payback = $3,000M ÷ $690M/year ≈ **4.3 years → approximately 4 years**\n\n**Conclusion**: The payback period of ~4 years is under the board's 5-year threshold. On a pure economics basis, the expansion project passes the criteria.",
+      "checklistItems": [
+        "Correctly computed old profit: 230 × $33 = $7,590M/yr",
+        "Correctly computed new profit: 360 × $23 = $8,280M/yr",
+        "Correctly computed the delta: $690M/yr",
+        "Correctly computed payback: $3B ÷ $0.69B = ~4 years",
+        "Confirmed the project meets the <5 year payback threshold"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "qualitative",
+      "interviewer": "Good math. Now let's think about competitive reaction. The price drop from $60 to $50 per ton affects Competitor B, not just us. How does Competitor B likely feel about our expansion, and what might they do?",
+      "question": "Analyze the impact on Competitor B and brainstorm their likely strategic responses.",
+      "modelAnswer": "**Impact on Competitor B:**\n\nCompetitor B currently sells approximately 190 million tons per year (from the curve, B spans from x=230 to x=420). The price drop from $60 to $50 per ton means B loses $10/ton on its entire production:\n- Total margin loss to B = $10 × 190 MTY = **$1.9 billion per year**\n\nThis is a catastrophic hit. B is facing a major strategic crisis.\n\n**B's likely strategic options:**\n\n1. **Increase production** (if B has access to new concessions): Expand volume to try to compensate for the lower margin per ton. Risk: this would push prices down even further, potentially into a destructive price war.\n\n2. **Temporarily reduce production** to push prices back up: If B withdraws supply, the equilibrium price would rise. Risk: this benefits our client more than B, and B sacrifices volume in the short term.\n\n3. **Cut costs aggressively**: Invest in operational efficiency to lower B's $30/ton cost closer to our client's $27/ton. Risk: requires capital and time; doesn't address the immediate margin crisis.\n\n4. **Pursue M&A**: Acquire higher-cost producers that are now being squeezed out of the market. These distressed assets may be available at low prices and could offer consolidation synergies.\n\n**For our client**: B's most threatening response is option 1 (expand) — this would drive prices even lower. This leads us to a game theory analysis of whether our client should still expand if B also expands.",
+      "checklistItems": [
+        "Correctly calculated B's margin loss: $10 × 190 MTY = $1.9B/yr",
+        "Identified at least 3 strategic options for B",
+        "Named option 1 (B expands) as the most threatening response",
+        "Noted the possibility of further price erosion if B also expands",
+        "Set up the need for a game theory / payoff matrix analysis"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "Let's think through the game theory. Assume you are now in B's shoes. B also has an opportunity to expand from 190 MTY to 270 MTY (an additional 80 MTY), and this expansion also has a positive payback. Construct a payoff matrix for A — should A expand given that B might also expand?",
+      "question": "Build the payoff matrix and identify the dominant strategy for Company A.",
+      "data": {
+        "scenarios": [
+          {
+            "label": "A does not expand, B does not expand",
+            "aNewVolume": 230,
+            "bExpands": false,
+            "newDemandAtX": 980,
+            "newPrice": 60,
+            "aDeltaVsBaseline": 0,
+            "description": "Neither expands — status quo. A's delta profit = $0."
+          },
+          {
+            "label": "A expands, B does not expand",
+            "aNewVolume": 360,
+            "bExpands": false,
+            "newDemandAtX": 850,
+            "newPrice": 50,
+            "aDeltaVsBaseline": 690,
+            "description": "A expands alone — price drops to $50. A's delta = +$690M/yr (as calculated)."
+          },
+          {
+            "label": "A does not expand, B expands",
+            "aNewVolume": 230,
+            "bExpands": true,
+            "additionalBVolume": 80,
+            "newDemandAtX": 900,
+            "newPrice": 55,
+            "aDeltaVsBaseline": -1150,
+            "description": "B expands alone. Supply right by 80 MTY; demand met at x=900 → price ≈ $55/ton. A loses 230 × ($55-$60) = $1,150M/yr."
+          },
+          {
+            "label": "Both A and B expand",
+            "aNewVolume": 360,
+            "bExpands": true,
+            "additionalBVolume": 80,
+            "newDemandAtX": 770,
+            "newPrice": 47,
+            "aDeltaVsBaseline": -390,
+            "description": "Both expand. Supply right by 130+80=210 MTY; demand met at x=770 → price ≈ $47/ton. A profit = 360 × ($47-$27) = $7,200M. Delta vs. baseline = $7,200-$7,590 = -$390M/yr."
+          }
+        ]
+      },
+      "modelAnswer": "**Payoff matrix (A's delta profit vs. baseline of $7,590M/yr):**\n\n|  | B Does NOT Expand | B Expands |\n|---|---|---|\n| **A Does NOT Expand** | $0 | **-$1.15B/yr** |\n| **A Expands** | **+$0.69B/yr** | **-$0.39B/yr** |\n\n**Reading the matrix:**\n- If B does NOT expand: A is better off expanding (+$0.69B > $0)\n- If B DOES expand: A is still better off expanding (-$0.39B > -$1.15B)\n\n**Expand is the dominant strategy for A** — regardless of what B chooses, A is better off expanding. If B doesn't expand, A captures a +$690M gain. If B does expand, A limits its loss to -$390M vs. -$1,150M by also expanding.\n\n**Intuition**: A is the lowest-cost producer. At any price level, A has the best margin in the industry. Expanding maximizes volume at the best possible unit economics. Staying put while B expands is the worst outcome for A.",
+      "checklistItems": [
+        "Constructed a 2×2 payoff matrix with A's outcomes in all 4 scenarios",
+        "Correctly computed A's delta when B expands alone: -$1.15B/yr",
+        "Correctly computed A's delta when both expand: -$0.39B/yr",
+        "Correctly identified Expand as A's dominant strategy",
+        "Articulated why: A is better off in both columns if it expands"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The CEO is about to walk in. Give your final recommendation.",
+      "question": "Give your final recommendation to the CEO on whether to pursue the expansion.",
+      "modelAnswer": "**Recommendation: Our client should expand.**\n\n**Three reasons:**\n\n1. **The project meets the financial criteria**: The expansion generates approximately $690 million per year in incremental profit, providing a payback period of roughly 4 years — under the board's 5-year threshold.\n\n2. **Expand is the dominant strategy regardless of competitor behavior**: Whether or not Competitor B expands, our client is better off expanding. If B does not expand, we capture +$690M/yr. If B expands, we limit our loss to -$390M/yr compared to -$1.15B/yr if we do nothing. Walking away is the worst outcome.\n\n3. **Scale builds structural competitive advantage**: As the largest, lowest-cost producer, increasing volume further entrenches our position. Scale gives us flexibility to adjust production as market conditions shift, and strengthens our negotiating power with buyers, logistics partners, and suppliers.\n\n**Key risks to monitor**:\n- If Chinese demand declines, the price/volume dynamics shift unfavorably — monitor Chinese steel production closely\n- B may pursue aggressive M&A to consolidate the market and gain scale\n- Logistics and supply chain capacity must be assessed to absorb 130 additional MTY\n\n**Recommended next steps**: Confirm supply chain absorptive capacity; engage with buyers on long-term purchase agreements to lock in volume at the new price; monitor B's capital plans for signs of counter-expansion.",
+      "checklistItems": [
+        "Led with a clear recommendation (expand)",
+        "Cited the 4-year payback as meeting the board threshold",
+        "Cited the dominant strategy argument (expand wins in both scenarios)",
+        "Mentioned scale as a structural competitive advantage",
+        "Named at least 2 key risks to monitor",
+        "Proposed concrete next steps"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "wharton-2017-13",
+  "title": "The National Park Service",
+  "number": 13,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium",
+  "firm": "BCG",
+  "type": "operations",
+  "topics": ["operations", "hr-talent", "attrition", "math", "brainstorming"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Our client is the United States Department of the Interior, which is responsible for the National Park Service (NPS). The NPS employs park rangers across all federally owned parks, ranging from Yellowstone and the Grand Canyon to the Statue of Liberty and Lincoln Memorial. National Parks employ four different classifications of rangers: Law Enforcement, Education, Maintenance, and Administrative. The focus of this case is on the Law Enforcement rangers, who have similar responsibilities to police and firefighters. They are trained in areas that include wilderness medicine and search and rescue. The client is concerned that job retention is low among the Law Enforcement rangers. They would like you to explore how big the problem is and think about ways to improve it.",
+      "question": "What are some of the costs to the National Parks Service of rangers leaving?",
+      "modelAnswer": "There are costs relating to **People** and **Operations**, which can be categorized as either **Direct** (tangible dollar amount) or **Indirect** (non-monetary):\n\n**People Costs:**\n- *Direct*: Sunk costs of recruiting and training departing rangers; severance payments\n- *Indirect*: Decline in morale among remaining staff; damage to the department's reputation as an employer\n\n**Operational Costs:**\n- *Direct*: Higher maintenance and operational costs caused by the influx of new, inexperienced employees who are less efficient\n- *Indirect*: Loss of institutional knowledge about specific park operations — experienced rangers know the parks, the risks, and the communities in ways new hires cannot immediately replicate\n\n*Note to candidate*: A great answer structures this into at least 2 categories (People vs. Operations, or Direct vs. Indirect), explains why each matters, and names 4–5 distinct cost items.",
+      "checklistItems": [
+        "Structured the answer into at least 2 categories (people vs. operations, or direct vs. indirect)",
+        "Named recruiting/training sunk costs as a direct people cost",
+        "Named morale decline as an indirect people cost",
+        "Named higher operational costs from inexperienced new hires as a direct operational cost",
+        "Named loss of institutional knowledge as an indirect operational cost",
+        "Named 4–5 distinct cost items total"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "math",
+      "interviewer": "Good. We have data on what the retention problem looks like across the four types of rangers nationally and what the associated costs are. Please calculate what percent of each type of ranger left in 2016 and what the total costs were per group.",
+      "question": "Calculate the attrition rate (% left) and total annual attrition cost for each ranger type. What insights do you draw?",
+      "data": {
+        "exhibit": "Ranger Attrition Data 2016",
+        "table": {
+          "columns": ["Ranger Type", "# Left in 2016", "Total Rangers in 2016", "Cost per Lost Ranger"],
+          "rows": [
+            ["Law Enforcement", 98, 2100, 35300],
+            ["Education", 175, 3750, 6200],
+            ["Maintenance", 215, 8615, 3500],
+            ["Administrative", 251, 9143, 3500]
+          ]
+        }
+      },
+      "modelAnswer": "**Law Enforcement**: 98 / 2,100 = **4.67%**; Total cost = 98 × $35,300 = **$3,459,400**\n\n**Education**: 175 / 3,750 = **4.67%**; Total cost = 175 × $6,200 = **$1,085,000**\n\n**Maintenance**: 215 / 8,615 = **2.50%**; Total cost = 215 × $3,500 = **$752,500**\n\n**Administrative**: 251 / 9,143 = **2.75%**; Total cost = 251 × $3,500 = **$878,500**\n\n**Key insights:**\n\n1. **Law Enforcement has the highest individual cost by far**: At $35,300 per lost ranger, a departing Law Enforcement ranger costs more than 5× a Maintenance or Administrative ranger. This reflects the expensive training (wilderness medicine, search and rescue, law enforcement certification).\n\n2. **Law Enforcement and Education share the same attrition rate (4.67%)**, but Law Enforcement generates 3× the total dollar cost ($3.46M vs. $1.09M). Law Enforcement attrition is the highest-priority problem.\n\n3. **Maintenance and Administrative have lower attrition rates** (2.5–2.75%) and much lower per-person cost — they should be deprioritized in the solution.\n\n4. **Prioritize Law Enforcement retention**: Solving Law Enforcement attrition yields by far the greatest dollar impact.",
+      "checklistItems": [
+        "Correctly computed Law Enforcement: 4.67% and $3,459,400",
+        "Correctly computed Education: 4.67% and $1,085,000",
+        "Correctly computed Maintenance: 2.50% and $752,500",
+        "Correctly computed Administrative: 2.75% and $878,500",
+        "Drew the insight: Law Enforcement has the same attrition % as Education but 3× the total cost",
+        "Recommended prioritizing Law Enforcement based on dollar impact"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "qualitative",
+      "interviewer": "The government conducted a survey among Law Enforcement rangers and found that their pain points exist across three areas: Family Friendliness, Effective Senior Leadership, and Performance-Based Rewards. Can you brainstorm solutions to retention within each of these areas?",
+      "question": "Brainstorm retention solutions across the three survey-identified pain point areas.",
+      "data": {
+        "painPointDefinitions": {
+          "familyFriendliness": "Degree to which the organization is family-friendly. Some rangers are expected to move across the country to remote locations, which may lack access to schooling and other family amenities.",
+          "effectiveSeniorLeadership": "Degree to which park Superintendents have the proper background and experience to lead Law Enforcement rangers. Note: most Superintendents have a background as Education rangers, not Law Enforcement.",
+          "performanceBasedRewards": "Degree to which rangers receive the right level and mix of benefits. Rangers are not primarily motivated by money, but pay is higher at other government agencies and those organizations also pay overtime, which NPS rangers do not receive."
+        }
+      },
+      "modelAnswer": "**Family Friendliness:**\n1. Better matching between rangers and assignments — prioritize placing rangers near their home region\n2. Performance-based assignment matching — let high-performing rangers choose preferred locations\n3. Source rangers locally where possible rather than requiring relocation\n4. Provide online tutoring or educational support for children of rangers in remote locations\n\n**Effective Senior Leadership:**\n1. Create new leadership tracks that allow Law Enforcement rangers to advance into Superintendent and senior management roles — currently blocked because most superintendents come from Education backgrounds\n2. Mentorship programs pairing senior Law Enforcement rangers with aspiring leaders\n3. Training programs for current superintendents (e.g., ride-alongs with Law Enforcement rangers to understand local operational realities)\n\n**Performance-Based Rewards:**\n1. Improve benefits package: salary benchmarking against comparable government agencies, travel allowances, enhanced health benefits\n2. Implement overtime pay — currently absent at NPS, which is a key differentiator at competing agencies\n3. Create non-monetary recognition programs (performance awards, public recognition, career milestone acknowledgment)\n\n*Note*: A great answer mentions the associated costs of these solutions and hypothesizes which would have the highest impact relative to cost.",
+      "checklistItems": [
+        "Proposed at least 2 concrete solutions per category",
+        "Named local assignment matching or local sourcing for Family Friendliness",
+        "Named a new LE leadership track for Effective Senior Leadership",
+        "Named overtime pay as a key lever for Performance-Based Rewards",
+        "Mentioned evaluating solutions by impact vs. cost",
+        "Structured brainstorm clearly within the three given categories"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "recommendation",
+      "interviewer": "The Director of the National Parks Service has just stepped into the room and would like you to summarize what we've discussed.",
+      "question": "Give your final synthesis and recommendation to the NPS Director.",
+      "modelAnswer": "**The problem**: Law Enforcement rangers have the lowest absolute number of departures (98 vs. 175–251 for other categories), but by far the highest retention cost — **$3.46M per year** — due to the specialized, expensive training required to replace each ranger. This is where we must focus.\n\n**Why it's happening**: Survey data points to three root causes — Law Enforcement rangers feel the organization isn't family-friendly (remote mandatory postings with no family support); they lack confidence in senior leadership (superintendents come from Education backgrounds, not Law Enforcement); and they are underpaid relative to comparable government agencies and don't receive overtime.\n\n**Our top two recommendations**:\n\n1. **Implement overtime pay and salary benchmarking** (highest impact, clear cost): This addresses the most concrete, measurable gap. Other government agencies pay overtime; NPS does not. This single change would remove one of the strongest 'pull' factors drawing rangers to other agencies.\n\n2. **Create a Law Enforcement leadership track**: If LE rangers can advance into Superintendent roles, the career path improves dramatically, leadership relevance increases, and retention follows.\n\n**Next steps**: Quantify the cost of each proposed solution and compare against the $3.46M annual attrition cost. Any solution costing less than $3.46M/year that reduces attrition materially has a positive ROI. Begin with a pilot in 1–2 parks to test impact before national rollout.",
+      "checklistItems": [
+        "Focused on Law Enforcement as the highest-priority group (highest dollar cost)",
+        "Named all three root causes from the survey (family, leadership, pay)",
+        "Led with a clear top recommendation (overtime pay / salary benchmarking)",
+        "Named the leadership track as a second priority",
+        "Proposed measuring solutions against the $3.46M annual attrition cost",
+        "Suggested a pilot approach before national rollout"
+      ]
+    }
+  ]
+}

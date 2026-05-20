@@ -1,0 +1,99 @@
+{
+  "id": "wharton-2017-09",
+  "title": "Pharma Company Goes International, Outsources Benefits, Integrates New Technology",
+  "number": 9,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium-hard",
+  "firm": "Deloitte Human Capital first and second round",
+  "type": "operations",
+  "topics": ["human-capital", "international-expansion", "outsourcing", "technology-adoption", "training"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Waltham&Rose, a pharmaceutical company based and solely operational in the US, has recently announced its imminent international expansion to Germany and France. The company will be increasing its employee numbers by 50% as a result of this expansion. To ease workloads and minimize complexity during this growth phase, Waltham&Rose executives are strongly considering outsourcing health benefits management. Executives have also decided to, for the first time, integrate a cloud-based CRM software, which all employees (many of whom have worked for Waltham&Rose for decades) will be required to use. Waltham&Rose has sought out Deloitte Human Capital to develop and help implement a seamless CRM technology adoption process, and to help ensure new Europe-based employees feel they are a part of the Waltham&Rose 'family,' and represent the brand well. The pharma industry has become increasingly competitive in recent years, with peer companies having already invested significantly in global expansion and technological advancements. Waltham&Rose executives feel they have no time to waste.",
+      "question": "What clarifying questions would you ask before structuring your analysis?",
+      "modelAnswer": "Key clarifying questions and answers:\n\n1. **Are any senior executives planning to relocate to Europe?** There have been discussions, but no firm plan for any senior executive to relocate. (Important gap — needs to be addressed.)\n\n2. **Does Waltham&Rose have any in-house expertise about European business regulations?** No. Regulatory and legal knowledge is entirely absent.\n\n3. **What is the demographic breakdown of the workforce?** Largely people in their forties and fifties, most with 10+ years of tenure. (Older workforce = important input for training approach.)\n\n4. **Is there already a plan for outsourcing health benefits?** No — outsourcing is completely new territory for Waltham&Rose.\n\n5. **What does success look like?** Seamless CRM adoption, smooth international expansion with new employees integrated into the company culture, and sustained competitiveness in pharma.",
+      "checklistItems": [
+        "Asked about plans to relocate senior executives to Europe",
+        "Asked about in-house European regulatory expertise",
+        "Asked about workforce demographic breakdown",
+        "Asked whether a health benefits outsourcing plan already exists",
+        "Briefly summarized the case before asking questions (shows listening)"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "framework",
+      "interviewer": "Good questions. No senior executive relocation is planned. The company has no European regulatory expertise. The workforce is mostly in their 40s and 50s with 10+ years tenure. Outsourcing is completely new territory. How would you structure this engagement?",
+      "question": "Walk me through your framework for helping Waltham&Rose manage this transition. This is a Human Capital case — use a Key Business Issue + Work Streams × (Assess / Implement / Evaluate) structure.",
+      "modelAnswer": "**Business Issues: International Expansion Management + Workforce Stabilization**\n\n---\n\n**Work Stream 1 (Most Important): Organizational / Job Design**\n- *Assess*: Gap analysis of current vs. required capabilities; change readiness assessment to understand employee openness to these changes. Since the company is in a hurry, a rapid all-hands workshop can provide data quickly.\n- *Implement*: Predictive competency modeling; revamped job descriptions; creation of new roles (Outsourcing Manager, CRM Manager, International Compliance Manager); recruitment strategy (internal promotions vs. external hires for each role); hiring and onboarding timeline.\n- *Evaluate*: Progress against strategy and timeline; individual job performance metrics.\n\n**Work Stream 2: Training and Learning**\n- *Assess*: Assess current training infrastructure; understand what kind of learning organization Waltham&Rose is; identify learning personas across the workforce (long-tenured US employees, new European hires, managers).\n- *Implement*: Training and learning strategy with multiple content modalities tailored to different personas — nano-learning, video, game-based, and instructor-led — to ensure equal access across time zones and learning styles; rationalize curricula to eliminate redundancies; integrate rewards into learning strategy. Pilot training in one market before global rollout.\n- *Evaluate*: Pace of learning, CRM adoption rate, knowledge retention, user feedback.\n\n**Work Stream 3: Technology Adoption**\n- *Assess*: Technology impact assessment (employee readiness and sentiment toward CRM); confirm CRM is accessible outside the office network; estimate data migration costs; stakeholder analysis.\n- *Implement*: Technology adoption strategy with transition plan, consistent communication (timeline, anticipated changes, benefits to employees), and a contingency plan for adoption failures.\n- *Evaluate*: Employee acceptance; CRM usage rates; reductions in manual workarounds; cost savings.\n\n*Other considerations*: European leadership gap (recommend at least one US exec relocate for 12–24 months); different healthcare regulations in US vs. Europe may require multiple outsourcing partners for health benefits.",
+      "checklistItems": [
+        "Used Assess / Implement / Evaluate structure for each work stream",
+        "Named Org/Job Design as the first and most important work stream",
+        "Identified the new roles needed (Outsourcing Manager, CRM Manager, International Compliance Manager)",
+        "Included Training & Learning with mention of multiple modalities and learning personas",
+        "Included Technology Adoption with transition plan and contingency",
+        "Mentioned the European leadership gap",
+        "Named at least one evaluation metric per work stream"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "pushback",
+      "interviewer": "You identified several training methodologies — nano-learning, video, game-based. Is it really necessary to have so many different approaches? Isn't that complex and expensive to implement?",
+      "question": "Defend the multi-modal training approach. Why is it worth the added complexity?",
+      "modelAnswer": "The multi-modal approach is necessary and justified for three reasons specific to Waltham&Rose:\n\n**1. Demographic diversity in the US workforce**: The existing employee base is predominantly in their 40s and 50s. Research shows that people of different ages absorb and retain information at different rates and through different media. Some prefer self-paced learning; others do better with instructor-led sessions or reference videos. A single format risks leaving a large portion of the workforce behind at a critical time.\n\n**2. The CRM adoption challenge**: Technology training is especially sensitive — people learn new platforms at very different paces. Some employees may master a quick video tutorial; others need hands-on walkthroughs. Using only one format risks adoption failures, which leads to workarounds and defeats the purpose of the investment.\n\n**3. Global distribution across time zones**: With employees in the US, Germany, and France, a training approach that requires everyone online simultaneously creates access barriers. Asynchronous, self-paced options alongside live sessions ensure equal access regardless of location.\n\nThe cost of developing multiple formats is modest relative to the cost of a failed CRM rollout or elevated attrition during an already stressful expansion. Training and learning are key drivers of employee engagement — and engagement drives profitability.",
+      "checklistItems": [
+        "Cited the demographic composition (40s–50s workforce) as the primary driver",
+        "Connected different modalities to the CRM adoption challenge specifically",
+        "Addressed the global time-zone / access issue",
+        "Framed the cost of multi-modal training as justified vs. the cost of a failed rollout",
+        "Stayed confident under pushback without fully abandoning the position"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "pushback",
+      "interviewer": "Waltham&Rose has no plan for who will lead the new offices in France and Germany — it will largely be new European hires, with no senior US executive planning to relocate. What are your thoughts?",
+      "question": "What is the risk of not having any US senior leadership in Europe, and what would you recommend?",
+      "modelAnswer": "This is a significant risk and I would push back on the current thinking.\n\n**The problem**: When a company expands internationally for the first time, the greatest threat is cultural and operational misalignment between headquarters and the new offices. Without a senior US executive on the ground:\n- New European offices may develop in ways that diverge from Waltham&Rose's culture and values\n- New European hires have no experienced organizational anchor — no one who understands HQ expectations and can translate them locally\n- Deloitte's mandate — making new employees feel part of the Waltham&Rose 'family' — becomes nearly impossible if no one from the family is present\n\n**Recommendation**: At minimum, one senior US executive — ideally the HR Director — should be assigned to each European office for the first 12–24 months as a structured transition role, not a permanent relocation.\n\nThis person's responsibilities:\n1. Anchor cultural cohesion between the new offices and HQ\n2. Oversee local CRM implementation and benefits outsourcing transition\n3. Gradually build and transfer authority to European senior hires\n\nUltimately, European office leadership must be balanced: US executives provide organizational context; locally hired German and French senior leaders bring regulatory knowledge, language, and cultural credibility. Both are essential.",
+      "checklistItems": [
+        "Identified the culture/alignment risk of no US executive presence",
+        "Connected it to the Deloitte mandate ('family' integration) being undermined",
+        "Recommended a structured 12–24 month transition assignment",
+        "Mentioned the HR Director as a natural candidate",
+        "Noted that final leadership must balance US context with local hires"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "You focused heavily on CRM adoption in your framework, but didn't say much about the outsourcing of health benefits. Walk me through how you'd approach that part of the engagement.",
+      "question": "How would you address the health benefits outsourcing challenge?",
+      "modelAnswer": "Health benefits outsourcing is a significant change management event on its own — and Waltham&Rose is tackling it simultaneously with international expansion and CRM rollout. The key risks are:\n\n**1. Employee anxiety during transition**: Employees get anxious when their healthcare coverage is changing, especially when it is unclear what will change, when, and how to access the new coverage. This anxiety directly affects performance. We need a proactive, transparent communication plan well before the transition date.\n\n**2. Regulatory complexity**: Healthcare regulations differ fundamentally between the US, Germany, and France. A single outsourcing partner may not be able to cover all three markets — separate partners may be required for each country. Waltham&Rose likely doesn't know this yet and must be informed early to avoid contract missteps.\n\n**3. Access and usability**: For outsourcing to succeed, employees must know how to contact their new benefits manager and understand the process. We recommend a digital portal, a named local benefits contact in each country, and a clear FAQ distributed before launch.\n\n*Structured approach*:\n- *Assess*: Audit current US benefits; map regulatory requirements in Germany and France; evaluate outsourcing partner options per country\n- *Implement*: Select partners; communicate changes clearly and in advance; establish local benefits contacts in each country; test access\n- *Evaluate*: Employee satisfaction with benefits access; claims response times; cost vs. baseline",
+      "checklistItems": [
+        "Named employee anxiety as a primary risk during benefits transition",
+        "Identified that US/Germany/France healthcare regulations differ (may need multiple partners)",
+        "Stressed the importance of proactive communication before transition",
+        "Recommended clear employee access to new benefits manager",
+        "Structured with Assess/Implement/Evaluate framing"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "Waltham&Rose's CEO is joining the call now. Give your final recommendation.",
+      "question": "Give your final recommendation to Waltham&Rose's CEO.",
+      "modelAnswer": "**Recommendation: Launch a three-work-stream engagement — Org/Job Design, Training & Learning, and Technology Adoption — executed in parallel on an accelerated timeline.**\n\n**The core problem**: Waltham&Rose is executing three high-complexity changes simultaneously — international expansion, benefits outsourcing, and CRM integration — with a long-tenured workforce that has never navigated anything like this before. Without structured change management, the risk of employee disengagement, adoption failure, or operational errors is high.\n\n**What we recommend:**\n\n1. **Immediately (this month)**: Conduct a rapid change readiness assessment. Stand up a PMO to coordinate all three work streams. Identify CRM champions internally. Brief the CEO on the European leadership gap — at least one senior exec must be assigned to Germany and France.\n\n2. **Short-term (months 1–3)**: Create and fill new roles (Outsourcing Manager, CRM Manager, International Compliance Manager). Develop multi-modal training in English, German, and French. Select health benefits partners for each country.\n\n3. **Medium-term (months 3–9)**: Pilot CRM rollout in one geography, then scale globally. Launch benefits outsourcing with proactive communications. Establish European office leadership with a US exec on a 12–24 month assignment.\n\n**Key risks**: CRM adoption resistance (mitigated by multi-modal training); regulatory missteps in Europe (mitigated by International Compliance Manager + local outsourcing partners).\n\n**Measurement**: CRM adoption rate by employee cohort; employee engagement scores pre/post expansion; benefits transition satisfaction; time-to-productivity of new European hires.",
+      "checklistItems": [
+        "Led with a clear recommendation (three work streams, accelerated timeline)",
+        "Named the core challenge (three simultaneous changes + long-tenured workforce)",
+        "Sequenced work into immediate, short-term, and medium-term actions",
+        "Recommended at least one US exec on a temporary European assignment",
+        "Named at least 2 key risks with mitigations",
+        "Proposed specific measurement metrics"
+      ]
+    }
+  ]
+}

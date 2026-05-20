@@ -1,0 +1,111 @@
+{
+  "id": "wharton-2017-16",
+  "title": "Medical Devices Co.",
+  "number": 16,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium-hard",
+  "firm": "BCG Final Round",
+  "type": "deal-structure",
+  "topics": ["deal-structure", "pricing", "math", "brainstorming", "vertical-integration", "margins"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Our client, Medical Devices Co., is a medical device company that manufactures a blood clotting product called BloodStopper. This product is currently sold in liquid vials. The product is typically applied with a sponge during post-op. Medical Devices is considering a deal with a sponge manufacturer named Spongy's to create a hybrid product that combines a sponge with the BloodStopper product. The combined product will include BloodStopper in a dry, tablet form. Spongy's will sell the final product.\n\nShould Medical Devices do a deal with Spongy's? If so, what terms should they negotiate?",
+      "question": "How would you structure this analysis? What clarifying questions would you ask?",
+      "modelAnswer": "I would structure this around four areas:\n\n**A. Consumers** — Who are they? Where, and how many? What benefit does the combined product provide vs. the original liquid vial? What is the WTP for the liquid vial alone, the standalone sponge, and the combined product?\n\n**B. Product** — Does Medical Devices own the IP on BloodStopper? Is the sponge unique or commoditized? What is the difference in cost between the liquid form and the tablet form of BloodStopper? What are the margins for each player?\n\n**C. Competition** — Are there other companies making a product like BloodStopper? What are the barriers to entry? Are there other sponge manufacturers?\n\n**D. Deal Structure** — Should Medical Devices proceed by selling the tablet to Spongy's, seek a different partner, or restructure the arrangement entirely?\n\n**Key clarifying questions:**\n- If Spongy's sells the final product, does Medical Devices sell the tablet to Spongy's? → *Yes, Medical Devices sells the tablet to Spongy's, and Spongy's handles marketing and customer relationships.*\n- Are there financial or operational targets for the deal? → *No. Medical Devices would like to maintain or improve profitability.*\n- Are there any other uses for BloodStopper? → *None that we know of right now.*",
+      "checklistItems": [
+        "Structured framework into at least 3 of the 4 areas: Consumers, Product, Competition, Deal Structure",
+        "Asked about consumer WTP for each product (liquid vial, standalone sponge, combined)",
+        "Asked whether Medical Devices owns the IP on BloodStopper",
+        "Asked about margins for each company in the deal",
+        "Asked who sells the final product and who sells the tablet to whom",
+        "Asked about the goal (maintain/improve profitability)"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "math",
+      "interviewer": "Good framework. Here is the consumer and product information. Customers are 1,000 hospitals with operating rooms across the U.S. The combined product enables greater operating room efficiency and is preferred because buyers no longer need to make separate purchases of BloodStopper (glass vial) and sponge — but there is no proven improved medical benefit. WTP for the original liquid vial is $85. WTP for a standalone sponge is $10. WTP increases by 10% for the combined product. The sponge costs $2 to manufacture. Medical Devices owns the IP on BloodStopper; there is nothing especially unique about the sponges. The BloodStopper liquid vial costs $5 total to produce. The BloodStopper tablet costs $3.50 to produce.",
+      "question": "Calculate: (1) the combined product price, (2) the price Medical Devices should charge Spongy's to maintain its original margin, and (3) Spongy's resulting margin.",
+      "data": {
+        "wtpLiquidVial": 85,
+        "wtpStandaloneSponge": 10,
+        "combinedProductPremium": 0.10,
+        "combinedProductWTP": 104.50,
+        "spongeMfgCost": 2,
+        "bloodstopperLiquidCost": 5,
+        "bloodstopperTabletCost": 3.50,
+        "originalMarginLiquidVial": 80,
+        "priceToChargeSpongy": 83.50,
+        "spongysMargin": 19
+      },
+      "modelAnswer": "**Step 1: Combined product price (WTP)**\n- WTP = ($85 + $10) × 1.10 = $95 × 1.10 = **$104.50**\n\n**Step 2: Medical Devices' original margin**\n- Liquid vial: selling price $85 − cost $5 = **$80 margin per unit**\n\n**Step 3: Price Medical Devices must charge Spongy's to maintain $80 margin**\n- Medical Devices' cost for the tablet = $3.50\n- To keep $80 margin: charge = $3.50 + $80 = **$83.50 per tablet**\n\n**Step 4: Spongy's margin on the combined product**\n- Spongy's sells combined product for $104.50\n- Spongy's COGS: $83.50 (tablet from MD) + $2.00 (sponge) = $85.50\n- Spongy's margin = $104.50 − $85.50 = **$19 per unit**\n\n**Key insight**: For Medical Devices to maintain its high $80 margin, Spongy's would face a very high COGS ($83.50 out of $104.50 in revenue), leaving only $19 margin. This is only possible if Spongy's can sell at significant volume — and even then, the economics heavily favor Medical Devices over Spongy's.",
+      "checklistItems": [
+        "Correctly computed combined product WTP: ($85 + $10) × 1.1 = $104.50",
+        "Correctly computed Medical Devices' original margin: $85 − $5 = $80",
+        "Correctly computed price to Spongy's: $3.50 + $80 = $83.50",
+        "Correctly computed Spongy's margin: $104.50 − $83.50 − $2 = $19",
+        "Identified that maintaining MD's margin means very high COGS for Spongy's"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "exhibit",
+      "exhibitType": "table",
+      "interviewer": "Here is the cost breakdown for the BloodStopper product in both forms.",
+      "question": "Review the cost table. What does it tell you about the economics of switching from liquid vial to tablet form?",
+      "data": {
+        "exhibit": "BloodStopper Cost Breakdown — Per Unit",
+        "table": {
+          "columns": ["Cost Item", "BloodStopper Liquid Vial", "BloodStopper Tablet Form"],
+          "rows": [
+            ["Raw materials", "$1.00", "$0.90"],
+            ["Manufacturing", "$0.25", "$0.20"],
+            ["Packaging", "$0.15", "$0.10"],
+            ["Direct Labor", "$2.10", "$1.80"],
+            ["Sales & Marketing", "$1.50", "$0.50"],
+            ["TOTAL", "$5.00", "$3.50"]
+          ]
+        }
+      },
+      "modelAnswer": "**Key observations from the cost table:**\n\n1. **The tablet form is cheaper to produce**: Total cost drops from $5.00 (liquid vial) to $3.50 (tablet form) — a $1.50 reduction, or 30% lower COGS.\n   - The biggest savings come from Sales & Marketing ($1.50 → $0.50), which makes sense since Spongy's would be taking over the marketing and distribution function in the new arrangement.\n   - Manufacturing, materials, packaging, and labor are all slightly lower in tablet form.\n\n2. **The lower tablet cost is what creates the margin math from the previous question**: Medical Devices can pass its $3.50 cost plus $80 margin on to Spongy's, which is exactly $83.50.\n\n3. **S&M cost reduction implies Medical Devices is offloading a key function to Spongy's**: Spongy's takes on all the sales and customer relationship burden. If Spongy's doesn't perform well on distribution, Medical Devices' market access is at risk — a key vulnerability in this deal structure.",
+      "checklistItems": [
+        "Identified that tablet form is $1.50 cheaper to produce ($5.00 → $3.50)",
+        "Noted that the biggest savings are in Sales & Marketing ($1.50 → $0.50)",
+        "Connected the cost reduction to the margin calculation from the previous card",
+        "Raised the risk that S&M offloading means MD depends on Spongy's for distribution"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "qualitative",
+      "interviewer": "Good. Now let's think about competition and the deal structure. What do you know about the competitive landscape for BloodStopper and for sponges? And given the margin analysis, how should Medical Devices think about the deal?",
+      "question": "Analyze the competitive positions of Medical Devices and Spongy's, and brainstorm alternative deal structures.",
+      "modelAnswer": "**Competitive analysis:**\n\n*BloodStopper (Medical Devices):*\n- Medical Devices owns the IP on BloodStopper — there are no other companies that make a comparable product, and it is not easy to replicate.\n- This gives Medical Devices enormous pricing power and a protected market position.\n\n*Spongy's (sponges):*\n- There are 10 large sponge manufacturers — the sponge market is commoditized.\n- Spongy's has no unique IP or defensible competitive advantage.\n\n**Implication**: Medical Devices is the powerful player in this negotiation. BloodStopper is unique and IP-protected; the sponge is a commodity. Medical Devices does not need Spongy's specifically — it could partner with any of the 10 other sponge makers.\n\n**Deal structure alternatives:**\n\n1. **Current deal (as proposed)** — Medical Devices sells tablet to Spongy's, Spongy's sells combined product. *Challenge*: Spongy's would have very high COGS ($83.50 of $104.50) if Medical Devices maintains its margin — unsustainable economics for Spongy's, which puts the partnership at risk.\n\n2. **Vertical integration — Medical Devices acquires a sponge manufacturer**: Given that Medical Devices has higher margins and a stronger financial position, it should acquire Spongy's or one of its 10 competitors. This eliminates the distribution dependency, captures the sponge margin directly, and gives Medical Devices full control of the combined product.\n\n3. **Volume-based discounting**: Medical Devices gives Spongy's a lower tablet price at high sales volumes, incentivizing Spongy's to push the combined product aggressively.\n\n4. **Revenue sharing**: Implement revenue-sharing thresholds to align incentives — Spongy's keeps more margin above certain sales targets.",
+      "checklistItems": [
+        "Identified BloodStopper as IP-protected with no competitive alternatives",
+        "Identified sponges as commoditized with 10 large manufacturers",
+        "Concluded that Medical Devices is the stronger/more powerful player",
+        "Named vertical integration (acquisition) as the primary alternative to the current deal",
+        "Named volume-based discounting or revenue sharing as deal modification options",
+        "Noted that the current deal economics may not be sustainable for Spongy's"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "recommendation",
+      "interviewer": "Should Medical Devices Co. sell their product to Spongy's? If so, how?",
+      "question": "Give your final recommendation on the deal.",
+      "modelAnswer": "**Recommendation: Medical Devices should NOT proceed with the deal as proposed.**\n\n**The core problem**: For Medical Devices to maintain its $80 margin per unit, Spongy's would have to pay $83.50 for the tablet and sell the combined product at $104.50 — leaving Spongy's only $19 per unit margin after its $2 sponge cost. With such a high COGS ($83.50 out of $104.50 revenue = 80% of revenue), Spongy's economics are strained. A Spongy's under margin pressure will under-invest in marketing and distribution — which defeats the strategic rationale for Medical Devices to partner in the first place.\n\n**The better path: vertical integration.**\n\nMedical Devices should acquire Spongy's or one of its 10 competitors outright. Here's why:\n- Medical Devices has the stronger financial position (higher margins, unique IP)\n- The sponge market is commoditized, so acquisition targets are available and likely at reasonable valuations\n- Acquiring a sponge manufacturer gives Medical Devices full control over the combined product — pricing, distribution, and margin capture\n- It eliminates the risk of being dependent on Spongy's sales performance for market access\n\n**If Medical Devices insists on a partnership** (not acquisition), it should restructure the deal with volume-based discounting or revenue sharing to give Spongy's viable economics at scale.\n\n**Key principle**: Medical Devices holds the powerful position in this negotiation — unique IP, no competitive alternatives, strong margins. It should use that leverage to capture the value of the combined product directly, not give it away through an unfavorable distribution agreement.",
+      "checklistItems": [
+        "Led with a clear recommendation (do not do the deal as proposed)",
+        "Cited Spongy's high COGS as the deal-breaker ($83.50 of $104.50 = ~80% of revenue)",
+        "Recommended vertical integration (acquisition) as the primary alternative",
+        "Justified acquisition: Medical Devices has stronger financial position, sponge market is commoditized",
+        "Acknowledged that if partnership must happen, restructure with volume discounting or revenue sharing",
+        "Recognized Medical Devices' negotiating power (unique IP vs. commodity sponge)"
+      ]
+    }
+  ]
+}

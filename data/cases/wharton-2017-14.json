@@ -1,0 +1,130 @@
+{
+  "id": "wharton-2017-14",
+  "title": "Penn & Teller",
+  "number": 14,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium",
+  "firm": "BCG first round",
+  "type": "profitability",
+  "topics": ["profitability", "math", "brainstorming", "entertainment", "unit-economics"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Our client is Caesars, one of the largest gaming and resort companies in the world. Penn and Teller have been the headlining show at the Rio Hotel since 2001, and they are currently the longest-running headlining show in Vegas history. Caesars, which owns the Rio Hotel where the duo performs in the 1,500-seat P&T Theater, is wondering if their act has become stale. Penn & Teller's annual contract is about to expire, and before Caesars has a meeting with the duo, they have asked our firm's advice on whether or not to resign the act for another year. What recommendation do you have for Caesars?",
+      "question": "What clarifying questions would you ask, and how would you structure this analysis?",
+      "modelAnswer": "**Clarifying questions:**\n\n1. **What is Caesars' primary goal?** Caesars cares solely about the company's total bottom line profitability — not just P&T's show in isolation.\n\n2. **How long is the Penn & Teller contract?** As is the Vegas standard, all contracts are one-year periods.\n\n3. **Why does Caesars think the show is stale?** The show has plateaued — no change in bottom-line profitability in the past five years.\n\n4. **Who are Caesars' competitors?** Biggest competitor is MGM Resorts (~33% of the Strip). P&T compete against all forms of nighttime entertainment: other shows, nightclubs, and gaming.\n\n**Framework — Company Profits from P&T:**\n- **Revenues from P&T**: Ticket revenue (price × seats sold by category) + other revenue driven by the show (gaming, dining, hotel stays, concessions, souvenirs)\n- **Costs**: Fixed costs (performer contracts, SG&A, marketing, insurance) + Variable costs (magic props, housekeeping, playbills, ushers, stage crew, utilities)\n- **Other sources of company profit**: How does P&T affect hotel stays, dining, casino spend, and concessions beyond the show itself?\n\nKey evaluation: Is P&T profitable today? What happens if we switch to a different act?",
+      "checklistItems": [
+        "Identified Caesars' goal as total company bottom line (not just P&T show)",
+        "Asked why the show is considered stale (plateaued revenue for 5+ years)",
+        "Identified competitors (MGM, all nighttime Vegas entertainment)",
+        "Framework goes at least three levels deep (revenue → ticket price × patrons; costs → fixed vs. variable)",
+        "Framework considers revenue sources beyond ticket sales (casino, hotel, concessions)",
+        "Used Vegas-specific terminology (patrons, not customers; theater, not venue)"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "math",
+      "interviewer": "Good structure. Here is the revenue information for the P&T show. The theater has 1,500 seats in three categories: 300 Category A seats (best seats, $120 each, 100% sold); 800 Category B seats ($75 each, 80% sold); 400 Category C seats (balcony, $55 each, 50% sold). Penn & Teller perform 6 shows per week, 40 weeks per year. These numbers have been static for 5+ years.",
+      "question": "Calculate the total annual ticket revenue from the Penn & Teller show.",
+      "data": {
+        "categories": [
+          { "name": "Category A", "seats": 300, "fillRate": 1.00, "pricePerTicket": 120 },
+          { "name": "Category B", "seats": 800, "fillRate": 0.80, "pricePerTicket": 75 },
+          { "name": "Category C", "seats": 400, "fillRate": 0.50, "pricePerTicket": 55 }
+        ],
+        "showsPerWeek": 6,
+        "weeksPerYear": 40
+      },
+      "modelAnswer": "**Revenue per show by category:**\n- Category A: 300 × 100% × $120 = **$36,000**\n- Category B: 800 × 80% × $75 = **$48,000**\n- Category C: 400 × 50% × $55 = **$11,000**\n- **Revenue per show = $95,000**\n\n**Annual shows**: 6 shows/week × 40 weeks = **240 shows/year**\n\n**Annual ticket revenue**: $95,000 × 240 = **$22.8 million per year**\n\n*Note*: These numbers have been static for 5+ years — confirming Caesars' concern that the show has plateaued.",
+      "checklistItems": [
+        "Correctly computed Cat A revenue per show: 300 × $120 = $36,000",
+        "Correctly computed Cat B revenue per show: 640 × $75 = $48,000",
+        "Correctly computed Cat C revenue per show: 200 × $55 = $11,000",
+        "Correctly totaled revenue per show: $95,000",
+        "Correctly computed annual shows: 6 × 40 = 240",
+        "Correctly computed annual revenue: $95K × 240 = $22.8M"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "math",
+      "interviewer": "Good. Now for costs. Penn and Teller each make $2M per year. The crew (stagehands, showgirls, ushers) costs $2,000 per show. Housekeeping costs $1,000 per week and is only needed the 40 weeks the show runs. Props (doves, cards, etc.) cost $200 per show. Utilities (lights, etc.) are $52,000 per year. SG&A (marketing, box office staff) costs $15,000 per month for the full 12 months.",
+      "question": "Calculate total annual costs and the show's annual profit and profit margin.",
+      "data": {
+        "costs": [
+          { "item": "Performer Contracts (Penn + Teller)", "rate": 2000000, "period": "per person per year", "annualCost": 4000000 },
+          { "item": "Crew (stagehands, showgirls, ushers)", "rate": 2000, "period": "per show", "annualCost": 480000 },
+          { "item": "Housekeeping", "rate": 1000, "period": "per week (40 weeks only)", "annualCost": 40000 },
+          { "item": "Props (doves, playing cards, etc.)", "rate": 200, "period": "per show", "annualCost": 48000 },
+          { "item": "Utilities (lights)", "rate": 52000, "period": "per year", "annualCost": 52000 },
+          { "item": "SG&A and Marketing", "rate": 15000, "period": "per month (12 months)", "annualCost": 180000 }
+        ]
+      },
+      "modelAnswer": "**Annualizing each cost item:**\n- Performer contracts: 2 × $2,000,000 = **$4,000,000/yr**\n- Crew: $2,000/show × 240 shows = **$480,000/yr**\n- Housekeeping: $1,000/week × 40 weeks = **$40,000/yr**\n- Props: $200/show × 240 shows = **$48,000/yr**\n- Utilities: **$52,000/yr**\n- SG&A: $15,000/month × 12 months = **$180,000/yr**\n- **Total annual costs = $4,800,000**\n\n**Annual profit:**\n- Revenue: $22,800,000\n- Costs: $4,800,000\n- **Annual profit = $18,000,000**\n- **Profit margin ≈ 79%**\n\nThe P&T show is extremely profitable — nearly 80 cents of operating profit per dollar of revenue. Caesars should consider this carefully before switching.",
+      "checklistItems": [
+        "Correctly computed performer cost: 2 × $2M = $4M/yr",
+        "Correctly computed crew: $2K × 240 shows = $480K/yr",
+        "Correctly computed housekeeping: $1K × 40 weeks = $40K/yr (not 52 weeks)",
+        "Correctly computed props: $200 × 240 = $48K/yr",
+        "Correctly computed SG&A: $15K × 12 months = $180K/yr",
+        "Correctly totaled costs to $4.8M/yr",
+        "Correctly computed profit: $22.8M − $4.8M = $18M and ~80% margin"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "qualitative",
+      "interviewer": "The P&T show is generating $18M in annual profit at an 80% margin. What could Caesars do to make the current show even more profitable if they resign?",
+      "question": "Brainstorm ways to increase revenue or reduce costs from the P&T show.",
+      "modelAnswer": "Structuring this by revenue and costs:\n\n**Revenue opportunities:**\n\n*Ticket price and quantity:*\n- Increase ticket prices — especially Cat A and Cat B (demand appears inelastic given consistent fill rates)\n- Reconfigure seating: convert some Cat B seats into Cat A seats (higher margin seats); convert Cat C balcony into Cat B\n- Offer bundle discounts with hotel stay or dining to drive incremental revenue\n\n*Other revenue streams beyond tickets:*\n- Retool concessions offerings (merchandise, food/drink at the show)\n- Add a gift shop with branded P&T souvenirs (magic-themed merchandise has strong appeal)\n- Shorten the show by 20–30 minutes so patrons have more time to gamble — gaming is a much higher-margin activity for Caesars\n- Create ticket/dinner packages with Rio Hotel restaurants to boost F&B revenue\n- Sell 'meet & greet' premium experiences at a significant upcharge\n\n**Cost reduction opportunities:**\n- Revisit the performer contract with P&T: at $4M/year, they represent 83% of total non-performer costs — even a modest reduction meaningfully improves margin\n- Evaluate union vs. non-union labor for crew and ushers\n- Reduce SG&A with more digital/social marketing (lower cost per impression than traditional channels)",
+      "checklistItems": [
+        "Structured brainstorm into revenue vs. cost categories",
+        "Proposed increasing ticket prices or reconfiguring seating mix",
+        "Proposed shortening the show to drive gaming revenue (case-specific insight)",
+        "Proposed merchandise/gift shop or premium 'meet & greet' experiences",
+        "Raised the performer contract as a cost reduction lever",
+        "Named union vs. non-union labor as a cost consideration"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "math",
+      "interviewer": "Caesars has the opportunity to replace P&T with the recent winner of America's Got Talent (AGT). Putting in a new show would require a one-time reconfiguration of the theater and a marketing blitz costing $2.4M total. The AGT winner's show would bring in $90K in ticket revenue per show (vs. P&T's $95K). The AGT show would cost $3M per year (vs. P&T's $4.8M). Should Caesars switch?",
+      "question": "Calculate whether switching to the AGT winner show makes financial sense. What is the payback period?",
+      "data": {
+        "ptRevPerShow": 95000,
+        "agtRevPerShow": 90000,
+        "totalShows": 240,
+        "ptAnnualCosts": 4800000,
+        "agtAnnualCosts": 3000000,
+        "switchCost": 2400000
+      },
+      "modelAnswer": "**Change in annual revenue:**\n- AGT brings in $5,000 less per show: −$5,000 × 240 shows = **−$1,200,000/yr**\n\n**Change in annual costs:**\n- AGT costs $1.8M less per year: $4.8M − $3.0M = **−$1,800,000/yr savings**\n\n**Net change in annual profit:**\n- Revenue change: −$1.2M\n- Cost savings: +$1.8M\n- **Net annual improvement: +$600,000/yr**\n\n**Payback on the $2.4M switch cost:**\n- $2,400,000 ÷ $600,000/yr = **4 years**\n\n**Should Caesars switch?**\n\n*Arguments for switching (AGT):*\n- $600K more profitable per year once the switch cost is recouped\n- AGT winner is new and fresh — directly addresses the 'stale' concern\n\n*Arguments against switching (P&T):*\n- 4-year payback is a long time in the hyper-competitive Vegas entertainment market\n- AGT winners are trendy but may not have Penn & Teller's sustained drawing power — the act may not fill seats for 4+ years\n- P&T is currently generating $18M/yr in profit — the downside if AGT underperforms is significant\n\n**The case does not dictate one right answer** — a well-reasoned argument for either side is acceptable.",
+      "checklistItems": [
+        "Correctly calculated revenue change: −$5K/show × 240 shows = −$1.2M/yr",
+        "Correctly calculated cost savings: $4.8M − $3.0M = $1.8M/yr",
+        "Correctly calculated net annual improvement: +$600K/yr",
+        "Correctly calculated payback: $2.4M ÷ $600K = 4 years",
+        "Presented balanced arguments for both sides (switch vs. stay)",
+        "Noted that 4 years is long given Vegas market volatility"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The SVP of Entertainment has just stepped in and wants to know what we've discussed and what your recommendation is. What do you tell them?",
+      "question": "Give your final recommendation to the SVP of Entertainment at Caesars.",
+      "modelAnswer": "**I recommend that Caesars resign Penn & Teller for another year.**\n\n**Summary of the analysis:**\n- The P&T show currently generates **$22.8M in revenue** and **$18M in annual profit** at an industry-leading 80% margin.\n- The alternative — signing the AGT winner — would yield $600K more in annual profit, but requires a $2.4M one-time investment with a 4-year payback.\n\n**Why we recommend resigning P&T:**\n1. **The payback period is too long**: In the hyper-competitive Vegas entertainment market, a 4-year payback horizon is risky. Consumer tastes shift quickly, and there is no guarantee the AGT winner maintains drawing power over that period.\n2. **P&T is a proven commodity**: 16 years as the longest-running headlining show in Vegas history means an established fan base, reliable repeat attendance, and strong brand recognition — which benefits the entire Rio property.\n3. **The P&T contract is relatively low-risk**: A one-year contract with the option to switch next year preserves optionality if the show truly stagnates further.\n\n**What we recommend alongside the resign**:\n- Use the next year to test revenue-enhancement initiatives: reconfigure some Cat B seats into Cat A, introduce premium 'meet & greet' packages, and consider shortening the show to drive gaming revenue.\n- If profitability still hasn't improved at next year's contract renewal, the AGT option or another act becomes more compelling.\n\n**Key risk**: If P&T's reputation continues to plateau and the AGT show's availability window closes, Caesars may lose the opportunity to refresh entirely — so this is a one-year runway, not an indefinite one.",
+      "checklistItems": [
+        "Led with a clear recommendation (resign P&T)",
+        "Referenced the $18M annual profit and 80% margin",
+        "Cited the 4-year payback as the key risk of switching",
+        "Named P&T's long history as a draw and brand asset",
+        "Proposed specific revenue-enhancement initiatives alongside the resign",
+        "Acknowledged the risk of indefinite delay and noted the one-year runway"
+      ]
+    }
+  ]
+}

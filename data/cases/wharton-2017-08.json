@@ -1,0 +1,102 @@
+{
+  "id": "wharton-2017-08",
+  "title": "Clothing Chain Goes Global and Local",
+  "number": 8,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium-hard",
+  "firm": "Deloitte Human Capital first and second round",
+  "type": "acquisition",
+  "topics": ["acquisition", "change-management", "culture", "workforce", "human-capital"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Yermakov Ltd. is a US-based clothing company with stores in 65 countries and 100,000 employees worldwide. To 'localize' its image, Yermakov has been acquiring a dozen high-end boutiques and specialty clothing shops around the world. These acquired businesses exclusively use fair-trade sourcing, have close relationships with their supply chain and buyer base, and are much smaller than Yermakov — the largest has 120 employees. Their employees have deep, specialized knowledge about local fashion and are passionate about local business. Six months into this post-acquisition era, Yermakov is experiencing what one senior staff member called 'growing pains': many acquired employees declined offers to continue working under Yermakov, customer acquisition in the local fashion market has been lower than expected, and long-time Yermakov employees are anxious, which is affecting their day-to-day performance. Yermakov has approached Deloitte Human Capital for help stabilizing their workforce and communicating a compelling change agenda.",
+      "question": "What clarifying questions would you ask before structuring your analysis?",
+      "modelAnswer": "Key clarifying questions and answers:\n\n1. **Is the other consulting firm that analyzed the acquisitions still involved?** No — but they have a point of contact from that team available for communication. (Important: we should review what the prior consultants found before starting.)\n\n2. **Are the acquired boutiques located in countries where Yermakov already has a presence?** Yes — this was part of the criteria for acquisition. Means some infrastructure and relationships exist.\n\n3. **How much advance notice did acquired employees receive about the acquisition?** It differed by company, but generally about one month. This is quite short — likely contributed to employee anxiety and departures.\n\n4. **Does Yermakov have an in-house team with expertise in local fashion?** No. This is a critical gap — Yermakov staff are not positioned to serve as ambassadors for the new local fashion lines they are supposed to be selling.\n\n5. **What is the primary mandate: stabilize current workforce, or also win back the employees who declined offers?** (Sets scope — focus on current employees and communicating change agenda.)",
+      "checklistItems": [
+        "Asked about the prior consulting firm's work (to avoid duplication and leverage findings)",
+        "Asked whether acquired companies are in markets where Yermakov already operates",
+        "Asked about the advance notice given to acquired employees",
+        "Asked whether Yermakov has internal local fashion expertise",
+        "Briefly summarized the case before asking questions (shows listening)"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "framework",
+      "interviewer": "Good questions. The prior consultants are no longer active but a contact exists. Acquired companies are all in markets where Yermakov operates. Employees received about one month's notice. Yermakov has no internal local fashion expertise. Now, how would you structure the engagement?",
+      "question": "Walk me through your framework for helping Yermakov stabilize its workforce and communicate a change agenda. This is a Human Capital case — use an Assess / Implement / Evaluate structure for each work stream.",
+      "modelAnswer": "**Business Issues: Acquisition Management + Workforce Stabilization**\n\nI'd organize this into three prioritized work streams:\n\n---\n\n**Work Stream 1 (Most Important): Communication & Change Management**\n- *Assess*: Stakeholder analysis (internal Yermakov staff + remaining acquired employees + leadership); change readiness assessment. Review prior consultants' work to avoid overlap.\n- *Implement*: Develop a change management strategy — demonstrate to all employees how they benefit from the acquisition. Create clear, honest communications: vision, timeline, and concrete steps. Establish two-way communication channels (company intranet, all-hands meetings, pulse surveys) so employees feel heard.\n- *Evaluate*: Track progress along the change curve: % awareness → % understanding → % adoption. Monitor open rates of change communications and pulse survey sentiment.\n\n**Work Stream 2: Talent Strategy**\n- *Assess*: Gap analysis of skills needed in the new Yermakov (local fashion expertise); compensation and benefits benchmarking versus market.\n- *Implement*: Define talent roadmap; develop competency models for new hybrid roles; create career pathing for employees who want to grow into the local fashion business; redesign rewards/recognition strategy.\n- *Evaluate*: Employee engagement surveys; offer/acceptance rates; \"great place to work\" ratings; retention rate of acquired employees.\n\n**Work Stream 3: Culture & Employee Engagement**\n- *Assess*: Review existing employee engagement surveys or create them. Stakeholder interviews and workshops to understand the cultures of both Yermakov and the acquired boutiques.\n- *Implement*: Design an employee engagement strategy that preserves core elements of acquired company culture while integrating Yermakov's values. More face time between senior leaders and all employees; professional development opportunities.\n- *Evaluate*: Engagement levels pre- and post-intervention.\n\n*Other considerations*: Leadership alignment (how are the CEOs of acquired boutiques now reporting?), technology integration (each acquired company may run a different tech platform).",
+      "checklistItems": [
+        "Used Assess / Implement / Evaluate structure for each work stream",
+        "Named Communication/Change Management as the first and most important work stream",
+        "Included talent strategy as a distinct work stream",
+        "Included culture/employee engagement as a third work stream",
+        "Mentioned reviewing the prior consultants' work",
+        "Named at least one evaluation metric per work stream",
+        "Stated assumptions (e.g., employee engagement went down post-acquisition)"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "qualitative",
+      "interviewer": "Good framework. Let's push on the root cause. What do you think is the primary reason Yermakov is experiencing these workforce challenges?",
+      "question": "What is the root cause of Yermakov's workforce challenges, and why does it matter so much?",
+      "modelAnswer": "**Root cause: Inadequate change management from the moment the acquisition was announced.**\n\nYermakov gave acquired employees roughly one month's notice — not nearly enough time to process a major organizational change, especially for employees who are deeply passionate about local fashion and their boutique's identity. Critically, there is no evidence that Yermakov senior management or HR actively went out to:\n- Formally welcome the acquired employees and develop rapport\n- Listen to their concerns\n- Understand the culture of the companies they were acquiring\n- Explain clearly how the acquisition would affect day-to-day work\n\nThis created massive unnecessary uncertainty and anxiety. Employees who are passionate about their work and culture felt Yermakov was acquiring their business without valuing the human capital within it.\n\n**Why this matters so much:**\nThe acquired companies' employees *are* the value Yermakov paid for. Their deep knowledge of local fashion, their relationships with local suppliers and buyers, and their passion for the business are not replicable from Yermakov's existing workforce. Losing these employees means losing the entire strategic rationale for the acquisition — Yermakov ends up with boutique storefronts but without the expertise or credibility to actually sell local fashion. If Yermakov cannot retain acquired employees, they risk losing major potential upside on their acquisition investment.",
+      "checklistItems": [
+        "Identified inadequate change communication as the root cause",
+        "Cited the short notice period (~1 month) as a contributing factor",
+        "Noted Yermakov leadership did not actively welcome or listen to acquired employees",
+        "Connected the workforce challenge to business risk (acquisition value destruction)",
+        "Articulated why acquired employees' expertise is uniquely valuable and hard to replace"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "pushback",
+      "interviewer": "People get unhappy about changes at work all the time — it's normal. Why is this such a serious problem for Yermakov specifically? And separately: Yermakov employees don't really understand what 'local fashion' means. They're supposed to be ambassadors for this new strategy. How do you address that?",
+      "question": "Push back on both challenges: Why is workforce unhappiness a serious strategic risk here, and how do you fix the local fashion knowledge gap?",
+      "modelAnswer": "**On why workforce unhappiness is a serious strategic risk:**\n\nThis isn't ordinary job dissatisfaction. The acquired companies' employees have rare, specialized knowledge about their local fashion markets — supplier relationships, buyer networks, and cultural credibility built over years. That expertise is what Yermakov acquired. Without it, Yermakov has boutique storefronts but no authentic local fashion offering, which means lower-than-expected customer acquisition and no path to recouping the investment.\n\nWhen people feel undervalued, they underperform and leave. Unlike most HR problems, Yermakov can't easily replace these employees — you cannot hire local fashion experts in 12 different markets overnight. Every departure is a compounding loss.\n\n**On the local fashion knowledge gap:**\n\nLong-term Yermakov employees may not become local fashion experts, but they can be trained to be credible ambassadors. Specific approaches:\n1. **Training and talking points**: Equip Yermakov staff with key facts, stories, and talking points about each local line — what makes it unique, who the suppliers are, why the product is authentic.\n2. **Professional rotations**: Assign willing Yermakov employees to rotations at the acquired boutiques to learn the business firsthand.\n3. **Site visits and cross-collaboration**: Organize visits between Yermakov HQ and boutique teams to build relationships and transfer knowledge bidirectionally.\n\nThe goal is not to make everyone an expert — it's to give the broader workforce enough literacy to authentically represent the strategy.",
+      "checklistItems": [
+        "Articulated why this is not 'ordinary' unhappiness — specialized knowledge is at stake",
+        "Connected employee departure to strategic value destruction (not just HR metrics)",
+        "Noted that acquired expertise is hard to replace at scale",
+        "Proposed at least 2 concrete ways to close the local fashion knowledge gap",
+        "Mentioned training + rotations as complementary tools",
+        "Framed the knowledge goal appropriately (ambassador-level, not expert-level)"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "If Yermakov can only afford to prioritize one work stream right now, which one would you choose and why? Also — each acquired company runs on a completely different technology platform. How would you address that aspect of the integration?",
+      "question": "Prioritize one work stream, then address the technology integration challenge.",
+      "modelAnswer": "**Priority work stream: Communication & Change Management.**\n\nThis is the foundational work stream because it addresses the primary root cause — employees felt blindsided and undervalued. Before talent strategy or culture programs can work, people need to understand what is happening, why, and how they fit into the new Yermakov. Without that foundation of trust and clarity, any talent or culture initiative will fall on deaf ears or feel performative.\n\nSpecifically, the most urgent action is establishing direct, two-way communication between Yermakov leadership and all employees — particularly those at acquired boutiques. Leaders should be on-site listening to concerns, not sending newsletters from headquarters.\n\n**On technology platform fragmentation:**\n\nThis is a classic post-acquisition integration challenge. The risk is twofold: (1) operational inefficiency from running a dozen different systems, and (2) employee frustration from being asked to change tools while already navigating organizational upheaval.\n\nRecommended approach:\n1. **In the short term**, do not force a technology migration. Let acquired companies continue using their existing platforms while the human stabilization work happens. Adding tech disruption now would compound employee frustration.\n2. **In the medium term**, conduct a systems audit to identify which platforms can coexist, which should migrate to Yermakov's standard, and which Yermakov should potentially adopt from the boutiques (if superior for local market needs).\n3. **Involve boutique employees** in the technology selection process — this builds buy-in and leverages their expertise.",
+      "checklistItems": [
+        "Correctly identified Communication/Change Management as the highest priority",
+        "Justified the choice by connecting it to the root cause",
+        "Noted that other work streams depend on establishing communication trust first",
+        "Recommended delaying forced tech migration during the stabilization phase",
+        "Proposed a phased tech integration approach (short-term stability → medium-term audit)",
+        "Suggested involving boutique employees in the tech decision to build buy-in"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "Yermakov's CEO is on the call. Give your final recommendation.",
+      "question": "Give your final recommendation to Yermakov's CEO.",
+      "modelAnswer": "**Recommendation: Launch a three-work-stream stabilization program, led by Communication & Change Management.**\n\n**The core problem:** Yermakov acquired the right businesses but managed the transition in a way that left acquired employees feeling unvalued and blindsided. This is now threatening the strategic value of the acquisitions — these employees hold the local expertise, supplier relationships, and market credibility that Yermakov paid for.\n\n**What we recommend:**\n\n1. **Immediately (this quarter)**: CEO and senior HR leaders must conduct in-person visits to each acquired boutique. Listen, acknowledge the missteps, and communicate a clear, honest vision for what Yermakov is trying to build. Establish two-way communication channels. Do not wait for a polished program — the urgency is now.\n\n2. **Short-term (months 2–4)**: Launch a talent strategy to map skill gaps, redesign career paths, benchmark compensation, and create visible growth opportunities for both acquired and long-time Yermakov employees.\n\n3. **Medium-term (months 4–12)**: Implement a culture integration program that consciously preserves what made the boutiques valuable while connecting them to Yermakov's scale advantages. Train Yermakov staff to be authentic ambassadors for local fashion lines.\n\n**Key risks to monitor:**\n- Further attrition among acquired employees before the program takes effect\n- Long-time Yermakov employees disengaging if they feel the boutiques are prioritized\n- Technology platform fragmentation slowing operational integration\n\n**Measurement**: Attrition rate of acquired employees, customer acquisition in local fashion lines, employee engagement scores pre- and post-intervention.",
+      "checklistItems": [
+        "Led with a clear recommendation (three work streams, led by comms)",
+        "Named the core problem correctly (transition management, not the acquisitions themselves)",
+        "Recommended immediate CEO-level in-person action",
+        "Sequenced the three work streams in a logical order",
+        "Named at least 2 key risks to monitor",
+        "Proposed specific measurement metrics",
+        "Structured answer: recommendation → rationale → risks → metrics"
+      ]
+    }
+  ]
+}

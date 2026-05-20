@@ -1,0 +1,117 @@
+{
+  "id": "wharton-2017-03",
+  "title": "Snack Foods Acquisition",
+  "number": 3,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium",
+  "firm": "Bain round 1",
+  "type": "acquisition",
+  "topics": ["market-sizing", "acquisition", "payback-period", "synergies"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Your client is Peanut Co., a leading manufacturer of snacking peanuts. Their core business has been growing slowly as consumers shift away from peanuts. They are considering acquiring Almond Co., a manufacturer of snacking almonds, to diversify their portfolio and access a faster-growing segment. They've asked us to evaluate whether this acquisition makes sense.",
+      "question": "What clarifying questions would you ask before structuring your analysis?",
+      "modelAnswer": "Key clarifying questions to ask:\n\n1. **Scope of the acquisition target**: Does Almond Co. produce only snacking almonds, or also cooking almonds and other products? (Answer: snacking almonds only — this keeps the market sizing focused.)\n\n2. **Why almonds vs. peanuts?**: Is the almond industry experiencing the same consumer slowdown as peanuts? (Answer: No — almonds are perceived as higher in nutrients and are growing faster.)\n\n3. **Strategic fit**: Does Peanut Co. have existing distribution in the snack food space that could benefit Almond Co.?\n\n4. **Deal structure**: Do we know the purchase price or valuation being discussed?\n\n5. **Competitive landscape**: Are competitors also looking to acquire Almond Co., creating urgency?",
+      "checklistItems": [
+        "Asked about scope of Almond Co.'s product line (snacking vs. cooking almonds)",
+        "Asked about why almonds are growing when peanuts are not",
+        "Asked about strategic fit / distribution overlap",
+        "Asked about purchase price or valuation",
+        "Asked about competitive dynamics or deal urgency"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "framework",
+      "interviewer": "Good questions. Here's what we know: Almond Co. produces snacking almonds only. The almond market is growing faster than peanuts due to health trends — almonds are perceived as more nutritious. Peanut Co. has an established distribution network in North America. The purchase price is $1.5 billion. Now, how would you structure your analysis of this acquisition?",
+      "question": "Walk me through your framework for evaluating this acquisition.",
+      "modelAnswer": "I'd evaluate this acquisition across five buckets:\n\n1. **Market size and growth**: How large is the snacking almond market? What is the growth rate? Is the growth sustainable?\n\n2. **Profitability**: What are Almond Co.'s unit economics — pricing, cost structure, and margins? How do they compare to Peanut Co.?\n\n3. **Synergies and dis-synergies**: Can Peanut Co. leverage its distribution network for Almond Co. products? Are there shared procurement or manufacturing efficiencies? On the flip side, will almond products cannibalize existing peanut sales?\n\n4. **Competitive dynamics**: Is Almond Co. a preferred brand in its segment? Who are the main competitors? What are the barriers to entry that protect Almond Co.'s position?\n\n5. **Deal economics**: At a $1.5B purchase price, what is the payback period? What return does this represent, and is it acceptable?",
+      "checklistItems": [
+        "Addressed market size and growth",
+        "Addressed profitability / unit economics",
+        "Addressed synergies and dis-synergies (including cannibalization)",
+        "Addressed competitive landscape / barriers to entry",
+        "Addressed deal economics / payback period"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "math",
+      "interviewer": "Good structure. Let's start with market size. How large is the U.S. snacking almond market?",
+      "question": "Estimate the size of the U.S. snacking almond market.",
+      "data": {
+        "population": 300000000,
+        "segments": [
+          { "name": "Don't snack on nuts", "share": 0.75, "count": 225000000, "packetsPerYear": 0 },
+          { "name": "Casual snackers", "share": 0.10, "count": 30000000, "packetsPerYear": 25 },
+          { "name": "Health-conscious snackers", "share": 0.10, "count": 30000000, "packetsPerYear": 60 },
+          { "name": "Frequent snackers", "share": 0.05, "count": 15000000, "packetsPerYear": 120 }
+        ],
+        "pricePerPacket": 2
+      },
+      "modelAnswer": "Working from the U.S. population of ~300 million:\n\n- **75% don't snack on nuts** → 225M people × 0 packets = 0\n- **10% are casual snackers** → 30M people × 25 packets/year = 750M packets\n- **10% are health-conscious snackers** → 30M people × 60 packets/year = 1,800M packets\n- **5% are frequent snackers** → 15M people × 120 packets/year = 1,800M packets\n\n**Total: ~4,350M packets/year → round to ~4.5B packets**\n\nAt $2 per packet: **4.5B × $2 = ~$9B market** → round to **$8–10B**.",
+      "checklistItems": [
+        "Segmented population into nut-snacking behavior groups",
+        "Correctly computed casual segment (750M packets)",
+        "Correctly computed health-conscious segment (1,800M packets)",
+        "Correctly computed frequent segment (1,800M packets)",
+        "Arrived at ~$8–10B market size",
+        "Applied a reasonable price per packet (~$2)"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "math",
+      "interviewer": "Good. Now let's look at the deal economics. Almond Co. holds 10% of the market you just sized. Their profit margin is 50%. The purchase price is $1.5 billion. Does this deal make financial sense?",
+      "question": "Calculate the payback period for this acquisition. Then run a sensitivity analysis.",
+      "data": {
+        "marketSize": 9000000000,
+        "marketShare": 0.10,
+        "profitMargin": 0.50,
+        "purchasePrice": 1500000000,
+        "sensitivityPriceMultiplier": 2,
+        "sensitivityShareDivisor": 2
+      },
+      "modelAnswer": "**Base case:**\n- Almond Co. revenue = 10% × $9B = **$900M → ~$1B**\n- Profit = 50% × $1B = **$500M/year**\n- Payback period = $1.5B ÷ $500M = **3 years**\n\n**Sensitivity analysis** (purchase price doubles, market share halves):\n- Revenue = 5% × $9B = $450M\n- Profit = 50% × $450M = $225M/year\n- Purchase price = $3B\n- Payback = $3B ÷ $225M = **~13 years**\n\nThe base case 3-year payback is very attractive. However, the deal is sensitive to assumptions — if we overpay or the market share is lower, the payback extends dramatically.",
+      "checklistItems": [
+        "Correctly computed Almond Co. revenue (~$1B)",
+        "Correctly computed annual profit (~$500M)",
+        "Correctly computed base-case payback period (3 years)",
+        "Ran sensitivity with doubled price and halved share",
+        "Correctly computed sensitivity payback (~12–13 years)",
+        "Drew conclusion on deal attractiveness and sensitivity"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "The 3-year payback looks attractive. Now let's think about strategic fit. Peanut Co. has an established snack food distribution network. What synergies and dis-synergies should we consider?",
+      "question": "What are the key synergies and dis-synergies from this acquisition?",
+      "modelAnswer": "**Synergies:**\n1. **Distribution leverage**: Peanut Co. can immediately put Almond Co. products through its existing distribution network, reducing Almond Co.'s logistics costs and accelerating shelf placement at retailers.\n2. **Cross-selling to existing customers**: Peanut Co.'s retail and wholesale relationships give Almond Co. access to accounts it may not currently reach.\n3. **Innovation transfer**: Peanut Co.'s experience in flavor development, packaging, and promotional campaigns can be applied to the almond product line to accelerate growth.\n4. **Procurement scale**: Combined purchasing of packaging, ingredients, and raw materials may reduce unit costs.\n\n**Dis-synergies / risks:**\n1. **Cannibalization**: Almond Co. products may draw customers away from Peanut Co.'s existing snack lines, reducing the net revenue uplift.\n2. **Brand dilution**: Peanut Co.'s brand identity is rooted in peanuts — extending it to almonds may confuse consumers or weaken brand positioning.\n3. **Operational complexity**: Managing a second manufacturing operation adds overhead and management bandwidth.",
+      "checklistItems": [
+        "Identified distribution leverage as a synergy",
+        "Identified cross-selling / customer access as a synergy",
+        "Identified innovation/brand transfer as a synergy",
+        "Identified cannibalization of existing peanut sales as a dis-synergy",
+        "Identified brand dilution risk",
+        "Addressed at least 2 synergies and 1 dis-synergy"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "The CEO of Peanut Co. is about to walk in. What's your recommendation?",
+      "question": "Give your final recommendation on whether Peanut Co. should acquire Almond Co.",
+      "modelAnswer": "**Recommendation: Proceed with the acquisition, subject to price negotiation.**\n\nThe snacking almond market is large ($8–10B) and growing faster than peanuts due to health trends. At the current terms, the payback period is approximately 3 years, which is highly attractive. Peanut Co.'s distribution network creates meaningful synergies that can accelerate Almond Co.'s growth and reduce costs.\n\n**Key risks to manage:**\n1. **Cannibalization**: Monitor whether almond sales displace peanut volume — consider keeping brands distinct.\n2. **Brand dilution**: Recommend maintaining Almond Co. as a separate brand rather than rebranding under Peanut Co.\n3. **Deal price sensitivity**: The 3-year payback is contingent on $1B revenue and 50% margins — validate these figures in due diligence.\n\n**Recommended next steps:**\n1. Confirm Almond Co.'s revenue and margin assumptions in due diligence\n2. Negotiate purchase price — $1.5B leaves little room for error\n3. Assess brand strategy: keep brands separate to minimize cannibalization\n4. Map distribution integration plan to capture synergies quickly",
+      "checklistItems": [
+        "Led with a clear recommendation (acquire or don't acquire)",
+        "Cited market size and payback period as supporting rationale",
+        "Addressed cannibalization and brand dilution risks",
+        "Proposed concrete next steps (due diligence, negotiation, brand strategy)",
+        "Structured answer: recommendation → rationale → risks → next steps"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "wharton-2017-18",
+  "title": "Home Inspection Co.",
+  "number": 18,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium",
+  "firm": "Bain First Round",
+  "type": "market-entry",
+  "topics": ["market-entry", "market-sizing", "math", "competitive-strategy"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "Our client, Home Inspection Co., is a third-party independent home inspection company who conducts inspections after a home is sold. They currently operate out of Ohio, and they have hired us to help them figure out if they should expand to more states, and if so, which state(s) and how?",
+      "question": "What clarifying questions would you ask, and how would you structure this analysis?",
+      "modelAnswer": "**Key clarifying questions and answers:**\n\n*Location options:*\n- *Have they looked at any specific states?* → Narrowed to Colorado and Michigan. They can only expand to one state right now.\n- *Is the market growing or shrinking?* → Relatively flat.\n\n*Business:*\n- *What is current revenue?* → $10 million (Ohio only).\n- *What is their motivation for expanding?* → Increasing top-line revenue.\n- *What types of homes do they inspect?* → Single-family homes only.\n- *What is the price of an inspection?* → Changes by state and type of home.\n\n*Competition and regulation:*\n- *Are there regulatory concerns?* → Home inspection is typically government-run, but Michigan allowed third-party inspections 10 years ago, and Colorado 2.5 years ago.\n- *What portion of the market can they serve?* → Michigan: 3rd party can only serve 20% of the market. Colorado: 50%.\n- *What does the competitive landscape look like?* → The longer 3rd party has been allowed, the more competition. Michigan has many competitors; Colorado has very few.\n\n**Framework:**\nA strong structure would analyze both candidate markets across three dimensions:\n1. **Market size** — how large is the addressable opportunity in each state, after regulatory caps?\n2. **Competition** — how saturated is the market, and where can Home Inspection Co. enter?\n3. **Market entry** — how would they physically enter (geography, staffing), and what are the risks?",
+      "checklistItems": [
+        "Identified that the client is limited to one new state and narrowed to CO vs MI",
+        "Asked about current revenue ($10M) and motivation (top-line growth)",
+        "Asked about regulatory constraints (3rd party allowed: MI 10 years, CO 2.5 years)",
+        "Asked about the 3rd party market cap (MI: 20%; CO: 50%)",
+        "Asked about competition (MI: many; CO: few)",
+        "Structured analysis into market size + competition + market entry"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "math",
+      "interviewer": "Let's size the Colorado market. Colorado has 5 million people. Homes are inspected every 9 years on average. Single-family homes make up 90% of households in Colorado. Each household has 2.5 people. The price of an inspection in Colorado is $300. The government limits third-party inspectors to 50% of the market.",
+      "question": "Calculate the total addressable market size for Home Inspection Co. in Colorado.",
+      "data": {
+        "state": "Colorado",
+        "population": 5000000,
+        "peoplePerHousehold": 2.5,
+        "totalHouseholds": 2000000,
+        "singleFamilyHomePct": 0.90,
+        "singleFamilyHomes": 1800000,
+        "inspectionFrequency": "1 every 9 years",
+        "inspectionsPerYear": 200000,
+        "pricePerInspection": 300,
+        "totalMarketRevenue": 60000000,
+        "governmentCapPct": 0.50,
+        "addressableMarket": 30000000
+      },
+      "modelAnswer": "**Step-by-step Colorado market sizing:**\n\n1. **Households**: 5M people ÷ 2.5 people/household = **2 million households**\n2. **Single-family homes**: 2M × 90% = **1.8 million homes**\n3. **Inspections per year**: 1.8M × 1/9 = **200,000 homes inspected per year**\n4. **Total market revenue**: 200,000 × $300 = **$60 million per year**\n5. **Government cap (50%)**: $60M × 50% = **$30 million per year**\n\n**True addressable opportunity in Colorado: $30 million per year**\n\nThis is 3× Home Inspection Co.'s current Ohio revenue of $10M — a significant opportunity.",
+      "checklistItems": [
+        "Correctly computed households: 5M / 2.5 = 2M",
+        "Correctly computed single-family homes: 2M × 90% = 1.8M",
+        "Correctly computed annual inspections: 1.8M / 9 = 200,000",
+        "Correctly computed total market: 200,000 × $300 = $60M",
+        "Applied the 50% government cap to arrive at $30M addressable market"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "qualitative",
+      "interviewer": "Good. Now think about market entry in Colorado. What would the competitive landscape look like, and how should Home Inspection Co. approach entry? What are the key risks?",
+      "question": "Analyze the Colorado competitive landscape and brainstorm a market entry approach and associated risks.",
+      "modelAnswer": "**Competitive landscape:**\n- Colorado only allowed third-party inspectors 2.5 years ago, so the market is still nascent.\n- There are approximately 2–3 independent inspectors spread evenly across the state — very few competitors.\n- Home Inspection Co. would be entering a wide-open market with a large first-mover advantage.\n\n**Market entry strategy:**\n- *Biggest city focus*: Since there are only a few competitors spread across Colorado, one option is to plant a flag in the largest market — Denver — and capture the most volume fastest.\n- *Underserved areas focus*: Alternatively, since competitors are spread thin, Home Inspection Co. could target markets where competitors have not yet set up (smaller cities, rural areas), avoiding direct head-to-head competition entirely.\n- Either strategy should be validated by scouting competitor locations before committing to an office site.\n\n**Key risks:**\n- *Regulatory change*: Colorado could change its cap to something more restrictive (like Michigan's 20%), dramatically reducing the addressable market\n- *Market demand shifts*: If Colorado population is declining or the housing market softens, the flat market assumption breaks down\n- *Geographic distance*: Colorado is far from Ohio — setting up a new office, hiring local inspectors, and training staff remotely is operationally challenging\n- *Cultural fit*: Third-party inspectors are new to Colorado; the local market may not be as familiar or comfortable with the model as Ohio buyers and sellers",
+      "checklistItems": [
+        "Identified Colorado as a nascent market with only 2-3 competitors",
+        "Named two entry strategies: largest city (Denver) OR underserved areas",
+        "Recommended scouting competitor locations before committing to an office",
+        "Named regulatory risk (cap reduction like Michigan) as a key risk",
+        "Named geographic distance from Ohio as an operational risk",
+        "Named market demand/population risk"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "math",
+      "interviewer": "Good. Now size the Michigan market. Michigan has 10 million people. Homes are inspected every 12 years on average. Single-family homes are 75% of all households. Each household has 2.5 people. The price of an inspection in Michigan is $400. The government limits third-party inspectors to 20% of the market.",
+      "question": "Calculate the total addressable market size for Home Inspection Co. in Michigan.",
+      "data": {
+        "state": "Michigan",
+        "population": 10000000,
+        "peoplePerHousehold": 2.5,
+        "totalHouseholds": 4000000,
+        "singleFamilyHomePct": 0.75,
+        "singleFamilyHomes": 3000000,
+        "inspectionFrequency": "1 every 12 years",
+        "inspectionsPerYear": 250000,
+        "pricePerInspection": 400,
+        "totalMarketRevenue": 100000000,
+        "governmentCapPct": 0.20,
+        "addressableMarket": 20000000
+      },
+      "modelAnswer": "**Step-by-step Michigan market sizing:**\n\n1. **Households**: 10M people ÷ 2.5 people/household = **4 million households**\n2. **Single-family homes**: 4M × 75% = **3 million homes**\n3. **Inspections per year**: 3M × 1/12 = **250,000 homes inspected per year**\n4. **Total market revenue**: 250,000 × $400 = **$100 million per year**\n5. **Government cap (20%)**: $100M × 20% = **$20 million per year**\n\n**True addressable opportunity in Michigan: $20 million per year**\n\nDespite Michigan's larger raw market ($100M vs $60M in CO), the severe regulatory cap (20% vs 50%) means Michigan's true opportunity ($20M) is meaningfully smaller than Colorado's ($30M).",
+      "checklistItems": [
+        "Correctly computed households: 10M / 2.5 = 4M",
+        "Correctly computed single-family homes: 4M × 75% = 3M",
+        "Correctly computed annual inspections: 3M / 12 = 250,000",
+        "Correctly computed total market: 250,000 × $400 = $100M",
+        "Applied the 20% government cap to arrive at $20M addressable market",
+        "Noted that MI's larger raw market doesn't translate to a larger opportunity due to the cap"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "qualitative",
+      "interviewer": "Good. Now think about Michigan market entry. What would the competitive landscape look like, and how should Home Inspection Co. approach entry? What are the key risks?",
+      "question": "Analyze the Michigan competitive landscape and brainstorm a market entry approach and associated risks.",
+      "modelAnswer": "**Competitive landscape:**\n- Michigan allowed third-party inspectors 10 years ago — enough time for many competitors to establish and cover the majority of the market.\n- The market is likely saturated or approaching saturation, making it harder and more expensive to win market share.\n\n**Market entry strategy:**\n- *Southern Michigan*: Since Michigan is geographically adjacent to Ohio, the most practical entry point is southern Michigan (Detroit metro area, Toledo corridor). Home Inspection Co. could potentially reassign existing Ohio employees rather than hiring and training a full new team — significantly reducing setup costs.\n- *Niche segmentation*: In a crowded market, consider focusing on an underserved segment (certain home types, rural areas, or premium inspection tiers) rather than competing head-to-head with established players.\n\n**Key risks:**\n- *Market saturation*: Many competitors already cover the Michigan market; winning share requires displacing incumbents, which is costly\n- *Regulatory cap*: The 20% cap is already a strict limit, and any further tightening would further compress the opportunity\n- *Market demand*: Michigan's economy is more volatile than Colorado's (more manufacturing-dependent); if population or housing demand falls, the $20M opportunity shrinks\n- *Commoditization*: In a mature market with many 3rd-party competitors, price pressure may compress margins",
+      "checklistItems": [
+        "Identified Michigan as a mature market with many competitors (allowed 10 years)",
+        "Named southern Michigan as the natural entry point due to Ohio adjacency",
+        "Named the ability to leverage existing Ohio staff as a cost advantage for MI entry",
+        "Named market saturation as the primary risk",
+        "Named regulatory cap and demand volatility as additional risks"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "recommendation",
+      "interviewer": "Home Inspection Co. wants your recommendation. Should they expand, and if so, to Colorado or Michigan?",
+      "question": "Give your final recommendation: should Home Inspection Co. expand, and to which state?",
+      "modelAnswer": "**Recommendation: Yes, Home Inspection Co. should expand — and Colorado is the stronger choice.**\n\n**Side-by-side comparison:**\n\n| | Colorado | Michigan |\n|---|---|---|\n| Addressable market | **$30M/yr** | $20M/yr |\n| Competitors | **Very few (2–3)** | Many |\n| Regulatory cap | **50%** | 20% |\n| Geographic distance | Far (risk) | **Close to Ohio** |\n| Market maturity | Nascent | Saturated |\n\n**Why Colorado:**\n1. **Larger opportunity**: $30M vs $20M — 50% bigger addressable market\n2. **Far fewer competitors**: Only 2–3 players spread across the state; first-mover advantage is still available\n3. **Favorable regulatory environment**: 50% cap vs. 20% in Michigan — much more room to grow\n\n**Key risks to manage in Colorado:**\n- Geographic distance from Ohio → mitigated by hiring local staff in Denver\n- Potential regulatory tightening → monitor closely; diversify across cities so no single regulatory change wipes out the entire operation\n\n**Why Michigan is the runner-up:**\n- Closer to Ohio and lower setup cost via employee reassignment\n- But market saturation and the 20% cap make it a less compelling growth story\n\n**Next steps**: Scout Colorado for competitor locations; decide between a Denver-first or rural-first entry strategy; assess staffing and licensing requirements for Colorado inspectors.",
+      "checklistItems": [
+        "Led with a clear recommendation (expand; Colorado preferred)",
+        "Compared CO and MI across market size, competition, and regulatory cap",
+        "Named $30M vs $20M as the primary financial reason to prefer CO",
+        "Named low competition in CO as a key strategic advantage",
+        "Acknowledged MI's geographic advantage but rebutted with saturation concern",
+        "Proposed concrete next steps (scout competitors, decide entry strategy)"
+      ]
+    }
+  ]
+}

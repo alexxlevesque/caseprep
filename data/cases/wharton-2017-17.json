@@ -1,0 +1,169 @@
+{
+  "id": "wharton-2017-17",
+  "title": "TV Screens – Supply Chain Pricing",
+  "number": 17,
+  "casebook": "Wharton 2017",
+  "difficulty": "medium",
+  "firm": "Simon-Kucher & Partners Final Round",
+  "type": "pricing",
+  "topics": ["pricing", "discounting", "supply-chain", "exhibit-analysis", "math"],
+  "cards": [
+    {
+      "index": 0,
+      "type": "prompt",
+      "interviewer": "SKP has been retained by a consumer electronics screen manufacturer, Vivid, to perform a pricing optimization project. Vivid's main product is HDTV (high definition TV) screens. Its main customers are well-known TV manufacturers in Asia and the US, who buy other components, build the finished TVs and sell them to retailers who use global distribution channels to reach the end-users. You have been assigned to this team and today is your first meeting with the project manager to review the information collected and brainstorm about key hypotheses.",
+      "question": "How would you structure a pricing analysis for Vivid? What clarifying questions would you ask?",
+      "modelAnswer": "**Pricing framework — five buckets:**\n\n1. **Pricing/Profit**: What is the current price structure, price metric, and price level? What are the cost drivers and margins?\n2. **Sales**: What is the current discounting policy, discounting levels, and sales force incentives? What KPIs does the sales team manage to?\n3. **Customers**: How is the customer base segmented? What are demand trends and WTP? Who are the suppliers and what are switching costs?\n4. **Product**: What are the key features and quality differentiators? What substitutes exist?\n5. **Competition**: How does Vivid's pricing compare to competitors? What are relative market shares?\n\n**Key clarifying questions and answers:**\n- *Is Vivid concerned about profitability, or just revenue?* → The client is looking at pricing in search of opportunities to grow revenue.\n- *Are there patents in place?* → Vivid technology is patent-protected, and for manufacturers to switch suppliers would require costly plant reconfiguration.\n- *Has revenue been declining year-over-year?* → While sales volumes have been increasing, revenue has remained flat.\n- *Are competitors experiencing the same revenue decline?* → We don't have financials for any of the competitors.\n\n**Key hypothesis**: Volume is growing but revenue is flat — this suggests Vivid's effective selling price is declining. The root cause is likely pricing or discounting behavior, not demand.",
+      "checklistItems": [
+        "Structured framework into at least 3 areas (pricing, sales, customers, product, competition)",
+        "Asked about Vivid's goal (revenue growth, not necessarily profitability)",
+        "Asked about patents and switching costs (yes — IP protected, costly plant reconfiguration)",
+        "Identified the revenue-flat-despite-volume-growth paradox as a key hypothesis to investigate",
+        "Named discounting policy as a likely root cause"
+      ]
+    },
+    {
+      "index": 1,
+      "type": "qualitative",
+      "interviewer": "We need to send a request for information to the client at the beginning of the project. What information do you think would be useful to ask for?",
+      "question": "Brainstorm the data you would request from Vivid at the start of this engagement.",
+      "modelAnswer": "I would request data across six categories:\n\n**Pricing and revenue:**\n- **Production costs** — to understand margin structure and where costs are going\n- **End-user street prices** — to understand value chain economics from Vivid's screens to final retail\n- **Sales volumes by year** — to quantify the volume growth that isn't translating to revenue\n- **Client financials** — P&L and revenue breakdown to confirm the revenue-flat problem\n\n**Sales behavior:**\n- **Discounting data** — what discounts are actually being given to which customers? Are there patterns?\n- **Sales incentives** — how is the sales force compensated? Volume-based? Revenue-based? Profit-based?\n- **Sales KPIs** — what targets is the team managing to?\n\n**Market and customer intelligence:**\n- **Value chain cost structure** — what does the full chain from component supplier to retail look like?\n- **Customer feedback / interviews** — what do TV manufacturers say about Vivid's quality, pricing, and alternatives?\n- **Marketing/segmentation data** — are some customer segments more or less price-sensitive?\n- **Internal strategy documents** — what pricing strategy has management intended to pursue?",
+      "checklistItems": [
+        "Named production costs as a data request",
+        "Named end-user street prices (retail price) as a data request",
+        "Named sales volumes as a data request",
+        "Named discounting data as a data request",
+        "Named value chain cost structure as a data request",
+        "Named customer feedback or sales incentive data as a data request",
+        "Explained WHY each category is useful (not just listing)"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "qualitative",
+      "interviewer": "Good. Here is the first set of data. Production costs for HDTV screens have been: 2015: $400/screen; 2016: $250/screen; 2017: $200/screen; 2018 (forecast): $180/screen. The retail price (street price) each year has been $1,000/screen — constant.",
+      "question": "What do you observe from the production cost and pricing data? What hypotheses does it generate?",
+      "data": {
+        "productionCosts": [
+          { "year": 2015, "costPerScreen": 400 },
+          { "year": 2016, "costPerScreen": 250 },
+          { "year": 2017, "costPerScreen": 200 },
+          { "year": 2018, "costPerScreen": 180, "note": "forecasted" }
+        ],
+        "retailStreetPrice": 1000,
+        "yearOverYearSavings": ["37.5%", "20%", "10%"]
+      },
+      "modelAnswer": "**Key observations:**\n\n1. **Production costs are declining rapidly** — from $400 in 2015 to $200 in 2017, a 50% cost reduction in two years. But the rate of savings is decreasing: 37.5% savings in 2016, 20% in 2017, only 10% forecast in 2018. These are significant, but **decreasing** economies of scale — the easy cost savings have been captured.\n\n2. **The retail price has been constant at $1,000** — which means the value chain as a whole is benefiting from rising margins. But we need Vivid's wholesale selling price (not just retail) to understand how much of that margin improvement Vivid is capturing vs. TV manufacturers and retailers.\n\n3. **Key hypothesis**: If Vivid's production costs are falling and the final retail price is unchanged, Vivid should be capturing more margin — but revenue is flat. This implies Vivid's selling price has been declining, likely through discounting. The cost savings that should flow to Vivid are being passed along to TV manufacturers through lower prices instead.\n\n**What we still need**: Vivid's actual selling price (not production cost) to understand its per-unit profit and margin trend.",
+      "checklistItems": [
+        "Identified that cost savings are significant but decelerating (37.5% → 20% → 10%)",
+        "Noted that retail street price is constant at $1,000",
+        "Recognized that without Vivid's wholesale price, we can't calculate Vivid's margin",
+        "Hypothesized that Vivid's selling price must be falling to explain flat revenue despite volume growth",
+        "Connected the decelerating cost savings to the unsustainability of continued discounting"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "exhibit",
+      "exhibitType": "chart",
+      "interviewer": "Good. Marketing has set a list price of $400 for the screen and a discount authority floor of 40% for the sales team. Here is Exhibit 1, the Discount/Volume Curve, showing the volume sold at each discount level. What do you see? If there's time, calculate the weighted average selling price.",
+      "question": "Analyze the Discount/Volume Curve. What does it reveal about Vivid's discounting behavior? Calculate the weighted average selling price.",
+      "data": {
+        "listPrice": 400,
+        "discountAuthorityFloor": 0.40,
+        "exhibit": "Exhibit 1: Discount/Volume Curve",
+        "xAxis": "Discount (%)",
+        "yAxis": "Volume (units)",
+        "dataPoints": [
+          { "discount": 0.50, "volume": 3000, "sellingPrice": 200 },
+          { "discount": 0.45, "volume": 1000, "sellingPrice": 220 },
+          { "discount": 0.40, "volume": 5000, "sellingPrice": 240 },
+          { "discount": 0.35, "volume": 1000, "sellingPrice": 260 }
+        ],
+        "totalVolume": 10000,
+        "weightedAvgSellingPrice": 228
+      },
+      "modelAnswer": "**What the chart reveals:**\n\n1. **Almost 40% of sales (4,000 out of 10,000 units) violates the 40% discount authority floor** — contracts at 50% and 45% discounts should not have been permitted, yet they represent a large share of volume. The sales force is breaking the pricing rules.\n\n2. **There is a clear peak at exactly the 40% discount level (5,000 units)** — the largest single cluster of sales is right at the discount limit. This is a classic sign that salespeople are discounting as much as they are allowed, and no further. They may be on volume-based quotas and maximizing the discount to close deals faster.\n\n3. **Almost no volume is sold above list price or at minimal discounts** — the distribution is concentrated at high-discount levels, leaving significant profit on the table.\n\n**Weighted average selling price calculation:**\n- 50% discount: $400 × 50% = $200 selling price; 3,000 × $200 = **$600K**\n- 45% discount: $400 × 55% = $220; 1,000 × $220 = **$220K**\n- 40% discount: $400 × 60% = $240; 5,000 × $240 = **$1,200K**\n- 35% discount: $400 × 65% = $260; 1,000 × $260 = **$260K**\n- Total revenue: $2,280K ÷ 10,000 units = **Weighted average selling price = $228/unit**\n\n**Key insight**: Vivid is selling at an average of $228 — a 43% discount from the $400 list price — despite a stated policy floor of 40%. Sales force incentives are misaligned.",
+      "checklistItems": [
+        "Identified that ~40% of sales (50% and 45% discount bands) violates the 40% discount floor",
+        "Identified the peak at exactly 40% as evidence salespeople discount to the floor",
+        "Inferred that sales incentives are volume-based (not profit-based)",
+        "Correctly computed weighted average: $2,280K / 10,000 = $228/unit",
+        "Connected the $228 ASP to the flat revenue problem despite volume growth"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "math",
+      "interviewer": "Good. Now let's look at the value chain. The HDTV supply chain has four players: backlighting suppliers, Vivid (screens), TV manufacturers, and electronics retailers. Here is the cost and profit data. The supplier's cost is $200 and profit is $20. Vivid's cost is $200 and profit is unknown (A). The TV manufacturer's cost is $300 and profit is unknown (B). The retailer's cost is $150 and profit is $30. What can you tell me about the distribution of surplus in the supply chain, and what is the TV manufacturer's willingness to pay for Vivid's screens?",
+      "question": "Calculate Vivid's profit (A) and the TV manufacturer's profit (B). What does the value chain tell you about Vivid's pricing opportunity?",
+      "data": {
+        "supplyChain": [
+          { "player": "Supplier (backlighting)", "cost": 200, "profit": 20, "sellingPrice": 220 },
+          { "player": "Vivid (screens)", "cost": 200, "profit": "A = ?", "sellingPrice": 228 },
+          { "player": "TV Manufacturer", "cost": 300, "profit": "B = ?", "sellingPrice": "unknown" },
+          { "player": "Retailer", "cost": 150, "profit": 30, "sellingPrice": 180 }
+        ],
+        "retailStreetPrice": 1000,
+        "solution": {
+          "vivid_profit_A": 28,
+          "subtotal_excluding_TV_manuf_profit": 928,
+          "tv_manuf_profit_B": 72,
+          "totalSurplus": 150
+        }
+      },
+      "modelAnswer": "**Calculating Vivid's profit (A):**\n- Vivid's average selling price = $228 (from previous analysis)\n- Vivid's cost = $200\n- Vivid's profit = $228 − $200 = **$28 per unit**\n\n**Calculating TV Manufacturer's profit (B):**\n- Sum all known supply chain value: Supplier ($220) + Vivid ($228) + TV Manuf cost ($300) + Retailer ($180) = $928\n- Retail street price = $1,000\n- TV Manufacturer profit = $1,000 − $928 = **$72 per unit**\n\n**Total supply chain surplus = $20 + $28 + $72 + $30 = $150**\n\n**Key insights:**\n- There is **$100 in profit surplus between Vivid and the TV manufacturer** ($28 + $72). Vivid captures only $28 of that $100 — less than 30% of the Vivid/Manufacturer surplus — despite providing the more differentiated, IP-protected product.\n- The TV manufacturer retains $72 — nearly half of all supply chain surplus — even though they manufacture a commodity assembly.\n- **Vivid is significantly underpricing** relative to its value contribution. This is the core pricing opportunity.\n\n**Target pricing**: A fair split would give both Vivid and TV Manufacturer a 20% return on their respective costs — that would be $40 for Vivid (20% × $200) and $60 for TV Manuf (20% × $300). This implies a target Vivid ASP of **$240** vs. the current $228.",
+      "checklistItems": [
+        "Correctly computed Vivid's profit: $228 − $200 = $28",
+        "Correctly computed TV Manuf profit: $1,000 − $928 = $72",
+        "Noted total surplus is $150 across the chain",
+        "Identified that Vivid captures only $28 of $100 Vivid+Manufacturer surplus",
+        "Concluded Vivid is underpricing given its IP-protected, differentiated product",
+        "Named a target ASP of ~$240 (equal 20% ROS for Vivid and TV Manuf)"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "exhibit",
+      "exhibitType": "quotes",
+      "interviewer": "Here is Exhibit 2, containing excerpts from interviews with customers and Vivid's own sales team. What can you take from this?",
+      "question": "Analyze the interview excerpts. What do they tell you about Vivid's pricing opportunity and the root cause of the discount problem?",
+      "data": {
+        "exhibit": "Exhibit 2: Internal and External Interviews",
+        "customerInterviews": [
+          "\"Although other screen technologies are cheaper, this product gives the quality we need to charge the prices we charge on the street.\"",
+          "\"We built a $1 billion plant to produce HDTVs this year. The plan only works with VIVID's screens.\""
+        ],
+        "internalSalesInterviews": [
+          "\"Although we have discount floors in the TV division, when we are getting closer to the end of the quarter, I need to close the deals to reach my sales quota. The competition is too strong in this market and I need to give the discounts.\"",
+          "\"If the management keeps asking us to grow our market share, we need to lower our prices to increase our sales, it's the law of demand, basic economics!\"",
+          "\"We can give higher discounts every year because our costs go down every year too.\""
+        ]
+      },
+      "modelAnswer": "**Customer interview insights:**\n\n1. **Customers have very high WTP for Vivid's screens**: Manufacturers explicitly say that Vivid's quality is what enables them to command premium retail prices. The product is not viewed as a commodity — it is a quality differentiator for the TV manufacturer's own product.\n\n2. **Switching costs are extremely high**: A customer has built a $1 billion plant specifically configured to work with Vivid's screens. Switching to an alternative supplier would require reconfiguring that plant — an astronomically high switching cost. Vivid has enormous pricing power that it is not exercising.\n\n**Sales team interview insights:**\n\n3. **Sales incentives are misaligned**: Salespeople are rewarded for hitting volume quotas, not profit targets. Quarter-end pressure to close deals causes them to default to maximum discounts to secure volume — even if those discounts are unprofitable.\n\n4. **The sales team has internalized an incorrect mental model**: Quoting \"the law of demand\" and arguing that lower prices are necessary for market share growth shows the team doesn't understand that Vivid has pricing power above the current level. They are not supposed to be in a price war — they have a differentiated, IP-protected product.\n\n5. **The cost-reduction rationale is dangerous**: Salespeople believe they can keep increasing discounts because costs keep falling. But cost savings should improve Vivid's margin — not be passed through to customers as lower prices.\n\n**Conclusion**: High customer WTP + high switching costs = pricing power that Vivid is not capturing, driven by a volume-biased, discount-heavy sales culture.",
+      "checklistItems": [
+        "Identified high customer WTP from manufacturer quotes",
+        "Identified high switching costs (the $1B plant quote)",
+        "Diagnosed sales force incentive misalignment (volume quota → discount-heavy behavior)",
+        "Named the flawed internal logic (cost savings justify deeper discounts)",
+        "Connected both findings: pricing power exists AND is being wasted"
+      ]
+    },
+    {
+      "index": 6,
+      "type": "recommendation",
+      "interviewer": "Your team is on the weekly update call with Vivid's CEO and she wants to get straight to the point. What did you find in the data? What are the action items?",
+      "question": "Give your findings and recommendations to Vivid's CEO.",
+      "modelAnswer": "**Three findings:**\n\n1. **Rampant discounting is destroying margin**: The sales team is discounting at or beyond the authorized 40% floor on nearly 90% of contracts — producing a weighted average selling price of $228 vs. a list price of $400. As cost reductions slow (from 37.5% to 20% to 10%), continued heavy discounting will become unsustainable.\n\n2. **Vivid is significantly underpriced relative to its value**: In the supply chain, Vivid captures only $28 of profit per unit — less than 30% of the $100 Vivid-plus-manufacturer surplus — despite providing the only differentiated, IP-protected component in the chain. TV manufacturers capture $72 while building a commodity assembly. Customer interviews confirm high WTP and extremely high switching costs (a $1B plant built specifically for Vivid screens). Vivid has clear pricing power it is not using.\n\n3. **Sales incentives are structurally misaligned**: Salespeople are rewarded for volume, which drives them to discount aggressively to close deals. The result is a discount-heavy culture that leaves significant profit on the table.\n\n**Three action items:**\n\n1. **Raise the target ASP from $228 to $240**: A $40/$60 Vivid/Manufacturer split of the $100 surplus gives both players a 20% return on sales — a credible, fair anchor. This is a $12 per unit improvement; at 10,000 units, that is $120K per period in additional profit.\n\n2. **Implement a more granular discount authority system**: Replace the single 40% floor with tiered discount authority by deal size, customer type, and competitive context — and require management approval above threshold discounts.\n\n3. **Add a profit-based component to sales compensation**: Align sales incentives with margin, not just volume. This removes the structural driver of the discount culture.",
+      "checklistItems": [
+        "Led with the discounting finding (ASP $228, 40% floor violated at scale)",
+        "Named Vivid's undervaluation in the supply chain ($28 vs $72 for TV Manuf)",
+        "Cited customer WTP and switching costs as evidence of pricing power",
+        "Named sales incentive misalignment as the structural root cause",
+        "Recommended raising ASP to $240 (equal 20% ROS split)",
+        "Recommended granular discount authority system",
+        "Recommended profit-based sales compensation"
+      ]
+    }
+  ]
+}
