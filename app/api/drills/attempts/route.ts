@@ -12,10 +12,11 @@ interface AttemptPayload {
 
 export async function POST(req: Request) {
   const body = await req.json() as AttemptPayload
-  const db = getDb()
-  db.prepare(`
-    INSERT INTO drill_attempts (drill_id, drill_type, case_id, topic, correct, duration_ms, created_at)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
-  `).run(body.drillId, body.drillType, body.caseId ?? null, body.topic, body.correct ? 1 : 0, body.durationMs, Date.now())
+  const db = await getDb()
+  await db.execute({
+    sql: `INSERT INTO drill_attempts (drill_id, drill_type, case_id, topic, correct, duration_ms, created_at)
+          VALUES (?, ?, ?, ?, ?, ?, ?)`,
+    args: [body.drillId, body.drillType, body.caseId ?? null, body.topic, body.correct ? 1 : 0, body.durationMs, Date.now()],
+  })
   return NextResponse.json({ ok: true })
 }

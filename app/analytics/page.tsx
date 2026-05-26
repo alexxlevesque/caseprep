@@ -4,17 +4,18 @@ import { computeHeatMap, getWeakestCells, SKILLS } from '@/lib/analytics'
 import HeatMap from '@/components/HeatMap'
 import Link from 'next/link'
 
-export default function AnalyticsPage() {
-  const db = getDb()
+export default async function AnalyticsPage() {
+  const db = await getDb()
   const cases = getAllCaseSummaries().map(c => ({ id: c.id, type: c.type }))
-  const heatMap = computeHeatMap(db, cases)
+  const heatMap = await computeHeatMap(db, cases)
   const weakestCells = getWeakestCells(heatMap, 2)
   const caseTypes = [...new Set(cases.map(c => c.type))]
 
-  const drillRows = db.prepare(`
+  const drillResult = await db.execute(`
     SELECT topic, ROUND(AVG(correct) * 100) as accuracy, COUNT(*) as attempt_count
     FROM drill_attempts GROUP BY topic
-  `).all() as { topic: string; accuracy: number; attempt_count: number }[]
+  `)
+  const drillRows = drillResult.rows as unknown as { topic: string; accuracy: number; attempt_count: number }[]
 
   return (
     <div>

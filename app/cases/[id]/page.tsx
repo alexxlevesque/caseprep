@@ -8,11 +8,13 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ id:
   const c = getCaseById(id)
   if (!c) notFound()
 
-  const db = getDb()
-  const sessions = db.prepare(`
-    SELECT id, started_at, completed_at, overall_rating FROM practice_sessions
-    WHERE case_id = ? ORDER BY started_at DESC LIMIT 5
-  `).all(id) as { id: number; started_at: number; completed_at: number | null; overall_rating: number | null }[]
+  const db = await getDb()
+  const result = await db.execute({
+    sql: `SELECT id, started_at, completed_at, overall_rating FROM practice_sessions
+          WHERE case_id = ? ORDER BY started_at DESC LIMIT 5`,
+    args: [id],
+  })
+  const sessions = result.rows as unknown as { id: number; started_at: number; completed_at: number | null; overall_rating: number | null }[]
 
   return (
     <div className="max-w-2xl">

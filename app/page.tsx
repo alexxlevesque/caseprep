@@ -3,21 +3,23 @@ import { getDb } from '@/lib/db'
 import { getAllCaseSummaries } from '@/lib/cases'
 import { computeHeatMap, getWeakestCells } from '@/lib/analytics'
 
-export default function DashboardPage() {
-  const db = getDb()
+export default async function DashboardPage() {
+  const db = await getDb()
   const allCases = getAllCaseSummaries()
 
-  const completedCount = (db.prepare(`
-    SELECT COUNT(DISTINCT case_id) as n FROM practice_sessions WHERE overall_rating IS NOT NULL
-  `).get() as { n: number }).n
+  const completedResult = await db.execute(
+    `SELECT COUNT(DISTINCT case_id) as n FROM practice_sessions WHERE overall_rating IS NOT NULL`
+  )
+  const completedCount = (completedResult.rows[0]?.n as number) ?? 0
 
-  const recentSessions = db.prepare(`
+  const recentResult = await db.execute(`
     SELECT ps.id, ps.case_id, ps.started_at, ps.overall_rating
     FROM practice_sessions ps WHERE ps.overall_rating IS NOT NULL
     ORDER BY ps.started_at DESC LIMIT 5
-  `).all() as { id: number; case_id: string; started_at: number; overall_rating: number }[]
+  `)
+  const recentSessions = recentResult.rows as unknown as { id: number; case_id: string; started_at: number; overall_rating: number }[]
 
-  const heatMap = computeHeatMap(db, allCases.map(c => ({ id: c.id, type: c.type })))
+  const heatMap = await computeHeatMap(db, allCases.map(c => ({ id: c.id, type: c.type })))
   const weakest = getWeakestCells(heatMap, 2)
 
   const pct = allCases.length > 0 ? Math.round((completedCount / allCases.length) * 100) : 0
