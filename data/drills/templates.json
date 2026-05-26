@@ -1,8 +1,415 @@
 [
   {
+    "id": "pct-change-easy",
+    "topic": "percentages",
+    "title": "Percentage Change",
+    "difficulty": "easy",
+    "template": "Revenue grew from ${{oldValue}}M to ${{newValue}}M. What is the percentage change?",
+    "variables": {
+      "oldValue": { "min": 100, "max": 400, "step": 100 },
+      "newValue": { "min": 150, "max": 600, "step": 50 }
+    },
+    "computeFnKey": "pct-change",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "% Change = (New - Old) / Old = (${{newValue}}M - ${{oldValue}}M) / ${{oldValue}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "pct-change-medium",
+    "topic": "percentages",
+    "title": "Percentage Change",
+    "difficulty": "medium",
+    "template": "A product's price dropped from ${{oldValue}} to ${{newValue}}. What is the percentage change?",
+    "variables": {
+      "oldValue": { "min": 40, "max": 250, "step": 10 },
+      "newValue": { "min": 20, "max": 230, "step": 5 }
+    },
+    "computeFnKey": "pct-change",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "% Change = (New - Old) / Old = (${{newValue}} - ${{oldValue}}) / ${{oldValue}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "markup-to-margin-easy",
+    "topic": "percentages",
+    "title": "Markup to Margin",
+    "difficulty": "easy",
+    "template": "A retailer marks up products by {{markupPct}}%. What is the gross margin percentage?",
+    "variables": {
+      "markupPct": { "min": 25, "max": 100, "step": 25 }
+    },
+    "computeFnKey": "markup-to-margin",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Margin = Markup / (100 + Markup) = {{markupPct}} / (100 + {{markupPct}}) = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "markup-to-margin-hard",
+    "topic": "percentages",
+    "title": "Markup to Margin (Complex)",
+    "difficulty": "hard",
+    "template": "A distributor applies a {{markupPct}}% markup to wholesale cost. What is the gross margin they earn on each sale?",
+    "variables": {
+      "markupPct": { "min": 15, "max": 150, "step": 5 }
+    },
+    "computeFnKey": "markup-to-margin",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "If cost = 100, selling price = 100 + {{markupPct}}",
+      "Margin = Markup / (100 + Markup) = {{markupPct}} / (100 + {{markupPct}}) = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "margin-easy",
+    "topic": "margins",
+    "title": "Gross Margin",
+    "difficulty": "easy",
+    "template": "A company has ${{revenue}}M in revenue and ${{costs}}M in COGS. What is the gross margin?",
+    "variables": {
+      "revenue": { "min": 100, "max": 500, "step": 100 },
+      "costs": { "min": 50, "max": 400, "step": 50 }
+    },
+    "computeFnKey": "margin-calc",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Gross Profit = Revenue - COGS = ${{revenue}}M - ${{costs}}M = ${{profit}}M",
+      "Gross Margin = Gross Profit / Revenue = ${{profit}}M / ${{revenue}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "margin-medium",
+    "topic": "margins",
+    "title": "Operating Margin",
+    "difficulty": "medium",
+    "template": "A firm earns ${{revenue}}M in revenue with ${{costs}}M in operating costs (COGS + SG&A + R&D). What is the operating margin?",
+    "variables": {
+      "revenue": { "min": 200, "max": 1000, "step": 50 },
+      "costs": { "min": 100, "max": 900, "step": 25 }
+    },
+    "computeFnKey": "margin-calc",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Operating Income = Revenue - Costs = ${{revenue}}M - ${{costs}}M = ${{profit}}M",
+      "Operating Margin = Operating Income / Revenue = ${{profit}}M / ${{revenue}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "ebitda-margin-medium",
+    "topic": "margins",
+    "title": "EBITDA Margin",
+    "difficulty": "medium",
+    "template": "A company reports ${{revenue}}M revenue and ${{costs}}M in total cash operating costs. What is the EBITDA margin?",
+    "variables": {
+      "revenue": { "min": 300, "max": 2000, "step": 100 },
+      "costs": { "min": 150, "max": 1800, "step": 50 }
+    },
+    "computeFnKey": "margin-calc",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "EBITDA = Revenue - Cash Costs = ${{revenue}}M - ${{costs}}M = ${{profit}}M",
+      "EBITDA Margin = EBITDA / Revenue = ${{profit}}M / ${{revenue}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "contribution-margin-hard",
+    "topic": "margins",
+    "title": "Contribution Margin",
+    "difficulty": "hard",
+    "template": "A product sells for ${{revenue}} per unit with ${{costs}} in variable costs per unit. What is the contribution margin percentage?",
+    "variables": {
+      "revenue": { "min": 50, "max": 500, "step": 10 },
+      "costs": { "min": 20, "max": 450, "step": 10 }
+    },
+    "computeFnKey": "margin-calc",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Contribution = Price - Variable Cost = ${{revenue}} - ${{costs}} = ${{profit}}",
+      "Contribution Margin % = Contribution / Price = ${{profit}} / ${{revenue}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "cagr-easy",
+    "topic": "growth",
+    "title": "Calculate CAGR",
+    "difficulty": "easy",
+    "template": "A market grew from ${{startValue}}B to ${{endValue}}B over {{years}} years. What was the CAGR?",
+    "variables": {
+      "startValue": { "min": 2, "max": 10, "step": 2 },
+      "endValue": { "min": 4, "max": 20, "step": 2 },
+      "years": { "min": 3, "max": 5, "step": 1 }
+    },
+    "computeFnKey": "cagr-basic",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "CAGR = (End / Start)^(1/Years) - 1 = (${{endValue}}B / ${{startValue}}B)^(1/{{years}}) - 1 = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "cagr-medium",
+    "topic": "growth",
+    "title": "Calculate CAGR",
+    "difficulty": "medium",
+    "template": "Revenue grew from ${{startValue}}M to ${{endValue}}M over {{years}} years. What was the CAGR?",
+    "variables": {
+      "startValue": { "min": 50, "max": 300, "step": 25 },
+      "endValue": { "min": 100, "max": 800, "step": 25 },
+      "years": { "min": 4, "max": 8, "step": 1 }
+    },
+    "computeFnKey": "cagr-basic",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "CAGR = (End / Start)^(1/Years) - 1 = (${{endValue}}M / ${{startValue}}M)^(1/{{years}}) - 1 = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "cagr-hard",
+    "topic": "growth",
+    "title": "Implied CAGR from Revenue Target",
+    "difficulty": "hard",
+    "template": "Management wants to grow from ${{startValue}}M to ${{endValue}}M over {{years}} years. What CAGR is required?",
+    "variables": {
+      "startValue": { "min": 100, "max": 500, "step": 50 },
+      "endValue": { "min": 200, "max": 2000, "step": 100 },
+      "years": { "min": 3, "max": 7, "step": 1 }
+    },
+    "computeFnKey": "cagr-basic",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Required CAGR = (Target / Current)^(1/Years) - 1",
+      "= (${{endValue}}M / ${{startValue}}M)^(1/{{years}}) - 1 = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "yoy-growth-medium",
+    "topic": "growth",
+    "title": "Year-over-Year Growth",
+    "difficulty": "medium",
+    "template": "A division had ${{oldValue}}M revenue last year and ${{newValue}}M this year. What is the YoY growth rate?",
+    "variables": {
+      "oldValue": { "min": 80, "max": 600, "step": 20 },
+      "newValue": { "min": 90, "max": 750, "step": 15 }
+    },
+    "computeFnKey": "pct-change",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "YoY Growth = (This Year - Last Year) / Last Year = (${{newValue}}M - ${{oldValue}}M) / ${{oldValue}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "rev-price-volume-medium",
+    "topic": "growth",
+    "title": "Revenue Impact: Price x Volume",
+    "difficulty": "medium",
+    "template": "A company raises prices by {{priceDeltaPct}}% and volume grows by {{volumeDeltaPct}}%. What is the total revenue change?",
+    "variables": {
+      "priceDeltaPct": { "min": 3, "max": 15, "step": 1 },
+      "volumeDeltaPct": { "min": 2, "max": 20, "step": 1 }
+    },
+    "computeFnKey": "rev-price-volume",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Revenue Change = (1 + Price%) x (1 + Volume%) - 1",
+      "= (1 + {{priceDeltaPct}}%) x (1 + {{volumeDeltaPct}}%) - 1 = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "rev-price-volume-hard",
+    "topic": "revenue",
+    "title": "Revenue Bridge: Price & Volume",
+    "difficulty": "hard",
+    "template": "Prices rise {{priceDeltaPct}}% and unit volume declines {{volumeDeltaPct}}%. What is the net revenue change?",
+    "variables": {
+      "priceDeltaPct": { "min": 5, "max": 20, "step": 1 },
+      "volumeDeltaPct": { "min": -20, "max": -2, "step": 1 }
+    },
+    "computeFnKey": "rev-price-volume",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Revenue Change = (1 + Price%) x (1 + Volume%) - 1",
+      "= (1 + {{priceDeltaPct}}%) x (1 + {{volumeDeltaPct}}%) - 1 = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "market-sizing-easy",
+    "topic": "market-sizing",
+    "title": "Market Size Estimation",
+    "difficulty": "easy",
+    "template": "A market has {{population}}M potential customers. {{penetrationPct}}% are expected to adopt the product at ${{price}}/year. What is the total addressable market?",
+    "variables": {
+      "population": { "min": 50, "max": 300, "step": 50 },
+      "penetrationPct": { "min": 10, "max": 40, "step": 10 },
+      "price": { "min": 100, "max": 500, "step": 100 }
+    },
+    "computeFnKey": "market-sizing",
+    "answerFormat": "currency",
+    "workingStepsTemplate": [
+      "Customers = {{population}}M x {{penetrationPct}}% = {{customers}}M",
+      "TAM = {{customers}}M x ${{price}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "market-sizing-medium",
+    "topic": "market-sizing",
+    "title": "Market Size Estimation",
+    "difficulty": "medium",
+    "template": "There are {{population}}M households in the target region. {{penetrationPct}}% own the relevant product, spending ${{price}}/year on average. Estimate the market size.",
+    "variables": {
+      "population": { "min": 20, "max": 200, "step": 10 },
+      "penetrationPct": { "min": 5, "max": 35, "step": 5 },
+      "price": { "min": 50, "max": 1500, "step": 50 }
+    },
+    "computeFnKey": "market-sizing",
+    "answerFormat": "currency",
+    "workingStepsTemplate": [
+      "Adopters = {{population}}M x {{penetrationPct}}% = {{customers}}M households",
+      "Market Size = {{customers}}M x ${{price}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "market-sizing-hard",
+    "topic": "market-sizing",
+    "title": "Addressable Market Share",
+    "difficulty": "hard",
+    "template": "A market has {{population}}M consumers, {{penetrationPct}}% of whom are addressable. Average annual spend is ${{price}}. What is the total addressable market?",
+    "variables": {
+      "population": { "min": 30, "max": 250, "step": 10 },
+      "penetrationPct": { "min": 8, "max": 40, "step": 4 },
+      "price": { "min": 75, "max": 2000, "step": 25 }
+    },
+    "computeFnKey": "market-sizing",
+    "answerFormat": "currency",
+    "workingStepsTemplate": [
+      "Addressable Customers = {{population}}M x {{penetrationPct}}% = {{customers}}M",
+      "TAM = {{customers}}M x ${{price}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "break-even-units-easy",
+    "topic": "break-even",
+    "title": "Break-Even Units",
+    "difficulty": "easy",
+    "template": "A product sells for ${{price}} per unit with ${{variableCost}} variable cost. Fixed costs are ${{fixedCosts}}. How many units to break even?",
+    "variables": {
+      "price": { "min": 50, "max": 200, "step": 10 },
+      "variableCost": { "min": 10, "max": 150, "step": 10 },
+      "fixedCosts": { "min": 10000, "max": 100000, "step": 10000 }
+    },
+    "computeFnKey": "break-even-units",
+    "answerFormat": "number",
+    "workingStepsTemplate": [
+      "Contribution per unit = Price - Variable Cost = ${{price}} - ${{variableCost}} = ${{contribution}}",
+      "Break-Even Units = Fixed Costs / Contribution = ${{fixedCosts}} / ${{contribution}} = {{answerFormatted}} units"
+    ]
+  },
+  {
+    "id": "break-even-revenue-easy",
+    "topic": "break-even",
+    "title": "Break-Even Revenue",
+    "difficulty": "medium",
+    "template": "A business has ${{fixedCosts}}K in fixed costs and a {{grossMarginPct}}% gross margin. What revenue is needed to break even?",
+    "variables": {
+      "fixedCosts": { "min": 200, "max": 2000, "step": 100 },
+      "grossMarginPct": { "min": 20, "max": 60, "step": 5 }
+    },
+    "computeFnKey": "break-even-revenue",
+    "answerFormat": "number",
+    "workingStepsTemplate": [
+      "Break-Even Revenue = Fixed Costs / Gross Margin% = ${{fixedCosts}}K / {{grossMarginPct}}% = ${{answerFormatted}}K"
+    ]
+  },
+  {
+    "id": "payback-basic",
+    "topic": "break-even",
+    "title": "Investment Payback Period",
+    "difficulty": "medium",
+    "template": "A company invests ${{investment}}M in a project generating ${{annualProfit}}M annual profit. How many years until payback?",
+    "variables": {
+      "investment": { "min": 50, "max": 500, "step": 25 },
+      "annualProfit": { "min": 10, "max": 100, "step": 5 }
+    },
+    "computeFnKey": "payback-basic",
+    "answerFormat": "years",
+    "workingStepsTemplate": [
+      "Payback = Investment / Annual Profit = ${{investment}}M / ${{annualProfit}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "ltv-basic-easy",
+    "topic": "unit-economics",
+    "title": "Customer Lifetime Value",
+    "difficulty": "easy",
+    "template": "A SaaS product earns ${{arpu}}/month per customer. Gross margin is {{marginPct}}% and monthly churn is {{churnPct}}%. What is the LTV?",
+    "variables": {
+      "arpu": { "min": 50, "max": 300, "step": 50 },
+      "marginPct": { "min": 60, "max": 90, "step": 10 },
+      "churnPct": { "min": 2, "max": 10, "step": 2 }
+    },
+    "computeFnKey": "ltv-basic",
+    "answerFormat": "number",
+    "workingStepsTemplate": [
+      "LTV = ARPU x Margin% / Churn% = ${{arpu}} x {{marginPct}}% / {{churnPct}}% = ${{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "ltv-cac-easy",
+    "topic": "unit-economics",
+    "title": "LTV / CAC Ratio",
+    "difficulty": "easy",
+    "template": "ARPU is ${{arpu}}/month, margin is {{marginPct}}%, monthly churn is {{churnPct}}%, and CAC is ${{cac}}. What is the LTV/CAC ratio?",
+    "variables": {
+      "arpu": { "min": 50, "max": 200, "step": 50 },
+      "marginPct": { "min": 60, "max": 90, "step": 10 },
+      "churnPct": { "min": 2, "max": 10, "step": 2 },
+      "cac": { "min": 100, "max": 1000, "step": 100 }
+    },
+    "computeFnKey": "ltv-cac",
+    "answerFormat": "multiplier",
+    "workingStepsTemplate": [
+      "LTV = ARPU x Margin% / Churn% = ${{arpu}} x {{marginPct}}% / {{churnPct}}% = ${{ltv}}",
+      "LTV/CAC = ${{ltv}} / ${{cac}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "cac-payback-medium",
+    "topic": "unit-economics",
+    "title": "CAC Payback Period",
+    "difficulty": "medium",
+    "template": "A company spends ${{investment}} to acquire a customer who pays ${{annualProfit}}/year in gross profit. How long to recover CAC?",
+    "variables": {
+      "investment": { "min": 200, "max": 2000, "step": 100 },
+      "annualProfit": { "min": 100, "max": 800, "step": 50 }
+    },
+    "computeFnKey": "payback-basic",
+    "answerFormat": "years",
+    "workingStepsTemplate": [
+      "CAC Payback = CAC / Annual Gross Profit = ${{investment}} / ${{annualProfit}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "ltv-advanced-hard",
+    "topic": "unit-economics",
+    "title": "LTV with Churn (Advanced)",
+    "difficulty": "hard",
+    "template": "Monthly ARPU is ${{arpu}}, gross margin {{marginPct}}%, and annual churn is {{churnPct}}%. Calculate LTV.",
+    "variables": {
+      "arpu": { "min": 20, "max": 500, "step": 10 },
+      "marginPct": { "min": 40, "max": 85, "step": 5 },
+      "churnPct": { "min": 5, "max": 30, "step": 5 }
+    },
+    "computeFnKey": "ltv-basic",
+    "answerFormat": "number",
+    "workingStepsTemplate": [
+      "Monthly Gross Profit = ARPU x Margin% = ${{arpu}} x {{marginPct}}%",
+      "LTV = Monthly GP / Monthly Churn% = ${{arpu}} x {{marginPct}}% / {{churnPct}}% = ${{answerFormatted}}"
+    ]
+  },
+  {
     "id": "roic-basic",
-    "topic": "roic",
-    "title": "Calculate ROIC",
+    "topic": "valuation",
+    "title": "Return on Invested Capital",
     "difficulty": "medium",
     "template": "A company invested ${{investment}}M. The investment generates ${{annualProfit}}M in annual profit. The discount rate is {{discountRatePct}}%. What is the ROIC?",
     "variables": {
@@ -18,87 +425,183 @@
     ]
   },
   {
-    "id": "payback-basic",
-    "topic": "payback",
-    "title": "Calculate Payback Period",
+    "id": "ev-ebitda-easy",
+    "topic": "valuation",
+    "title": "EV/EBITDA Multiple",
     "difficulty": "easy",
-    "template": "A company invests ${{investment}}M in a project generating ${{annualProfit}}M in annual profit. How many years until payback?",
+    "template": "A company has an enterprise value of ${{ev}}M and EBITDA of ${{ebitda}}M. What is the EV/EBITDA multiple?",
     "variables": {
-      "investment": { "min": 50, "max": 500, "step": 25 },
-      "annualProfit": { "min": 10, "max": 100, "step": 5 }
+      "ev": { "min": 120, "max": 2400, "step": 120 },
+      "ebitda": { "min": 10, "max": 200, "step": 10 }
     },
-    "computeFnKey": "payback-basic",
-    "answerFormat": "years",
+    "computeFnKey": "ev-ebitda",
+    "answerFormat": "multiplier",
     "workingStepsTemplate": [
-      "Payback = Investment / Annual Profit = ${{investment}}M / ${{annualProfit}}M = {{answerFormatted}}"
+      "EV/EBITDA = Enterprise Value / EBITDA = ${{ev}}M / ${{ebitda}}M = {{answerFormatted}}"
     ]
   },
   {
-    "id": "pct-change",
-    "topic": "percentages",
-    "title": "Percentage Change",
-    "difficulty": "easy",
-    "template": "A metric changed from ${{oldValue}}M to ${{newValue}}M. What is the percentage change?",
+    "id": "pe-ratio-medium",
+    "topic": "valuation",
+    "title": "P/E Ratio",
+    "difficulty": "medium",
+    "template": "A company's market cap is ${{numerator}}M and net income is ${{denominator}}M. What is the P/E ratio?",
     "variables": {
-      "oldValue": { "min": 50, "max": 500, "step": 10 },
-      "newValue": { "min": 30, "max": 600, "step": 10 }
+      "numerator": { "min": 100, "max": 5000, "step": 100 },
+      "denominator": { "min": 5, "max": 250, "step": 5 }
+    },
+    "computeFnKey": "simple-ratio",
+    "answerFormat": "multiplier",
+    "workingStepsTemplate": [
+      "P/E = Market Cap / Net Income = ${{numerator}}M / ${{denominator}}M = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "cost-per-unit-easy",
+    "topic": "cost-structure",
+    "title": "Cost per Unit",
+    "difficulty": "easy",
+    "template": "A factory incurs ${{numerator}}M in total costs to produce {{denominator}}M units. What is the cost per unit?",
+    "variables": {
+      "numerator": { "min": 10, "max": 200, "step": 10 },
+      "denominator": { "min": 1, "max": 50, "step": 1 }
+    },
+    "computeFnKey": "simple-ratio",
+    "answerFormat": "number",
+    "workingStepsTemplate": [
+      "Cost per Unit = Total Costs / Units = ${{numerator}}M / {{denominator}}M = ${{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "cost-reduction-medium",
+    "topic": "cost-structure",
+    "title": "Cost Reduction Impact",
+    "difficulty": "medium",
+    "template": "A firm's COGS dropped from ${{oldValue}}M to ${{newValue}}M. By what percentage did costs fall?",
+    "variables": {
+      "oldValue": { "min": 100, "max": 800, "step": 50 },
+      "newValue": { "min": 50, "max": 750, "step": 25 }
     },
     "computeFnKey": "pct-change",
     "answerFormat": "percentage",
     "workingStepsTemplate": [
-      "% Change = (New - Old) / Old = (${{newValue}}M - ${{oldValue}}M) / ${{oldValue}}M = {{answerFormatted}}"
+      "Cost Reduction = (New - Old) / Old = (${{newValue}}M - ${{oldValue}}M) / ${{oldValue}}M = {{answerFormatted}}"
     ]
   },
   {
-    "id": "market-sizing",
-    "topic": "market-sizing",
-    "title": "Market Size Estimation",
-    "difficulty": "medium",
-    "template": "A market has {{population}}M potential customers. {{penetrationPct}}% are expected to adopt the product. The average annual spend is ${{price}}. What is the total market size?",
+    "id": "fixed-variable-split-hard",
+    "topic": "cost-structure",
+    "title": "Fixed vs Variable Cost Split",
+    "difficulty": "hard",
+    "template": "Total costs are ${{revenue}}M. Fixed costs are ${{costs}}M. What share of total costs is variable?",
     "variables": {
-      "population": { "min": 10, "max": 300, "step": 10 },
-      "penetrationPct": { "min": 5, "max": 40, "step": 5 },
-      "price": { "min": 50, "max": 2000, "step": 50 }
-    },
-    "computeFnKey": "market-sizing",
-    "answerFormat": "currency",
-    "workingStepsTemplate": [
-      "Customers = Population × Penetration = {{population}}M × {{penetrationPct}}% = {{customers}}M",
-      "Market Size = Customers × Price = {{customers}}M × ${{price}} = {{answerFormatted}}"
-    ]
-  },
-  {
-    "id": "margin-calc",
-    "topic": "margins",
-    "title": "Profit Margin",
-    "difficulty": "easy",
-    "template": "A company has ${{revenue}}M in revenue and ${{costs}}M in total costs. What is the profit margin?",
-    "variables": {
-      "revenue": { "min": 100, "max": 2000, "step": 50 },
-      "costs": { "min": 50, "max": 1800, "step": 50 }
+      "revenue": { "min": 100, "max": 600, "step": 50 },
+      "costs": { "min": 20, "max": 500, "step": 20 }
     },
     "computeFnKey": "margin-calc",
     "answerFormat": "percentage",
     "workingStepsTemplate": [
-      "Profit = Revenue - Costs = ${{revenue}}M - ${{costs}}M = ${{profit}}M",
-      "Margin = Profit / Revenue = ${{profit}}M / ${{revenue}}M = {{answerFormatted}}"
+      "Variable Costs = Total - Fixed = ${{revenue}}M - ${{costs}}M = ${{profit}}M",
+      "Variable Share = Variable / Total = ${{profit}}M / ${{revenue}}M = {{answerFormatted}}"
     ]
   },
   {
-    "id": "cagr-basic",
-    "topic": "cagr",
-    "title": "Calculate CAGR",
-    "difficulty": "medium",
-    "template": "A market grew from ${{startValue}}B to ${{endValue}}B over {{years}} years. What was the CAGR?",
+    "id": "utilization-easy",
+    "topic": "capacity",
+    "title": "Capacity Utilization",
+    "difficulty": "easy",
+    "template": "A plant produces {{numerator}}K units/month against a maximum capacity of {{denominator}}K units/month. What is the utilization rate?",
     "variables": {
-      "startValue": { "min": 1, "max": 50, "step": 1 },
-      "endValue": { "min": 2, "max": 100, "step": 2 },
-      "years": { "min": 3, "max": 10, "step": 1 }
+      "numerator": { "min": 50, "max": 450, "step": 50 },
+      "denominator": { "min": 100, "max": 500, "step": 100 }
     },
-    "computeFnKey": "cagr-basic",
+    "computeFnKey": "simple-ratio",
     "answerFormat": "percentage",
     "workingStepsTemplate": [
-      "CAGR = (End / Start)^(1/Years) - 1 = (${{endValue}}B / ${{startValue}}B)^(1/{{years}}) - 1 = {{answerFormatted}}"
+      "Utilization = Actual / Capacity = {{numerator}}K / {{denominator}}K = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "throughput-medium",
+    "topic": "capacity",
+    "title": "Rated Capacity from Throughput",
+    "difficulty": "medium",
+    "template": "A facility produces {{numerator}}K units/day and runs at {{denominator}}% of rated capacity. What is rated capacity?",
+    "variables": {
+      "numerator": { "min": 50, "max": 450, "step": 25 },
+      "denominator": { "min": 50, "max": 90, "step": 5 }
+    },
+    "computeFnKey": "break-even-revenue",
+    "answerFormat": "number",
+    "workingStepsTemplate": [
+      "Rated Capacity = Actual Output / Utilization% = {{numerator}}K / {{denominator}}% = {{answerFormatted}}K units/day"
+    ]
+  },
+  {
+    "id": "utilization-hard",
+    "topic": "capacity",
+    "title": "Multi-Line Utilization Rate",
+    "difficulty": "hard",
+    "template": "A facility runs at {{numerator}}K units/month actual output against a rated capacity of {{denominator}}K units/month. What is the utilization rate?",
+    "variables": {
+      "numerator": { "min": 60, "max": 450, "step": 10 },
+      "denominator": { "min": 100, "max": 500, "step": 25 }
+    },
+    "computeFnKey": "simple-ratio",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Utilization = Actual Output / Rated Capacity = {{numerator}}K / {{denominator}}K = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "rev-per-customer-easy",
+    "topic": "revenue",
+    "title": "Revenue per Customer",
+    "difficulty": "easy",
+    "template": "A company generates ${{numerator}}M in annual revenue from {{denominator}}M customers. What is revenue per customer?",
+    "variables": {
+      "numerator": { "min": 10, "max": 500, "step": 10 },
+      "denominator": { "min": 1, "max": 50, "step": 1 }
+    },
+    "computeFnKey": "simple-ratio",
+    "answerFormat": "number",
+    "workingStepsTemplate": [
+      "Revenue per Customer = Total Revenue / Customers = ${{numerator}}M / {{denominator}}M = ${{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "rev-market-share-medium",
+    "topic": "revenue",
+    "title": "Revenue from Market Share",
+    "difficulty": "medium",
+    "template": "A {{population}}M-person market has {{penetrationPct}}% adoption at ${{price}}/year. What is the total market size?",
+    "variables": {
+      "population": { "min": 20, "max": 200, "step": 20 },
+      "penetrationPct": { "min": 10, "max": 50, "step": 5 },
+      "price": { "min": 100, "max": 1000, "step": 100 }
+    },
+    "computeFnKey": "market-sizing",
+    "answerFormat": "currency",
+    "workingStepsTemplate": [
+      "Customers = {{population}}M x {{penetrationPct}}% = {{customers}}M",
+      "Market Revenue = {{customers}}M x ${{price}} = {{answerFormatted}}"
+    ]
+  },
+  {
+    "id": "contribution-per-unit-hard",
+    "topic": "unit-economics",
+    "title": "Contribution Margin per Unit",
+    "difficulty": "hard",
+    "template": "A unit sells for ${{revenue}} with ${{costs}} in variable costs. What is the contribution margin %?",
+    "variables": {
+      "revenue": { "min": 30, "max": 300, "step": 15 },
+      "costs": { "min": 10, "max": 270, "step": 10 }
+    },
+    "computeFnKey": "margin-calc",
+    "answerFormat": "percentage",
+    "workingStepsTemplate": [
+      "Contribution = Price - Variable Cost = ${{revenue}} - ${{costs}} = ${{profit}}",
+      "Contribution Margin % = ${{profit}} / ${{revenue}} = {{answerFormatted}}"
     ]
   }
 ]

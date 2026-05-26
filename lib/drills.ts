@@ -26,6 +26,7 @@ const computeFunctions: Record<string, ComputeFn> = {
   'ltv-cac': ({ arpu, marginPct, churnPct, cac }) =>
     (arpu * (marginPct / 100) / (churnPct / 100)) / cac,
   'simple-ratio': ({ numerator, denominator }) => numerator / denominator,
+  'ev-ebitda': ({ ev, ebitda }) => ev / ebitda,
   'rev-price-volume': ({ priceDeltaPct, volumeDeltaPct }) =>
     (1 + priceDeltaPct / 100) * (1 + volumeDeltaPct / 100) - 1,
 }
