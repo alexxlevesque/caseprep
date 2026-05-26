@@ -5,6 +5,7 @@ import type { DrillTemplate, GeneratedDrill } from '@/types/drill'
 type ComputeFn = (vars: Record<string, number>) => number
 
 const computeFunctions: Record<string, ComputeFn> = {
+  // --- existing ---
   'roic-basic': ({ investment, annualProfit, discountRatePct }) => {
     const value = annualProfit / (discountRatePct / 100)
     return value / investment - 1
@@ -16,6 +17,17 @@ const computeFunctions: Record<string, ComputeFn> = {
   'margin-calc': ({ revenue, costs }) => (revenue - costs) / revenue,
   'cagr-basic': ({ startValue, endValue, years }) =>
     Math.pow(endValue / startValue, 1 / years) - 1,
+
+  // --- new ---
+  'markup-to-margin': ({ markupPct }) => markupPct / (100 + markupPct),
+  'break-even-units': ({ fixedCosts, price, variableCost }) => fixedCosts / (price - variableCost),
+  'break-even-revenue': ({ fixedCosts, grossMarginPct }) => fixedCosts / (grossMarginPct / 100),
+  'ltv-basic': ({ arpu, marginPct, churnPct }) => arpu * (marginPct / 100) / (churnPct / 100),
+  'ltv-cac': ({ arpu, marginPct, churnPct, cac }) =>
+    (arpu * (marginPct / 100) / (churnPct / 100)) / cac,
+  'simple-ratio': ({ numerator, denominator }) => numerator / denominator,
+  'rev-price-volume': ({ priceDeltaPct, volumeDeltaPct }) =>
+    (1 + priceDeltaPct / 100) * (1 + volumeDeltaPct / 100) - 1,
 }
 
 function formatAnswer(value: number, format: DrillTemplate['answerFormat']): string {
@@ -23,7 +35,8 @@ function formatAnswer(value: number, format: DrillTemplate['answerFormat']): str
     case 'percentage': return `${(value * 100).toFixed(1)}%`
     case 'currency': return `$${(value / 1_000_000).toFixed(0)}M`
     case 'years': return `${value.toFixed(1)} years`
-    case 'number': return value.toFixed(2)
+    case 'number': return value.toFixed(0)
+    case 'multiplier': return `${value.toFixed(1)}x`
   }
 }
 
@@ -78,11 +91,24 @@ export function generateDrill(templateId: string, overrideVars?: Record<string, 
   if (template.computeFnKey === 'market-sizing') {
     extras['customers'] = (vars['population'] * (vars['penetrationPct'] / 100)).toFixed(1)
   }
+  if (template.computeFnKey === 'break-even-units') {
+    extras['contribution'] = (vars['price'] - vars['variableCost']).toFixed(0)
+  }
+  if (template.computeFnKey === 'break-even-revenue') {
+    extras['marginDecimal'] = (vars['grossMarginPct'] / 100).toFixed(2)
+  }
+  if (template.computeFnKey === 'ltv-basic' || template.computeFnKey === 'ltv-cac') {
+    extras['ltv'] = ((vars['arpu'] * (vars['marginPct'] / 100)) / (vars['churnPct'] / 100)).toFixed(0)
+  }
+  if (template.computeFnKey === 'rev-price-volume') {
+    extras['totalPct'] = (answer * 100).toFixed(1)
+  }
 
   return {
     drillId: `${templateId}-${Date.now()}`,
     topic: template.topic,
     title: template.title,
+    difficulty: template.difficulty,
     question: fillTemplate(template.template, vars),
     variables: vars,
     answer,
@@ -91,9 +117,12 @@ export function generateDrill(templateId: string, overrideVars?: Record<string, 
   }
 }
 
-export function getRandomDrill(topic?: string): GeneratedDrill {
+export function getRandomDrill(topic?: string, difficulty?: string): GeneratedDrill {
   const templates = getAllTemplates()
-  const pool = topic ? templates.filter(t => t.topic === topic) : templates
+  let pool = templates
+  if (topic) pool = pool.filter(t => t.topic === topic)
+  if (difficulty) pool = pool.filter(t => t.difficulty === difficulty)
+  if (pool.length === 0) pool = templates // fallback if combo yields nothing
   const template = pool[Math.floor(Math.random() * pool.length)]
   return generateDrill(template.id)
 }
