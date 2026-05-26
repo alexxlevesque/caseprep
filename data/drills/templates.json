@@ -526,15 +526,15 @@
     "topic": "capacity",
     "title": "Rated Capacity from Throughput",
     "difficulty": "medium",
-    "template": "A facility produces {{numerator}}K units/day and runs at {{denominator}}% of rated capacity. What is rated capacity?",
+    "template": "A facility produces {{fixedCosts}}K units/day and runs at {{grossMarginPct}}% of rated capacity. What is rated capacity?",
     "variables": {
-      "numerator": { "min": 50, "max": 450, "step": 25 },
-      "denominator": { "min": 50, "max": 90, "step": 5 }
+      "fixedCosts": { "min": 50, "max": 450, "step": 25 },
+      "grossMarginPct": { "min": 50, "max": 90, "step": 5 }
     },
     "computeFnKey": "break-even-revenue",
     "answerFormat": "number",
     "workingStepsTemplate": [
-      "Rated Capacity = Actual Output / Utilization% = {{numerator}}K / {{denominator}}% = {{answerFormatted}}K units/day"
+      "Rated Capacity = Actual Output / Utilization% = {{fixedCosts}}K / {{grossMarginPct}}% = {{answerFormatted}}K units/day"
     ]
   },
   {
