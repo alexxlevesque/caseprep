@@ -69,8 +69,8 @@
     "difficulty": "easy",
     "template": "A company has ${{revenue}}M in revenue and ${{costs}}M in COGS. What is the gross margin?",
     "variables": {
-      "revenue": { "min": 100, "max": 500, "step": 100 },
-      "costs": { "min": 50, "max": 400, "step": 50 }
+      "revenue": { "min": 200, "max": 1000, "step": 100 },
+      "costs": { "min": 50, "max": 150, "step": 25 }
     },
     "computeFnKey": "margin-calc",
     "answerFormat": "percentage",
@@ -86,8 +86,8 @@
     "difficulty": "medium",
     "template": "A firm earns ${{revenue}}M in revenue with ${{costs}}M in operating costs (COGS + SG&A + R&D). What is the operating margin?",
     "variables": {
-      "revenue": { "min": 200, "max": 1000, "step": 50 },
-      "costs": { "min": 100, "max": 900, "step": 25 }
+      "revenue": { "min": 400, "max": 1000, "step": 50 },
+      "costs": { "min": 100, "max": 350, "step": 25 }
     },
     "computeFnKey": "margin-calc",
     "answerFormat": "percentage",
@@ -103,8 +103,8 @@
     "difficulty": "medium",
     "template": "A company reports ${{revenue}}M revenue and ${{costs}}M in total cash operating costs. What is the EBITDA margin?",
     "variables": {
-      "revenue": { "min": 300, "max": 2000, "step": 100 },
-      "costs": { "min": 150, "max": 1800, "step": 50 }
+      "revenue": { "min": 500, "max": 2000, "step": 100 },
+      "costs": { "min": 150, "max": 400, "step": 50 }
     },
     "computeFnKey": "margin-calc",
     "answerFormat": "percentage",
@@ -120,8 +120,8 @@
     "difficulty": "hard",
     "template": "A product sells for ${{revenue}} per unit with ${{costs}} in variable costs per unit. What is the contribution margin percentage?",
     "variables": {
-      "revenue": { "min": 50, "max": 500, "step": 10 },
-      "costs": { "min": 20, "max": 450, "step": 10 }
+      "revenue": { "min": 100, "max": 500, "step": 25 },
+      "costs": { "min": 20, "max": 80, "step": 10 }
     },
     "computeFnKey": "margin-calc",
     "answerFormat": "percentage",
@@ -293,8 +293,8 @@
     "difficulty": "easy",
     "template": "A product sells for ${{price}} per unit with ${{variableCost}} variable cost. Fixed costs are ${{fixedCosts}}. How many units to break even?",
     "variables": {
-      "price": { "min": 50, "max": 200, "step": 10 },
-      "variableCost": { "min": 10, "max": 150, "step": 10 },
+      "price": { "min": 80, "max": 200, "step": 10 },
+      "variableCost": { "min": 10, "max": 60, "step": 10 },
       "fixedCosts": { "min": 10000, "max": 100000, "step": 10000 }
     },
     "computeFnKey": "break-even-units",
