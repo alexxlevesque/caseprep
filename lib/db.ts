@@ -47,6 +47,13 @@ async function initSchema(client: Client): Promise<void> {
       question_id TEXT PRIMARY KEY,
       first_seen_at INTEGER NOT NULL
     )`,
+    `CREATE TABLE IF NOT EXISTS exhibit_attempts (
+      id           INTEGER PRIMARY KEY AUTOINCREMENT,
+      exhibit_id   TEXT    NOT NULL,
+      exhibit_type TEXT    NOT NULL,
+      result       TEXT    NOT NULL,
+      attempted_at INTEGER NOT NULL
+    )`,
   ]
   for (const sql of statements) {
     await client.execute(sql)

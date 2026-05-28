@@ -1,0 +1,1204 @@
+[
+  {
+    "id": "bar-revenue-segments",
+    "type": "bar-chart",
+    "topic": "profitability",
+    "difficulty": "easy",
+    "title": "Revenue by Business Segment",
+    "context": "A consumer goods company is reviewing its portfolio performance.",
+    "question": "Which segment contributes the most revenue? What is Consumer's share of total revenue?",
+    "chartData": {
+      "labels": ["Consumer", "Business", "Govt", "Intl"],
+      "values": [420, 300, 120, 50],
+      "unit": "$M"
+    },
+    "answer": {
+      "insights": [
+        "Consumer dominates at $420M — nearly half of total revenue.",
+        "Consumer + Business account for 81% of total, making them the core business.",
+        "Government and International are small but may represent growth opportunities."
+      ],
+      "calculation": [
+        "Total = 420 + 300 + 120 + 50 = $890M",
+        "Consumer share = 420 ÷ 890 = 47.2% ≈ 47%"
+      ]
+    }
+  },
+  {
+    "id": "bar-cost-breakdown",
+    "type": "bar-chart",
+    "topic": "profitability",
+    "difficulty": "easy",
+    "title": "Cost Breakdown by Category",
+    "context": "A software company is analyzing its cost structure.",
+    "question": "What is the largest cost driver? What % of total costs does R&D represent?",
+    "chartData": {
+      "labels": ["COGS", "S&M", "R&D", "G&A"],
+      "values": [280, 150, 90, 60],
+      "unit": "$M"
+    },
+    "answer": {
+      "insights": [
+        "COGS is the largest cost at $280M — 48% of total costs.",
+        "S&M is the second largest — typical for a growth-stage software business.",
+        "R&D at 16% is relatively lean; may signal underinvestment or a mature product."
+      ],
+      "calculation": [
+        "Total costs = 280 + 150 + 90 + 60 = $580M",
+        "R&D share = 90 ÷ 580 = 15.5% ≈ 16%"
+      ]
+    }
+  },
+  {
+    "id": "bar-market-share",
+    "type": "bar-chart",
+    "topic": "strategy",
+    "difficulty": "easy",
+    "title": "Market Share by Competitor",
+    "context": "A consumer electronics market has four main players.",
+    "question": "Who leads the market? What is the combined share of the top two players?",
+    "chartData": {
+      "labels": ["Alpha Co", "Beta Inc", "Gamma", "Others"],
+      "values": [35, 28, 20, 17],
+      "unit": "%"
+    },
+    "answer": {
+      "insights": [
+        "Alpha Co leads with 35% — a commanding but not dominant position.",
+        "The top two players control 63% of the market, indicating moderate concentration.",
+        "Others at 17% suggests a fragmented tail with potential acquisition targets."
+      ],
+      "calculation": [
+        "Top 2 combined = 35 + 28 = 63%",
+        "Confirm: 35 + 28 + 20 + 17 = 100% ✓"
+      ]
+    }
+  },
+  {
+    "id": "bar-headcount-region",
+    "type": "bar-chart",
+    "topic": "operations",
+    "difficulty": "easy",
+    "title": "Headcount by Region",
+    "context": "A global services firm is reviewing its workforce distribution.",
+    "question": "What % of total headcount is in North America? How does APAC compare to Europe?",
+    "chartData": {
+      "labels": ["NA", "Europe", "APAC", "LatAm"],
+      "values": [2400, 1800, 900, 300],
+      "unit": " FTEs"
+    },
+    "answer": {
+      "insights": [
+        "North America has the largest workforce at 2,400 FTEs — 44% of total.",
+        "APAC is half the size of Europe despite being a high-growth region.",
+        "LatAm is significantly underweighted — a potential expansion lever."
+      ],
+      "calculation": [
+        "Total = 2400 + 1800 + 900 + 300 = 5,400 FTEs",
+        "NA share = 2400 ÷ 5400 = 44.4% ≈ 44%",
+        "APAC vs Europe = 900 ÷ 1800 = 50% — APAC is half the size of Europe"
+      ]
+    }
+  },
+  {
+    "id": "line-revenue-trend",
+    "type": "line-graph",
+    "topic": "growth",
+    "difficulty": "easy",
+    "title": "Revenue Trend (2019–2023)",
+    "context": "A mid-size technology company is presenting its 5-year track record.",
+    "question": "What is the revenue CAGR from 2019 to 2023? Is growth accelerating or decelerating?",
+    "chartData": {
+      "series": [{ "label": "Revenue", "points": [320, 350, 380, 430, 490] }],
+      "xLabels": ["2019", "2020", "2021", "2022", "2023"],
+      "unit": "$M"
+    },
+    "answer": {
+      "insights": [
+        "Revenue grew from $320M to $490M — a $170M absolute gain over 4 years.",
+        "Year-over-year growth has been accelerating: 9%, 9%, 13%, 14%.",
+        "Strong momentum heading into 2024."
+      ],
+      "calculation": [
+        "CAGR = (490 ÷ 320)^(1/4) − 1",
+        "= (1.531)^0.25 − 1",
+        "= 1.112 − 1 = 11.2% CAGR"
+      ]
+    }
+  },
+  {
+    "id": "line-margin-vs-industry",
+    "type": "line-graph",
+    "topic": "profitability",
+    "difficulty": "medium",
+    "title": "EBITDA Margin vs. Industry Benchmark",
+    "context": "A consumer goods company is benchmarking its profitability against the sector.",
+    "question": "How has the margin gap vs. industry changed over time? What does the trend imply?",
+    "chartData": {
+      "series": [
+        { "label": "Company", "points": [18, 19, 21, 22, 24] },
+        { "label": "Industry", "points": [15, 16, 16, 17, 18] }
+      ],
+      "xLabels": ["2019", "2020", "2021", "2022", "2023"],
+      "unit": "%"
+    },
+    "answer": {
+      "insights": [
+        "Company consistently outperforms industry — and the gap is widening.",
+        "Gap expanded from 3pp in 2019 to 6pp in 2023, suggesting a structural advantage.",
+        "Industry margins are growing slowly; the company is compounding its lead."
+      ],
+      "calculation": [
+        "2019 gap = 18% − 15% = 3 percentage points",
+        "2023 gap = 24% − 18% = 6 percentage points",
+        "Gap doubled in 4 years — growing at ~19% per year"
+      ]
+    }
+  },
+  {
+    "id": "line-volume-growth",
+    "type": "line-graph",
+    "topic": "growth",
+    "difficulty": "medium",
+    "title": "Volume Growth by Region (YoY %)",
+    "context": "A manufacturer is evaluating regional performance over the past 4 years.",
+    "question": "Which region is growing fastest? Which shows signs of maturity?",
+    "chartData": {
+      "series": [
+        { "label": "NA", "points": [5, 7, 6, 8] },
+        { "label": "Europe", "points": [3, 4, 4, 5] },
+        { "label": "APAC", "points": [12, 15, 18, 20] }
+      ],
+      "xLabels": ["2020", "2021", "2022", "2023"],
+      "unit": "%"
+    },
+    "answer": {
+      "insights": [
+        "APAC is the clear growth engine — 20% YoY and accelerating every year.",
+        "NA is stable at mid-single digits, showing maturity but not decline.",
+        "Europe is the laggard at 3–5%, suggesting market saturation or competitive pressure."
+      ],
+      "calculation": [
+        "APAC acceleration = 12% → 20% over 4 years (+8pp)",
+        "NA average = (5+7+6+8) ÷ 4 = 6.5%",
+        "Europe average = (3+4+4+5) ÷ 4 = 4.0%"
+      ]
+    }
+  },
+  {
+    "id": "scatter-bu-revenue-margin",
+    "type": "scatter-plot",
+    "topic": "strategy",
+    "difficulty": "medium",
+    "title": "Business Unit Revenue vs. EBITDA Margin",
+    "context": "A conglomerate is reviewing which business units to invest in or divest.",
+    "question": "Which BU is the 'star'? Which is a potential divestiture candidate?",
+    "chartData": {
+      "points": [
+        { "label": "BU A", "x": 450, "y": 28 },
+        { "label": "BU B", "x": 280, "y": 22 },
+        { "label": "BU C", "x": 180, "y": 8 },
+        { "label": "BU D", "x": 90, "y": 31 },
+        { "label": "BU E", "x": 60, "y": 5 }
+      ],
+      "xLabel": "Revenue ($M)",
+      "yLabel": "EBITDA Margin (%)"
+    },
+    "answer": {
+      "insights": [
+        "BU A is the star — largest revenue AND a strong 28% margin.",
+        "BU D is a hidden gem — small but highly profitable at 31% margin.",
+        "BU C and BU E are underperformers — low margins despite meaningful scale."
+      ],
+      "calculation": [
+        "BU A EBITDA = $450M × 28% = $126M",
+        "BU E EBITDA = $60M × 5% = $3M — barely profitable",
+        "Divestiture logic: BU E generates only $3M EBITDA on $60M revenue"
+      ]
+    }
+  },
+  {
+    "id": "scatter-market-growth",
+    "type": "scatter-plot",
+    "topic": "market-sizing",
+    "difficulty": "medium",
+    "title": "Market Size vs. Growth Rate by Segment",
+    "context": "A healthcare company is evaluating entry into adjacent segments.",
+    "question": "Which segment offers the best opportunity? Which has the worst risk/reward?",
+    "chartData": {
+      "points": [
+        { "label": "Diagnostics", "x": 85, "y": 12 },
+        { "label": "Devices", "x": 120, "y": 6 },
+        { "label": "Digital", "x": 40, "y": 28 },
+        { "label": "Pharma", "x": 200, "y": 4 },
+        { "label": "Biotech", "x": 65, "y": 18 },
+        { "label": "Insurance", "x": 350, "y": 2 }
+      ],
+      "xLabel": "Market Size ($B)",
+      "yLabel": "Annual Growth Rate (%)"
+    },
+    "answer": {
+      "insights": [
+        "Digital Health is the highest-growth segment at 28%, though still small ($40B).",
+        "Diagnostics and Biotech offer the best balance — mid-size with double-digit growth.",
+        "Pharma and Insurance are large but slow-growing (2–4%) — defensive, not opportunistic."
+      ],
+      "calculation": [
+        "Diagnostics in 5 years = $85B × (1.12)^5 = $85B × 1.76 = $150B",
+        "Digital Health in 5 years = $40B × (1.28)^5 = $40B × 3.44 = $138B",
+        "Both converge in size — either is a strong entry bet"
+      ]
+    }
+  },
+  {
+    "id": "waterfall-revenue-bridge",
+    "type": "waterfall",
+    "topic": "growth",
+    "difficulty": "medium",
+    "title": "Revenue Bridge: Prior Year to Current Year",
+    "context": "A retail company is explaining the drivers of revenue change to its board.",
+    "question": "What drove the net revenue increase? Which factor had the biggest impact?",
+    "chartData": {
+      "bars": [
+        { "label": "PY Rev", "value": 420, "type": "start" },
+        { "label": "Price", "value": 30, "type": "up" },
+        { "label": "Volume", "value": 50, "type": "up" },
+        { "label": "Mix", "value": -20, "type": "down" },
+        { "label": "FX", "value": -10, "type": "down" },
+        { "label": "CY Rev", "value": 470, "type": "total" }
+      ],
+      "unit": "$M"
+    },
+    "answer": {
+      "insights": [
+        "Revenue grew $50M (+12%) driven primarily by volume (+$50M) and price (+$30M).",
+        "Mix shift was a $20M headwind — customers moved toward lower-value products.",
+        "FX was a modest $10M drag — manageable but worth monitoring."
+      ],
+      "calculation": [
+        "Net change = +30 + 50 − 20 − 10 = +$50M",
+        "CY Revenue = 420 + 50 = $470M ✓",
+        "Growth rate = 50 ÷ 420 = 11.9% ≈ 12%"
+      ]
+    }
+  },
+  {
+    "id": "waterfall-ebitda-bridge",
+    "type": "waterfall",
+    "topic": "profitability",
+    "difficulty": "hard",
+    "title": "EBITDA Bridge",
+    "context": "A manufacturing firm is analyzing the year-over-year EBITDA improvement.",
+    "question": "What was the largest driver of EBITDA improvement? Did volume or efficiency contribute more?",
+    "chartData": {
+      "bars": [
+        { "label": "PY EBITDA", "value": 84, "type": "start" },
+        { "label": "Volume", "value": 40, "type": "up" },
+        { "label": "Pricing", "value": 18, "type": "up" },
+        { "label": "COGS infl.", "value": -25, "type": "down" },
+        { "label": "Efficiency", "value": 12, "type": "up" },
+        { "label": "SG&A", "value": -9, "type": "down" },
+        { "label": "CY EBITDA", "value": 120, "type": "total" }
+      ],
+      "unit": "$M"
+    },
+    "answer": {
+      "insights": [
+        "EBITDA grew $36M (+43%) — driven by volume and pricing.",
+        "COGS inflation was the biggest headwind at −$25M — a structural risk if it persists.",
+        "Efficiency gains of $12M partially offset inflation, showing operational leverage."
+      ],
+      "calculation": [
+        "Net change = +40 + 18 − 25 + 12 − 9 = +$36M",
+        "CY EBITDA = 84 + 36 = $120M ✓",
+        "Volume ($40M) > Efficiency ($12M) — volume is the primary driver"
+      ]
+    }
+  },
+  {
+    "id": "waterfall-cost-walk",
+    "type": "waterfall",
+    "topic": "operations",
+    "difficulty": "medium",
+    "title": "COGS Walk: 2022 to 2023",
+    "context": "A consumer products company is reviewing what drove cost increases.",
+    "question": "What is the total cost increase? What % of the base does inflation represent?",
+    "chartData": {
+      "bars": [
+        { "label": "2022 COGS", "value": 280, "type": "start" },
+        { "label": "Inflation", "value": 22, "type": "up" },
+        { "label": "Volume", "value": 15, "type": "up" },
+        { "label": "Efficiency", "value": -10, "type": "down" },
+        { "label": "Sourcing", "value": -7, "type": "down" },
+        { "label": "2023 COGS", "value": 300, "type": "total" }
+      ],
+      "unit": "$M"
+    },
+    "answer": {
+      "insights": [
+        "COGS rose $20M (+7%) — inflation and volume growth are the primary culprits.",
+        "Efficiency and sourcing initiatives saved $17M, partially offsetting the headwinds.",
+        "Net inflation impact after savings = $22M − $17M = $5M — well-managed."
+      ],
+      "calculation": [
+        "Net change = +22 + 15 − 10 − 7 = +$20M",
+        "2023 COGS = 280 + 20 = $300M ✓",
+        "Inflation as % of base = 22 ÷ 280 = 7.9% ≈ 8%"
+      ]
+    }
+  },
+  {
+    "id": "pie-revenue-mix",
+    "type": "pie-chart",
+    "topic": "profitability",
+    "difficulty": "easy",
+    "title": "Revenue Mix by Type",
+    "context": "A technology company breaks down revenue by source.",
+    "question": "What is the largest revenue stream? If Services grow 20% next year, what will the new mix be?",
+    "chartData": {
+      "slices": [
+        { "label": "Products", "value": 55 },
+        { "label": "Services", "value": 30 },
+        { "label": "Licensing", "value": 15 }
+      ],
+      "unit": "%"
+    },
+    "answer": {
+      "insights": [
+        "Products dominate at 55%, but Services at 30% is a high-quality recurring revenue stream.",
+        "Licensing is small at 15% but likely high-margin — worth tracking separately.",
+        "Services growth will shift mix toward higher-quality recurring revenue."
+      ],
+      "calculation": [
+        "Index total = $100. Services = $30.",
+        "Services grow 20%: $30 × 1.2 = $36",
+        "New total = $55 + $36 + $15 = $106",
+        "New Services mix = 36 ÷ 106 = 34%"
+      ]
+    }
+  },
+  {
+    "id": "pie-cost-mix",
+    "type": "pie-chart",
+    "topic": "profitability",
+    "difficulty": "easy",
+    "title": "Cost Structure Mix",
+    "context": "A retailer is reviewing where its money goes.",
+    "question": "What are the top two cost buckets? What gross margin is implied by this structure?",
+    "chartData": {
+      "slices": [
+        { "label": "COGS", "value": 52 },
+        { "label": "S&M", "value": 23 },
+        { "label": "R&D", "value": 10 },
+        { "label": "G&A", "value": 8 },
+        { "label": "Other", "value": 7 }
+      ],
+      "unit": "%"
+    },
+    "answer": {
+      "insights": [
+        "COGS and S&M together account for 75% of all costs — the dominant levers.",
+        "If these percentages represent % of revenue, gross margin = 100% − 52% = 48%.",
+        "R&D at 10% suggests meaningful product investment for a retailer."
+      ],
+      "calculation": [
+        "Gross margin = 100% − 52% COGS = 48%",
+        "EBITDA margin = 100% − 52% − 23% − 10% − 8% − 7% = 0% (breakeven at these ratios)",
+        "Top 2 cost levers = COGS + S&M = 75% of total"
+      ]
+    }
+  },
+  {
+    "id": "pie-market-share",
+    "type": "pie-chart",
+    "topic": "strategy",
+    "difficulty": "easy",
+    "title": "Market Share Distribution",
+    "context": "A beverage market has a clear leader and several challengers.",
+    "question": "What is the leader's market share? How concentrated is this market?",
+    "chartData": {
+      "slices": [
+        { "label": "Leader", "value": 42 },
+        { "label": "Challenger", "value": 28 },
+        { "label": "Niche A", "value": 15 },
+        { "label": "Others", "value": 15 }
+      ],
+      "unit": "%"
+    },
+    "answer": {
+      "insights": [
+        "The leader holds 42% — dominant but not monopolistic.",
+        "Top 2 players control 70% — a concentrated duopoly structure.",
+        "Niche players at 30% combined suggest the market isn't fully consolidated."
+      ],
+      "calculation": [
+        "Top 2 share = 42% + 28% = 70%",
+        "HHI ≈ 42² + 28² + 15² + 15² = 1764 + 784 + 225 + 225 = 2998",
+        "HHI > 2500 = highly concentrated per US DOJ guidelines"
+      ]
+    }
+  },
+  {
+    "id": "table-competitive-benchmark",
+    "type": "table",
+    "topic": "strategy",
+    "difficulty": "medium",
+    "title": "Competitive Benchmarking",
+    "context": "A strategy team is comparing four players in the industrial equipment sector.",
+    "question": "Who has the best combination of growth and profitability? Who is most at risk?",
+    "chartData": {
+      "headers": ["Company", "Revenue", "EBITDA Margin", "Rev Growth", "EV/EBITDA"],
+      "rows": [
+        ["Our Co", "$2.4B", "18%", "12%", "11x"],
+        ["Rival A", "$4.1B", "22%", "5%", "14x"],
+        ["Rival B", "$1.8B", "14%", "18%", "9x"],
+        ["Rival C", "$3.2B", "11%", "2%", "7x"]
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Our Co has the best growth-margin balance: 12% growth + 18% margin at 11x multiple.",
+        "Rival A is profitable but mature (5% growth) — priced at a premium 14x.",
+        "Rival C is most at risk: lowest margin (11%), slowest growth (2%), cheapest valuation."
+      ],
+      "calculation": [
+        "Our Co EBITDA = $2.4B × 18% = $432M",
+        "Our Co EV = $432M × 11x = $4.75B",
+        "Rival C EBITDA = $3.2B × 11% = $352M — lower absolute EBITDA despite larger revenue"
+      ]
+    }
+  },
+  {
+    "id": "table-pl-summary",
+    "type": "table",
+    "topic": "profitability",
+    "difficulty": "medium",
+    "title": "P&L Summary (2021–2023)",
+    "context": "A SaaS company presents its three-year income statement.",
+    "question": "What is the trend in gross margin? Is the company improving its path to profitability?",
+    "chartData": {
+      "headers": ["Metric", "2021", "2022", "2023"],
+      "rows": [
+        ["Revenue ($M)", "120", "175", "240"],
+        ["COGS ($M)", "42", "56", "72"],
+        ["Gross Profit ($M)", "78", "119", "168"],
+        ["Gross Margin", "65%", "68%", "70%"],
+        ["S&M ($M)", "60", "80", "96"],
+        ["R&D ($M)", "30", "40", "52"],
+        ["G&A ($M)", "15", "18", "22"],
+        ["EBITDA ($M)", "-27", "-19", "-2"]
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Gross margin is expanding: 65% → 70% — strong unit economics improving with scale.",
+        "EBITDA loss narrowing rapidly: −$27M → −$2M in two years, near breakeven.",
+        "Revenue growing ~40% YoY — classic Rule of 40 trade-off."
+      ],
+      "calculation": [
+        "2023 Gross margin = 168 ÷ 240 = 70% ✓",
+        "2023 EBITDA = 168 − 96 − 52 − 22 = −$2M ✓",
+        "Rule of 40: Revenue growth ~37% + EBITDA margin −1% = 36 (slightly below threshold)"
+      ]
+    }
+  },
+  {
+    "id": "table-unit-economics",
+    "type": "table",
+    "topic": "profitability",
+    "difficulty": "hard",
+    "title": "Unit Economics by Customer Segment",
+    "context": "A subscription business has three customer tiers with different economics.",
+    "question": "Which segment has the best LTV/CAC? Which should the company prioritize for growth?",
+    "chartData": {
+      "headers": ["Segment", "ARPU/mo", "Churn/mo", "Gross Margin", "CAC", "LTV", "LTV/CAC"],
+      "rows": [
+        ["Enterprise", "$2,400", "0.5%", "75%", "$18,000", "$360,000", "20x"],
+        ["SMB", "$400", "2.0%", "65%", "$2,400", "$13,000", "5.4x"],
+        ["Consumer", "$25", "5.0%", "55%", "$80", "$275", "3.4x"]
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Enterprise has exceptional economics: 20x LTV/CAC vs. 3.4x Consumer.",
+        "Consumer barely clears the 3x minimum threshold — marginal economics.",
+        "Enterprise is clearly the priority segment despite higher acquisition cost."
+      ],
+      "calculation": [
+        "Enterprise LTV = ($2,400 × 75%) ÷ 0.5% = $1,800 ÷ 0.005 = $360,000",
+        "SMB LTV = ($400 × 65%) ÷ 2.0% = $260 ÷ 0.02 = $13,000",
+        "Consumer LTV = ($25 × 55%) ÷ 5.0% = $13.75 ÷ 0.05 = $275"
+      ]
+    }
+  },
+  {
+    "id": "table-segment-financials",
+    "type": "table",
+    "topic": "profitability",
+    "difficulty": "medium",
+    "title": "Segment Financial Performance",
+    "context": "A diversified industrial company reports performance by division.",
+    "question": "Which segment is most profitable in absolute terms? Which has the best margin?",
+    "chartData": {
+      "headers": ["Segment", "Revenue", "EBITDA", "EBITDA Margin", "YoY Growth"],
+      "rows": [
+        ["Automation", "$480M", "$120M", "25%", "+18%"],
+        ["Components", "$320M", "$64M", "20%", "+8%"],
+        ["Services", "$200M", "$70M", "35%", "+22%"],
+        ["Legacy", "$150M", "$12M", "8%", "-3%"]
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Automation generates the most absolute EBITDA ($120M) but Services has the best margin (35%).",
+        "Legacy is a drag: lowest margin (8%) and the only segment in decline (−3%).",
+        "Services deserves investment — highest margin AND fastest growth."
+      ],
+      "calculation": [
+        "Total Revenue = 480 + 320 + 200 + 150 = $1,150M",
+        "Total EBITDA = 120 + 64 + 70 + 12 = $266M",
+        "Blended EBITDA margin = 266 ÷ 1,150 = 23.1%"
+      ]
+    }
+  },
+  {
+    "id": "twobytwo-bcg",
+    "type": "two-by-two",
+    "topic": "strategy",
+    "difficulty": "easy",
+    "title": "BCG Growth-Share Matrix",
+    "context": "A conglomerate maps its four product lines on a BCG matrix.",
+    "question": "Which products should be invested in? Which should be divested?",
+    "chartData": {
+      "xLabel": "Market Share",
+      "yLabel": "Market Growth",
+      "items": [
+        { "label": "Product A", "x": "high", "y": "high" },
+        { "label": "Product B", "x": "low", "y": "high" },
+        { "label": "Product C", "x": "high", "y": "low" },
+        { "label": "Product D", "x": "low", "y": "low" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Product A (Star): high share + high growth — invest aggressively to maintain position.",
+        "Product B (Question Mark): high growth but low share — invest selectively or exit.",
+        "Product C (Cash Cow): low growth but high share — milk for cash, don't overinvest."
+      ],
+      "calculation": [
+        "Product D (Dog): low share + low growth → divest or harvest",
+        "Capital allocation priority: A > B (selective) > C (maintain) > D (divest)",
+        "Cash flow logic: C funds A's investment; sell D to redeploy capital"
+      ]
+    }
+  },
+  {
+    "id": "twobytwo-competitive-position",
+    "type": "two-by-two",
+    "topic": "strategy",
+    "difficulty": "medium",
+    "title": "Competitive Positioning Matrix",
+    "context": "Five competitors are mapped by market share and profitability.",
+    "question": "Who has the strongest competitive position? Who is most vulnerable?",
+    "chartData": {
+      "xLabel": "Market Share",
+      "yLabel": "Profitability",
+      "items": [
+        { "label": "Our Co", "x": "high", "y": "high" },
+        { "label": "Rival A", "x": "high", "y": "low" },
+        { "label": "Rival B", "x": "low", "y": "high" },
+        { "label": "Rival C", "x": "low", "y": "low" },
+        { "label": "Rival D", "x": "low", "y": "low" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Our Co has the strongest position — both scale and profitability advantages.",
+        "Rival A is dangerous: large share but low profitability may signal price aggression.",
+        "Rivals C and D are the most vulnerable — no scale, no profitability advantage."
+      ],
+      "calculation": [
+        "No arithmetic — this is a strategic framing exercise",
+        "Rival A's low profitability on high share = possible predatory pricing",
+        "Rival B's high profitability on low share = niche premium player, unlikely to threaten at scale"
+      ]
+    }
+  },
+  {
+    "id": "twobytwo-risk-impact",
+    "type": "two-by-two",
+    "topic": "strategy",
+    "difficulty": "medium",
+    "title": "Risk-Impact Matrix",
+    "context": "A management team is prioritizing operational risks for mitigation.",
+    "question": "Which risks require immediate action? Which can be monitored passively?",
+    "chartData": {
+      "xLabel": "Probability",
+      "yLabel": "Impact",
+      "items": [
+        { "label": "Supply disruption", "x": "high", "y": "high" },
+        { "label": "Regulatory change", "x": "low", "y": "high" },
+        { "label": "Talent loss", "x": "high", "y": "low" },
+        { "label": "IT outage", "x": "high", "y": "low" },
+        { "label": "FX volatility", "x": "low", "y": "low" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Supply disruption: high probability AND high impact — #1 priority for mitigation.",
+        "Regulatory change: low probability but catastrophic if it occurs — needs a contingency plan.",
+        "FX volatility: low priority — hedge naturally or accept as cost of doing business."
+      ],
+      "calculation": [
+        "Risk prioritization = Probability × Impact",
+        "Supply disruption and Regulatory change deserve the most risk-management investment",
+        "Talent loss and IT outage: implement standard protocols, don't over-invest"
+      ]
+    }
+  },
+  {
+    "id": "decision-tree-investment",
+    "type": "decision-tree",
+    "topic": "strategy",
+    "difficulty": "hard",
+    "title": "Investment Decision Tree",
+    "context": "A PE firm is deciding whether to acquire a target company for $50M.",
+    "question": "What is the expected value of the acquisition? Should the firm proceed?",
+    "chartData": {
+      "nodes": [
+        { "id": "root", "label": "Acquire? ($50M)", "children": ["yes", "no"] },
+        { "id": "yes", "label": "Invest $50M", "children": ["grows", "flat", "declines"] },
+        { "id": "no", "label": "Pass", "value": "$0" },
+        { "id": "grows", "label": "Mkt grows (40%)", "value": "+$120M" },
+        { "id": "flat", "label": "Mkt flat (40%)", "value": "+$20M" },
+        { "id": "declines", "label": "Mkt declines (20%)", "value": "-$30M" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Expected return is +$50M gross — but net of the $50M investment, EV = $0 (breakeven).",
+        "The deal is driven by the upside scenario (40% probability, +$120M).",
+        "Downside is limited (−$30M) relative to upside — asymmetric risk/reward."
+      ],
+      "calculation": [
+        "EV = 0.4×(120) + 0.4×(20) + 0.2×(−30)",
+        "= 48 + 8 − 6 = +$50M gross return",
+        "Net EV = +$50M − $50M cost = $0 (breakeven)",
+        "Decision: negotiate a lower price or wait for better information"
+      ]
+    }
+  },
+  {
+    "id": "decision-tree-pricing",
+    "type": "decision-tree",
+    "topic": "strategy",
+    "difficulty": "hard",
+    "title": "Pricing Strategy Decision Tree",
+    "context": "A product launch team is choosing between three pricing strategies for a 1M-unit market.",
+    "question": "Which pricing strategy maximizes expected Year 1 revenue?",
+    "chartData": {
+      "nodes": [
+        { "id": "root", "label": "Pricing strategy", "children": ["premium", "mid", "penetration"] },
+        { "id": "premium", "label": "Premium ($120)", "children": ["p-hi", "p-lo"] },
+        { "id": "mid", "label": "Mid-market ($80)", "children": ["m-hi", "m-lo"] },
+        { "id": "penetration", "label": "Penetration ($40)", "children": ["n-hi", "n-lo"] },
+        { "id": "p-hi", "label": "Adoption 20% (p=50%)", "value": "$24M" },
+        { "id": "p-lo", "label": "Adoption 10% (p=50%)", "value": "$12M" },
+        { "id": "m-hi", "label": "Adoption 40% (p=60%)", "value": "$32M" },
+        { "id": "m-lo", "label": "Adoption 25% (p=40%)", "value": "$20M" },
+        { "id": "n-hi", "label": "Adoption 70% (p=70%)", "value": "$28M" },
+        { "id": "n-lo", "label": "Adoption 45% (p=30%)", "value": "$18M" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Mid-market pricing has the highest expected Year 1 revenue at $27.2M.",
+        "Premium pricing is risky — low adoption probability drags the expected value to $18M.",
+        "Penetration builds volume but lower price limits revenue despite high adoption."
+      ],
+      "calculation": [
+        "Premium EV = 0.5×$24M + 0.5×$12M = $18M",
+        "Mid-market EV = 0.6×$32M + 0.4×$20M = $19.2M + $8M = $27.2M",
+        "Penetration EV = 0.7×$28M + 0.3×$18M = $19.6M + $5.4M = $25M",
+        "Winner: Mid-market at $27.2M expected revenue"
+      ]
+    }
+  },
+  {
+    "id": "process-flow-order-to-cash",
+    "type": "process-flow",
+    "topic": "operations",
+    "difficulty": "easy",
+    "title": "Order-to-Cash Process",
+    "context": "A B2B distributor is mapping its revenue collection cycle.",
+    "question": "What % of orders successfully reach collection? Where is the biggest drop-off?",
+    "chartData": {
+      "steps": [
+        { "label": "Order Received", "detail": "100%" },
+        { "label": "Credit Check", "detail": "92% pass" },
+        { "label": "Fulfillment", "detail": "96% complete" },
+        { "label": "Invoice Sent", "detail": "99% issued" },
+        { "label": "Payment", "detail": "94% on time" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "End-to-end yield ≈ 82% — 18% of orders encounter some friction.",
+        "Credit check is the biggest single drop-off at 8% — worth reviewing credit policy.",
+        "Late payment (6%) and fulfillment failures (4%) are secondary issues."
+      ],
+      "calculation": [
+        "Cumulative yield = 0.92 × 0.96 × 0.99 × 0.94",
+        "= 0.92 × 0.96 = 0.883",
+        "× 0.99 = 0.874",
+        "× 0.94 = 0.821 ≈ 82%"
+      ]
+    }
+  },
+  {
+    "id": "process-flow-manufacturing",
+    "type": "process-flow",
+    "topic": "operations",
+    "difficulty": "medium",
+    "title": "Manufacturing Yield by Stage",
+    "context": "A semiconductor manufacturer tracks defect rates at each production stage.",
+    "question": "What is the overall production yield? Which stage is the critical bottleneck?",
+    "chartData": {
+      "steps": [
+        { "label": "Wafer Prep", "detail": "98% yield" },
+        { "label": "Lithography", "detail": "94% yield" },
+        { "label": "Etching", "detail": "97% yield" },
+        { "label": "Deposition", "detail": "96% yield" },
+        { "label": "Final Test", "detail": "91% yield" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Overall yield ≈ 78% — meaning 22% of wafers are scrapped, a major cost driver.",
+        "Lithography (94%) and Final Test (91%) are the two biggest yield killers.",
+        "A 1pp improvement in Final Test saves more value due to all the embedded cost upstream."
+      ],
+      "calculation": [
+        "Yield = 0.98 × 0.94 × 0.97 × 0.96 × 0.91",
+        "= 0.921 × 0.97 = 0.894",
+        "× 0.96 = 0.858",
+        "× 0.91 = 0.781 ≈ 78%"
+      ]
+    }
+  },
+  {
+    "id": "process-flow-acquisition",
+    "type": "process-flow",
+    "topic": "growth",
+    "difficulty": "medium",
+    "title": "Customer Acquisition Funnel",
+    "context": "A direct-to-consumer brand is analyzing its marketing funnel.",
+    "question": "What is the overall funnel conversion rate? What is the CAC if marketing spend is $2M?",
+    "chartData": {
+      "steps": [
+        { "label": "Awareness", "detail": "500K reached" },
+        { "label": "Consideration", "detail": "15% → 75K" },
+        { "label": "Trial", "detail": "40% → 30K" },
+        { "label": "Purchase", "detail": "60% → 18K" },
+        { "label": "Retention", "detail": "70% → 12.6K" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "End-to-end conversion = 3.6% from awareness to first purchase.",
+        "Biggest drop-off is Awareness → Consideration (85% lost) — targeting or messaging issue.",
+        "Retention at 70% is solid — the product delivers on its promise."
+      ],
+      "calculation": [
+        "Purchases = 500K × 15% × 40% × 60% = 18,000",
+        "CAC = $2,000,000 ÷ 18,000 = $111 per acquired customer",
+        "Cost per retained customer = $2M ÷ 12,600 = $159"
+      ]
+    }
+  },
+  {
+    "id": "value-chain-retail",
+    "type": "value-chain",
+    "topic": "profitability",
+    "difficulty": "medium",
+    "title": "Retail Value Chain — Margin Stack",
+    "context": "A consumer goods manufacturer is analyzing where margin is captured in its supply chain.",
+    "question": "What % of consumer price does the manufacturer capture? Who captures the most margin?",
+    "chartData": {
+      "stages": [
+        { "label": "Manufacturer", "margin": 22 },
+        { "label": "Distributor", "margin": 12 },
+        { "label": "Retailer", "margin": 38 },
+        { "label": "Total COGS", "margin": 28 }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Retailer captures the most margin (38%) — significantly more than the manufacturer (22%).",
+        "The manufacturer earns only $0.22 per $1 of consumer price — a thin slice.",
+        "Going direct-to-consumer would capture ~60pp of margin (manufacturer + retailer)."
+      ],
+      "calculation": [
+        "Total channel margin = 22% + 12% + 38% = 72%",
+        "COGS as % of consumer price = 100% − 72% = 28%",
+        "DTC upside: capturing retailer's 38% → total margin = 22% + 38% = 60%"
+      ]
+    }
+  },
+  {
+    "id": "value-chain-manufacturing",
+    "type": "value-chain",
+    "topic": "operations",
+    "difficulty": "hard",
+    "title": "Automotive Value Chain — Margin by Stage",
+    "context": "An automotive OEM is benchmarking margin distribution across its value chain.",
+    "question": "Which stage is most profitable? What is total margin captured before reaching the dealer?",
+    "chartData": {
+      "stages": [
+        { "label": "Raw Matls", "margin": 8 },
+        { "label": "Components", "margin": 14 },
+        { "label": "Assembly", "margin": 6 },
+        { "label": "Dealer", "margin": 10 },
+        { "label": "After-Sales", "margin": 45 }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "After-Sales (45% margin) is by far the most profitable stage — typical for automotive.",
+        "OEM Assembly captures only 6% — the least profitable stage despite highest revenue.",
+        "Components at 14% earn twice the OEM margin, explaining the rise of Tier 1 suppliers."
+      ],
+      "calculation": [
+        "Pre-dealer margin = 8% + 14% + 6% = 28% (raw to OEM gate)",
+        "After-Sales alone (45%) exceeds the entire manufacturing chain (28%)",
+        "Strategic implication: invest in after-sales/service, not manufacturing efficiency"
+      ]
+    }
+  },
+  {
+    "id": "market-sizing-tam-sam-som",
+    "type": "market-sizing",
+    "topic": "market-sizing",
+    "difficulty": "easy",
+    "title": "Coffee Market: TAM / SAM / SOM",
+    "context": "A specialty coffee startup is presenting its market opportunity to investors.",
+    "question": "What % of TAM does the SOM represent? Is this a credible estimate for a startup?",
+    "chartData": {
+      "levels": [
+        { "label": "TAM — Global Coffee", "value": 450, "unit": "$B" },
+        { "label": "SAM — US Specialty", "value": 48, "unit": "$B" },
+        { "label": "SOM — Direct-to-Consumer", "value": 2.4, "unit": "$B" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "SOM is $2.4B — 5% of SAM and just 0.5% of TAM, which is credible for a startup.",
+        "The TAM→SAM step (90% reduction) appropriately narrows to the addressable US market.",
+        "A startup targeting 1% of SOM = $24M ARR — a reasonable 3–5 year goal."
+      ],
+      "calculation": [
+        "SOM as % of TAM = 2.4 ÷ 450 = 0.53% ≈ 0.5%",
+        "SOM as % of SAM = 2.4 ÷ 48 = 5%",
+        "1% market share of SOM = $24M in revenue"
+      ]
+    }
+  },
+  {
+    "id": "market-sizing-bottom-up",
+    "type": "market-sizing",
+    "topic": "market-sizing",
+    "difficulty": "medium",
+    "title": "US Gym Market — Bottom-Up Sizing",
+    "context": "A fitness equipment company is sizing the US commercial gym market.",
+    "question": "How large is the US gym market? Walk through the bottom-up calculation.",
+    "chartData": {
+      "levels": [
+        { "label": "US Gyms", "value": 41000, "unit": " gyms" },
+        { "label": "Members per gym", "value": 1200, "unit": " avg" },
+        { "label": "Monthly fee", "value": 45, "unit": "$/mo avg" },
+        { "label": "Annual Market", "value": 26.6, "unit": "$B" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "US gym market is ~$27B annually — a large, established industry.",
+        "Average gym has 1,200 members at $45/month — mostly mid-market.",
+        "Cross-check: ~15% of US adults (330M × 15% = 49.5M) are gym members ✓"
+      ],
+      "calculation": [
+        "Total members = 41,000 × 1,200 = 49.2M members",
+        "Annual revenue = 49.2M × $45/mo × 12 months",
+        "= 49.2M × $540 = $26.6B"
+      ]
+    }
+  },
+  {
+    "id": "market-sizing-top-down",
+    "type": "market-sizing",
+    "topic": "market-sizing",
+    "difficulty": "medium",
+    "title": "US Smartphone Repair Market — Top-Down",
+    "context": "A mobile repair chain is estimating the size of its addressable market.",
+    "question": "What is the US smartphone repair market size? Walk through the top-down logic.",
+    "chartData": {
+      "levels": [
+        { "label": "US smartphone users", "value": 270, "unit": "M" },
+        { "label": "Annual break rate (20%)", "value": 54, "unit": "M devices" },
+        { "label": "Repaired vs replaced (55%)", "value": 29.7, "unit": "M repairs" },
+        { "label": "Market Size @ $180 avg", "value": 5.3, "unit": "$B" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "~$5.3B market — sizable but fragmented across independent shops and OEM stores.",
+        "Only 55% of broken phones get repaired — the rest are replaced, capping market size.",
+        "Increasing repair rate from 55% → 65% would add ~$1B to the addressable market."
+      ],
+      "calculation": [
+        "Broken phones/year = 270M × 20% = 54M devices",
+        "Phones repaired = 54M × 55% = 29.7M repairs",
+        "Market size = 29.7M × $180 = $5.35B ≈ $5.3B"
+      ]
+    }
+  },
+  {
+    "id": "market-sizing-addressable",
+    "type": "market-sizing",
+    "topic": "market-sizing",
+    "difficulty": "hard",
+    "title": "B2B SaaS — Addressable Market Funnel",
+    "context": "A B2B project management SaaS is refining its market opportunity.",
+    "question": "What is the serviceable addressable market? How many customers does that imply?",
+    "chartData": {
+      "levels": [
+        { "label": "US Companies (5+ employees)", "value": 6.1, "unit": "M" },
+        { "label": "Knowledge worker cos.", "value": 1.8, "unit": "M" },
+        { "label": "Can afford SaaS (20+ EEs)", "value": 600, "unit": "K" },
+        { "label": "Relevant use case", "value": 300, "unit": "K" },
+        { "label": "SAM @ $2,400/yr ARPU", "value": 720, "unit": "$M" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "SAM is ~$720M — meaningful but far below the multi-billion TAM often cited in pitch decks.",
+        "Only 5% of US companies ultimately qualify — TAM inflation is a common pitch error.",
+        "At $2,400 ARPU, capturing 10% = 30,000 customers = $72M ARR."
+      ],
+      "calculation": [
+        "Funnel: 6.1M → 1.8M (29%) → 600K (33%) → 300K (50%)",
+        "SAM = 300,000 × $2,400/yr = $720M",
+        "10% market share = 30,000 × $2,400 = $72M ARR"
+      ]
+    }
+  },
+  {
+    "id": "customer-seg-ltv",
+    "type": "customer-segmentation",
+    "topic": "profitability",
+    "difficulty": "medium",
+    "title": "LTV by Customer Segment",
+    "context": "A subscription retailer has segmented customers by purchase frequency and value.",
+    "question": "Which segment generates the most total value? What % of LTV do Champions represent?",
+    "chartData": {
+      "segments": [
+        { "label": "Champions", "metrics": [{ "key": "Customers", "value": "8,000" }, { "key": "Avg LTV", "value": "$1,200" }, { "key": "Total LTV", "value": "$9.6M" }] },
+        { "label": "Loyals", "metrics": [{ "key": "Customers", "value": "22,000" }, { "key": "Avg LTV", "value": "$450" }, { "key": "Total LTV", "value": "$9.9M" }] },
+        { "label": "At-Risk", "metrics": [{ "key": "Customers", "value": "35,000" }, { "key": "Avg LTV", "value": "$180" }, { "key": "Total LTV", "value": "$6.3M" }] },
+        { "label": "Lost", "metrics": [{ "key": "Customers", "value": "45,000" }, { "key": "Avg LTV", "value": "$40" }, { "key": "Total LTV", "value": "$1.8M" }] }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Champions (8K) and Loyals (22K) generate $19.5M — 71% of total customer LTV.",
+        "Champions deliver 30x the per-customer LTV of Lost customers ($1,200 vs $40).",
+        "At-Risk segment is high priority — $6.3M in LTV is at stake if they churn."
+      ],
+      "calculation": [
+        "Total LTV = 9.6 + 9.9 + 6.3 + 1.8 = $27.6M",
+        "Champions' share = $9.6M ÷ $27.6M = 34.8% ≈ 35%",
+        "Champions + Loyals = $19.5M ÷ $27.6M = 70.7% ≈ 71%"
+      ]
+    }
+  },
+  {
+    "id": "customer-seg-churn",
+    "type": "customer-segmentation",
+    "topic": "growth",
+    "difficulty": "medium",
+    "title": "Monthly Churn by Customer Cohort",
+    "context": "A SaaS company tracks monthly churn rates for customers acquired by quarter.",
+    "question": "Which cohort has the best retention? What does the trend imply about product improvements?",
+    "chartData": {
+      "segments": [
+        { "label": "Q1 2022", "metrics": [{ "key": "Month 1", "value": "8.0%" }, { "key": "Month 3", "value": "5.0%" }, { "key": "Month 6", "value": "3.0%" }, { "key": "Month 12", "value": "2.0%" }] },
+        { "label": "Q3 2022", "metrics": [{ "key": "Month 1", "value": "7.0%" }, { "key": "Month 3", "value": "4.0%" }, { "key": "Month 6", "value": "2.5%" }, { "key": "Month 12", "value": "1.8%" }] },
+        { "label": "Q1 2023", "metrics": [{ "key": "Month 1", "value": "5.0%" }, { "key": "Month 3", "value": "3.0%" }, { "key": "Month 6", "value": "2.0%" }, { "key": "Month 12", "value": "1.5%" }] },
+        { "label": "Q3 2023", "metrics": [{ "key": "Month 1", "value": "4.0%" }, { "key": "Month 3", "value": "2.5%" }, { "key": "Month 6", "value": "1.8%" }, { "key": "Month 12", "value": "—" }] }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Churn is steadily improving — Q3 2023 Month 1 churn (4%) is half of Q1 2022 (8%).",
+        "Product/onboarding improvements are clearly working — each newer cohort retains better.",
+        "Month 12 churn settling at ~1.5–2% shows the engaged core is highly sticky."
+      ],
+      "calculation": [
+        "Month 1 churn improvement: 8% → 4% over 6 quarters = −0.67pp per quarter",
+        "Q1 2022 approximate 12-month retention ≈ 75%",
+        "Q3 2023 trajectory implies ~85% 12-month retention — meaningful improvement"
+      ]
+    }
+  },
+  {
+    "id": "customer-seg-nps",
+    "type": "customer-segmentation",
+    "topic": "strategy",
+    "difficulty": "easy",
+    "title": "NPS Distribution",
+    "context": "A consumer bank surveys 10,000 customers on likelihood to recommend.",
+    "question": "What is the Net Promoter Score? How does it compare to the banking industry average of +34?",
+    "chartData": {
+      "segments": [
+        { "label": "Promoters (9–10)", "metrics": [{ "key": "Count", "value": "4,500" }, { "key": "Share", "value": "45%" }] },
+        { "label": "Passives (7–8)", "metrics": [{ "key": "Count", "value": "3,000" }, { "key": "Share", "value": "30%" }] },
+        { "label": "Detractors (0–6)", "metrics": [{ "key": "Count", "value": "2,500" }, { "key": "Share", "value": "25%" }] }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "NPS = +20 — below the banking industry average of +34, indicating a loyalty gap.",
+        "Passives (30%) are the biggest opportunity — converting half to Promoters adds +15pp to NPS.",
+        "High Detractor share (25%) needs investigation — likely fee or service failure driven."
+      ],
+      "calculation": [
+        "NPS = % Promoters − % Detractors = 45% − 25% = +20",
+        "Industry average = +34 → gap of 14 points",
+        "To reach +34: Promoters must rise to ~59% or Detractors must fall to ~11%"
+      ]
+    }
+  },
+  {
+    "id": "customer-seg-rfm",
+    "type": "customer-segmentation",
+    "topic": "growth",
+    "difficulty": "medium",
+    "title": "RFM Segmentation — Revenue Contribution",
+    "context": "An e-commerce retailer has segmented its 100,000-customer base using RFM analysis.",
+    "question": "What % of customers are Champions? How much revenue do they represent?",
+    "chartData": {
+      "segments": [
+        { "label": "Champions", "metrics": [{ "key": "% customers", "value": "8%" }, { "key": "% revenue", "value": "38%" }, { "key": "Avg AOV", "value": "$285" }] },
+        { "label": "Loyal", "metrics": [{ "key": "% customers", "value": "15%" }, { "key": "% revenue", "value": "28%" }, { "key": "Avg AOV", "value": "$112" }] },
+        { "label": "Potential", "metrics": [{ "key": "% customers", "value": "22%" }, { "key": "% revenue", "value": "20%" }, { "key": "Avg AOV", "value": "$55" }] },
+        { "label": "At-Risk/Lost", "metrics": [{ "key": "% customers", "value": "55%" }, { "key": "% revenue", "value": "14%" }, { "key": "Avg AOV", "value": "$15" }] }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Champions are 8% of customers but generate 38% of revenue — classic Pareto concentration.",
+        "Champions' AOV ($285) is 19x higher than At-Risk/Lost ($15).",
+        "55% of customers contribute only 14% of revenue — focus resources on Champions and Loyals."
+      ],
+      "calculation": [
+        "Assume total revenue = $10M",
+        "Champions = $3.8M from 8,000 customers = $475/customer",
+        "At-Risk/Lost = $1.4M from 55,000 customers = $25/customer",
+        "Ratio: $475 ÷ $25 = 19x revenue per customer"
+      ]
+    }
+  },
+  {
+    "id": "geo-revenue-region",
+    "type": "geographic",
+    "topic": "growth",
+    "difficulty": "easy",
+    "title": "Revenue by Region",
+    "context": "A global consumer brand reports revenue broken down by major geography.",
+    "question": "What is North America's share of total revenue? Which region is most under-indexed?",
+    "chartData": {
+      "regions": [
+        { "label": "North America", "value": 420, "unit": "$M" },
+        { "label": "Europe", "value": 300, "unit": "$M" },
+        { "label": "Asia-Pacific", "value": 120, "unit": "$M" },
+        { "label": "Latin America", "value": 50, "unit": "$M" },
+        { "label": "MEA", "value": 30, "unit": "$M" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "North America dominates at $420M — 46% of total, the core market.",
+        "APAC at $120M is massively under-indexed given it represents 60% of global population.",
+        "LatAm + MEA combined ($80M) represent early-stage markets with high upside."
+      ],
+      "calculation": [
+        "Total = 420 + 300 + 120 + 50 + 30 = $920M",
+        "NA share = 420 ÷ 920 = 45.7% ≈ 46%",
+        "NA revenue per capita = $420M ÷ 360M people = $1.17/person",
+        "APAC revenue per capita = $120M ÷ 4,500M people = $0.027/person → 43x lower"
+      ]
+    }
+  },
+  {
+    "id": "geo-market-penetration",
+    "type": "geographic",
+    "topic": "growth",
+    "difficulty": "medium",
+    "title": "Market Penetration by Country",
+    "context": "A software company is mapping its penetration of target accounts by country.",
+    "question": "What is the average penetration across all markets? Which has the most upside?",
+    "chartData": {
+      "regions": [
+        { "label": "United States", "value": 45, "unit": "%" },
+        { "label": "UK", "value": 38, "unit": "%" },
+        { "label": "Germany", "value": 22, "unit": "%" },
+        { "label": "France", "value": 18, "unit": "%" },
+        { "label": "Japan", "value": 12, "unit": "%" },
+        { "label": "Australia", "value": 31, "unit": "%" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "US and UK are maturing (45% and 38%) — growth focus should shift to Germany and beyond.",
+        "Germany and France are the biggest near-term opportunities: large markets, low penetration.",
+        "Japan at 12% despite a large economy suggests market entry barriers worth investigating."
+      ],
+      "calculation": [
+        "Simple average = (45+38+22+18+12+31) ÷ 6 = 166 ÷ 6 = 27.7%",
+        "Germany upside to UK level: 22% → 38% = +16pp",
+        "Japan upside to average: 12% → 28% = +16pp — both are high priority"
+      ]
+    }
+  },
+  {
+    "id": "geo-store-density",
+    "type": "geographic",
+    "topic": "operations",
+    "difficulty": "hard",
+    "title": "Store Density vs. Revenue by Metro Market",
+    "context": "A specialty retailer is evaluating store density relative to revenue potential across 6 metro markets.",
+    "question": "Which market is under-stored relative to revenue potential? What does this imply for expansion?",
+    "chartData": {
+      "regions": [
+        { "label": "New York", "value": 42, "unit": " stores/$B" },
+        { "label": "Los Angeles", "value": 28, "unit": " stores/$B" },
+        { "label": "Chicago", "value": 38, "unit": " stores/$B" },
+        { "label": "Houston", "value": 18, "unit": " stores/$B" },
+        { "label": "Phoenix", "value": 22, "unit": " stores/$B" },
+        { "label": "Philadelphia", "value": 45, "unit": " stores/$B" }
+      ]
+    },
+    "answer": {
+      "insights": [
+        "Houston (18) and LA (28) are the most under-stored vs. the NY/Philadelphia benchmark (~43).",
+        "LA is a large market being under-served — the highest priority for new store openings.",
+        "Houston's low density may reflect weaker market fit — worth testing before mass expansion."
+      ],
+      "calculation": [
+        "Average density = (42+28+38+18+22+45) ÷ 6 = 193 ÷ 6 = 32 stores/$B",
+        "LA gap = 32 − 28 = 4 stores/$B below average",
+        "Houston gap = 32 − 18 = 14 stores/$B below average",
+        "If LA revenue = $2B: adding 8 stores closes the gap to average"
+      ]
+    }
+  }
+]

@@ -4,6 +4,7 @@ const links = [
   { href: '/', label: 'Dashboard' },
   { href: '/cases', label: 'Case Bank' },
   { href: '/drills', label: 'Math Drills' },
+  { href: '/exhibits', label: 'Exhibits' },
   { href: '/analytics', label: 'Analytics' },
   { href: '/fit', label: 'Fit Prep' },
   { href: '/frameworks', label: 'Frameworks' },
